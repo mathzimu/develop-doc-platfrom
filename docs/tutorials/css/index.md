@@ -1,0 +1,575 @@
+# CSS 教程
+
+CSS（Cascading Style Sheets）用于控制 HTML 元素的显示样式和布局。CSS 让内容与表现分离，使网页更易于维护。
+
+## 引入方式
+
+```html
+<!-- 1. 外部样式表（推荐） -->
+<link rel="stylesheet" href="style.css">
+
+<!-- 2. 内部样式表 -->
+<style>
+  body { font-family: sans-serif; }
+</style>
+
+<!-- 3. 行内样式（避免使用） -->
+<p style="color: red;">红色文字</p>
+```
+
+## 选择器
+
+### 基本选择器
+
+```css
+/* 元素选择器 */
+p { color: blue; }
+
+/* 类选择器 */
+.card { border: 1px solid #ddd; }
+
+/* ID 选择器 */
+#header { background: #333; }
+
+/* 通配选择器 */
+* { box-sizing: border-box; }
+
+/* 属性选择器 */
+[type="text"] { border: 1px solid #ccc; }
+[href^="https"] { color: green; }
+[src$=".png"] { border: 0; }
+[class*="icon"] { width: 16px; }
+```
+
+### 组合选择器
+
+```css
+/* 后代选择器（空格） */
+article p { line-height: 1.6; }
+
+/* 子选择器（>） */
+ul > li { list-style: none; }
+
+/* 相邻兄弟（+） */
+h2 + p { margin-top: 0; }
+
+/* 通用兄弟（~） */
+h2 ~ p { color: gray; }
+
+/* 组合 */
+div.card, section.highlight { padding: 16px; }
+```
+
+### 伪类与伪元素
+
+```css
+/* 伪类：状态 */
+a:hover { color: red; }
+a:active { color: orange; }
+a:visited { color: purple; }
+input:focus { outline: 2px solid blue; }
+li:first-child { font-weight: bold; }
+li:last-child { border: none; }
+li:nth-child(odd) { background: #f5f5f5; }
+li:nth-child(3n+1) { color: red; }
+
+/* 伪元素：内容片段 */
+p::first-line { font-size: 1.2em; }
+p::first-letter { font-size: 2em; }
+::selection { background: yellow; }
+.element::before { content: "→ "; }
+.element::after { content: " ←"; }
+
+/* :not() 否定 */
+input:not([type="submit"]) { border: 1px solid #ccc; }
+
+/* :has() 父级选择 */
+figure:has(img) { padding: 10px; }
+```
+
+## 盒模型
+
+每个元素占据一个矩形盒子，由内到外依次为：
+
+```
+┌──────────────────────────────┐
+│          margin              │
+│  ┌────────────────────────┐  │
+│  │       border           │  │
+│  │  ┌──────────────────┐  │  │
+│  │  │     padding      │  │  │
+│  │  │  ┌────────────┐  │  │  │
+│  │  │  │  content   │  │  │  │
+│  │  │  └────────────┘  │  │  │
+│  │  └──────────────────┘  │  │
+│  └────────────────────────┘  │
+└──────────────────────────────┘
+```
+
+```css
+.box {
+  width: 200px;           /* 内容区宽度 */
+  padding: 20px;          /* 内边距 */
+  border: 2px solid #000; /* 边框 */
+  margin: 10px;           /* 外边距 */
+
+  /* 标准盒模型：width = 内容区宽度 */
+  /* border-box：width 包含 padding + border */
+  box-sizing: border-box;
+}
+```
+
+**重要**：建议全局设置 `box-sizing: border-box`：
+
+```css
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+```
+
+## 颜色与单位
+
+### 颜色表示
+
+```css
+.color-examples {
+  color: red;                    /* 命名颜色 */
+  color: #ff0000;                /* 十六进制 */
+  color: #f00;                   /* 简写 */
+  color: rgb(255, 0, 0);         /* RGB */
+  color: rgba(255, 0, 0, 0.5);  /* RGBA（带透明度） */
+  color: hsl(0, 100%, 50%);     /* HSL */
+  color: hsla(0, 100%, 50%, 0.5); /* HSLA */
+  color: oklch(0.6, 0.25, 30);   /* OKLCH（更广色域） */
+}
+```
+
+### CSS 单位
+
+| 单位 | 类型 | 说明 |
+|------|------|------|
+| `px` | 绝对 | 像素 |
+| `em` | 相对 | 相对于父元素字体大小 |
+| `rem` | 相对 | 相对于根元素字体大小 |
+| `%` | 相对 | 相对于父元素同属性值 |
+| `vw` | 视口 | 视口宽度的 1% |
+| `vh` | 视口 | 视口高度的 1% |
+| `vmin` | 视口 | `vw` 和 `vh` 中较小的 |
+| `vmax` | 视口 | `vw` 和 `vh` 中较大的 |
+| `ch` | 相对 | 数字 "0" 的宽度 |
+| `fr` | Grid | Grid 剩余空间分配单位 |
+
+```css
+.unit-examples {
+  font-size: 16px;
+  padding: 1em;        /* = 16px */
+  margin: 2rem;        /* = 32px（相对于根字体） */
+  width: 50%;          /* 父元素宽度的一半 */
+  height: 100vh;       /* 全屏高度 */
+  max-width: 1200px;
+  font-size: clamp(14px, 2vw, 20px); /* 响应式字号 */
+}
+```
+
+## Flexbox 布局
+
+Flexbox 是一维布局模型，适合行或列的排列。
+
+```css
+.container {
+  display: flex;           /* 启用 Flexbox */
+  flex-direction: row;     /* row | column | row-reverse | column-reverse */
+  flex-wrap: wrap;         /* nowrap | wrap | wrap-reverse */
+  justify-content: center; /* 主轴对齐 */
+  align-items: center;     /* 交叉轴对齐 */
+  gap: 16px;               /* 间距 */
+}
+
+.item {
+  flex: 1;                 /* flex-grow flex-shrink flex-basis */
+  flex: 0 0 200px;         /* 不伸缩，固定 200px */
+  align-self: flex-end;    /* 单独对齐 */
+  order: -1;               /* 排序 */
+}
+```
+
+### justify-content 取值
+
+```
+flex-start     ┌──┬──┬──┐
+center         ┌──┬──┬──┐
+flex-end       ┌──┬──┬──┐
+space-between  ┌──┐──┌──┐──┌──┐
+space-around   ┌──┐──┌──┐──┌──┐
+space-evenly   ┌──┐──┌──┐──┌──┐
+```
+
+## Grid 布局
+
+Grid 是二维布局模型，同时处理行和列。
+
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;  /* 三列 */
+  grid-template-rows: auto 200px auto;  /* 三行 */
+  gap: 16px;                            /* 间距 */
+}
+
+/* 命名区域 */
+.grid-container {
+  grid-template-areas:
+    "header header header"
+    "sidebar main aside"
+    "footer footer footer";
+}
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+
+/* 跨行跨列 */
+.featured {
+  grid-column: 1 / -1;  /* 从第一列到最后一列 */
+  grid-row: span 2;     /* 跨越两行 */
+}
+
+/* auto-fill 与 auto-fit */
+.grid-container {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+```
+
+## 定位
+
+```css
+/* 静态定位（默认） */
+.static { position: static; }
+
+/* 相对定位：相对自身原来位置偏移 */
+.relative {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+/* 绝对定位：相对于最近的定位祖先 */
+.absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* 固定定位：相对于视口 */
+.fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* 粘性定位：滚动到阈值后固定 */
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+```
+
+### z-index 堆叠
+
+```css
+.layer-1 { z-index: 1; }    /* 底层 */
+.layer-2 { z-index: 10; }   /* 中层 */
+.layer-3 { z-index: 100; }  /* 顶层 */
+```
+
+## 响应式设计
+
+### 媒体查询
+
+```css
+/* 手机（默认） */
+.container { padding: 16px; }
+
+/* 平板 ≥ 768px */
+@media (min-width: 768px) {
+  .container { padding: 24px; }
+}
+
+/* 桌面 ≥ 1024px */
+@media (min-width: 1024px) {
+  .container {
+    padding: 32px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+/* 大屏 ≥ 1440px */
+@media (min-width: 1440px) {
+  .container { max-width: 1200px; }
+}
+
+/* 深色模式 */
+@media (prefers-color-scheme: dark) {
+  body { background: #1a1a2e; color: #e0e0e0; }
+}
+
+/* 减少动效 */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; }
+}
+
+/* 打印样式 */
+@media print {
+  nav { display: none; }
+}
+```
+
+### 移动端优先 vs 桌面端优先
+
+```css
+/* 移动端优先（推荐）：用 min-width */
+.mobile-first {
+  font-size: 14px;         /* 手机 */
+}
+@media (min-width: 768px) {
+  .mobile-first { font-size: 16px; }  /* 平板+ */
+}
+
+/* 桌面端优先：用 max-width */
+.desktop-first {
+  font-size: 18px;         /* 桌面 */
+}
+@media (max-width: 767px) {
+  .desktop-first { font-size: 14px; } /* 手机 */
+}
+```
+
+## 常见 CSS 属性
+
+### 文本样式
+
+```css
+.text-styling {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  font-weight: 400;        /* 100-900 */
+  font-style: normal;      /* normal | italic */
+  line-height: 1.6;
+  text-align: center;      /* left | center | right | justify */
+  text-decoration: none;   /* none | underline | line-through */
+  text-transform: uppercase; /* uppercase | lowercase | capitalize */
+  letter-spacing: 1px;     /* 字间距 */
+  word-spacing: 2px;       /* 词间距 */
+  white-space: nowrap;     /* 不换行 */
+  text-overflow: ellipsis; /* 溢出省略号 */
+  overflow: hidden;
+  word-break: break-all;   /* 断词 */
+}
+```
+
+### 背景与边框
+
+```css
+.background-example {
+  background-color: #f0f0f0;
+  background-image: url('bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;  /* cover | contain | auto */
+
+  /* 简写 */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  /* 多重背景 */
+  background:
+    url('overlay.png') no-repeat center,
+    linear-gradient(180deg, #fff, #f0f0f0);
+
+  /* 边框 */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  /* 阴影 */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+  /* 透明 */
+  opacity: 0.8;
+}
+```
+
+## 过渡与动画
+
+```css
+/* 过渡 */
+.button {
+  background: blue;
+  color: white;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background: darkblue;
+  transform: translateY(-2px);
+}
+
+/* 关键帧动画 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animated {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* 关键帧动画进阶 */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-20px); }
+}
+
+.bouncing {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+/* animation 完整属性 */
+.element {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+  /* 简写 */
+  animation: fadeIn 0.5s ease-out 0.2s 1 normal backwards;
+}
+```
+
+## CSS 变量
+
+```css
+:root {
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --text: #1a1a2e;
+  --bg: #ffffff;
+  --radius: 8px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.button {
+  background: var(--primary);
+  color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.button:hover {
+  background: var(--primary-dark);
+}
+
+/* JS 修改变量 */
+/* document.documentElement.style.setProperty('--primary', '#ef4444'); */
+```
+
+## 常见布局模式
+
+### 居中
+
+```css
+/* 水平居中 */
+.center-horizontal {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 垂直居中（Flexbox） */
+.center-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* 绝对定位居中 */
+.center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Grid 居中 */
+.center-grid {
+  display: grid;
+  place-items: center;
+}
+```
+
+### 两栏布局
+
+```css
+.two-column {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+}
+```
+
+### 圣杯布局
+
+```css
+.holy-grail {
+  display: grid;
+  grid-template:
+    "header  header" auto
+    "sidebar main" 1fr
+    "footer  footer" auto
+    / 200px 1fr;
+  min-height: 100vh;
+  gap: 0;
+}
+.holy-grail header  { grid-area: header; }
+.holy-grail nav     { grid-area: sidebar; }
+.holy-grail main    { grid-area: main; }
+.holy-grail footer  { grid-area: footer; }
+```
+
+## CSS 优先级
+
+从低到高：
+
+1. 浏览器默认样式
+2. 继承的样式
+3. 通用选择器 `*`
+4. 元素选择器 `div`, `p`
+5. 类、属性、伪类选择器 `.class`, `[attr]`, `:hover`
+6. ID 选择器 `#id`
+7. 行内样式 `style="..."`
+8. `!important`（尽可能避免使用）
+
+```
+优先级计算：
+#id    = 0,1,0,0
+.class = 0,0,1,0
+div    = 0,0,0,1
+
+#nav .item a:hover = 0,1,2,1
+```
+
+## 最佳实践
+
+1. **使用 reset 或 normalize**：统一不同浏览器的默认样式
+2. **简写属性**：使用 `margin`、`padding`、`background` 等简写
+3. **避免 `!important`**：通过提高优先级解决，而非覆盖
+4. **使用 class 而非 ID 选择样式**：class 可复用，优先级更易管理
+5. **移动端优先**：先写手机样式，再用 `min-width` 媒体查询扩展
+6. **使用 CSS 变量**：统一管理主题色、间距等常量
+7. **避免冗余选择器**：`.container .wrapper .content p` → 简化
+8. **善用 `gap`**：替代 `margin` 处理 Flexbox/Grid 子元素间距

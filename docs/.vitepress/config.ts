@@ -21,9 +21,8 @@ export default defineConfig({
     logo: '/logo.svg',
 
     nav: [
-      { text: '指南', link: '/guide/', activeMatch: '/guide/' },
-      { text: 'API 参考', link: '/api/', activeMatch: '/api/' },
-      { text: '高级', link: '/advanced/', activeMatch: '/advanced/' },
+      { text: '教程', link: '/tutorials/', activeMatch: '/tutorials/' },
+      { text: '部署', link: '/guide/deployment' },
       {
         text: '版本',
         items: [

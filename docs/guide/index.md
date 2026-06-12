@@ -1,3 +1,3 @@
-# 指南
+# 平台指南
 
-欢迎使用 Developer Doc Platform。
+关于本平台的配置与部署说明。
