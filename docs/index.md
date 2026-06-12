@@ -14,7 +14,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /guide/getting-started
+      link: /guide/
     - theme: alt
       text: 在 GitHub 查看
       link: https://github.com/mathzimu/develop_doc_platfrom
