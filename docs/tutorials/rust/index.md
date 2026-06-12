@@ -313,4 +313,200 @@ cargo test
 cargo fmt           # 格式化代码
 cargo clippy        # 代码检查
 cargo add serde     # 添加依赖
+
+---
+
+# 企业级实践
+
+## 项目结构
+
+```
+myapp/
+├── Cargo.toml
+├── src/
+│   ├── main.rs          # 入口
+│   ├── config.rs        # 配置
+│   ├── api/             # API 层
+│   │   ├── mod.rs
+│   │   ├── routes.rs
+│   │   └── errors.rs
+│   ├── domain/          # 领域层
+│   │   ├── mod.rs
+│   │   └── models.rs
+│   ├── infrastructure/  # 基础设施
+│   │   ├── mod.rs
+│   │   ├── db.rs
+│   │   └── logging.rs
+│   └── bin/             # 二进制入口
+├── tests/
+└── migrations/
+```
+
+## Actix-Web 生产级 API
+
+```rust
+use actix_web::{web, App, HttpServer, HttpRequest, HttpResponse, middleware};
+use serde::{Deserialize, Serialize};
+use sqlx::PgPool;
+use tracing_actix_web::TracingLogger;
+use std::sync::Arc;
+
+#[derive(Serialize)]
+struct User {
+    id: i32,
+    name: String,
+    email: String,
+}
+
+#[derive(Deserialize)]
+struct Pagination {
+    page: Option<i32>,
+    size: Option<i32>,
+}
+
+async fn list_users(
+    pool: web::Data<PgPool>,
+    query: web::Query<Pagination>,
+) -> Result<HttpResponse, actix_web::Error> {
+    let page = query.page.unwrap_or(1);
+    let size = query.size.unwrap_or(20);
+    let offset = (page - 1) * size;
+
+    let users = sqlx::query_as::<_, User>(
+        "SELECT id, name, email FROM users LIMIT $1 OFFSET $2"
+    )
+    .bind(size)
+    .bind(offset)
+    .fetch_all(pool.get_ref())
+    .await
+    .map_err(|e| {
+        tracing::error!("Database error: {}", e);
+        actix_web::error::ErrorInternalServerError("database error")
+    })?;
+
+    Ok(HttpResponse::Ok().json(users))
+}
+
+#[actix_web::main]
+async fn main() -> std::io::Result<()> {
+    tracing_subscriber::fmt()
+        .with_env_filter("info")
+        .init();
+
+    let pool = PgPool::connect(&std::env::var("DATABASE_URL").unwrap())
+        .await
+        .expect("Failed to connect to database");
+
+    HttpServer::new(move || {
+        App::new()
+            .app_data(web::Data::new(pool.clone()))
+            .wrap(TracingLogger::default())
+            .configure(configure_routes)
+    })
+    .bind("0.0.0.0:8080")?
+    .run()
+    .await
+}
+
+fn configure_routes(cfg: &mut web::ServiceConfig) {
+    cfg.service(
+        web::scope("/api/v1")
+            .route("/users", web::get().to(list_users))
+            .route("/users", web::post().to(create_user))
+    );
+}
+```
+
+## 错误处理
+
+```rust
+use std::fmt;
+use actix_web::{HttpResponse, ResponseError};
+
+#[derive(Debug)]
+pub enum AppError {
+    NotFound(String),
+    Validation(String),
+    Database(String),
+    Unauthorized,
+    Internal(String),
+}
+
+impl fmt::Display for AppError {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            AppError::NotFound(msg) => write!(f, "Not found: {}", msg),
+            AppError::Validation(msg) => write!(f, "Validation: {}", msg),
+            AppError::Database(msg) => write!(f, "Database: {}", msg),
+            AppError::Unauthorized => write!(f, "Unauthorized"),
+            AppError::Internal(msg) => write!(f, "Internal: {}", msg),
+        }
+    }
+}
+
+impl ResponseError for AppError {
+    fn error_response(&self) -> HttpResponse {
+        match self {
+            AppError::NotFound(msg) => HttpResponse::NotFound().json(serde_json::json!({
+                "error": "NOT_FOUND",
+                "message": msg,
+            })),
+            AppError::Validation(msg) => HttpResponse::BadRequest().json(serde_json::json!({
+                "error": "VALIDATION_ERROR",
+                "message": msg,
+            })),
+            AppError::Unauthorized => HttpResponse::Unauthorized().json(serde_json::json!({
+                "error": "UNAUTHORIZED",
+                "message": "需要登录",
+            })),
+            _ => HttpResponse::InternalServerError().json(serde_json::json!({
+                "error": "INTERNAL_ERROR",
+                "message": "服务器内部错误",
+            })),
+        }
+    }
+}
+```
+
+## 配置管理
+
+```rust
+// config.rs
+use config::{Config, ConfigError, Environment, File};
+use serde::Deserialize;
+
+#[derive(Debug, Deserialize, Clone)]
+pub struct AppConfig {
+    pub database_url: String,
+    pub redis_url: String,
+    pub jwt_secret: String,
+    pub server: ServerConfig,
+    pub log: LogConfig,
+}
+
+#[derive(Debug, Deserialize, Clone)]
+pub struct ServerConfig {
+    pub host: String,
+    pub port: u16,
+    pub workers: usize,
+}
+
+#[derive(Debug, Deserialize, Clone)]
+pub struct LogConfig {
+    pub level: String,
+    pub json: bool,
+}
+
+impl AppConfig {
+    pub fn new() -> Result<Self, ConfigError> {
+        let builder = Config::builder()
+            .add_source(File::with_name("config/default"))
+            .add_source(File::with_name("config/production").required(false))
+            .add_source(Environment::with_prefix("APP"))
+            .build()?;
+        builder.try_deserialize()
+    }
+}
+```
+
 ```

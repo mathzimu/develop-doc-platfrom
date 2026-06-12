@@ -297,3 +297,140 @@ set -u    # 使用未定义变量时报错
 # 行数统计
 find . -name "*.ts" -exec wc -l {} + | tail -1
 ```
+
+---
+
+# 企业级实践
+
+## Shell 脚本规范
+
+```bash
+#!/usr/bin/env bash
+# 企业级 Shell 脚本模板
+set -euo pipefail   # 严格模式
+IFS=$'\n\t'
+
+# 颜色输出
+readonly RED='\033[0;31m'
+readonly GREEN='\033[0;32m'
+readonly YELLOW='\033[1;33m'
+readonly NC='\033[0m'
+
+log_info()    { echo -e "${GREEN}[INFO]${NC} $*"; }
+log_warn()    { echo -e "${YELLOW}[WARN]${NC} $*"; }
+log_error()   { echo -e "${RED}[ERROR]${NC} $*"; }
+
+# 使用说明
+usage() {
+    cat <<EOF
+Usage: $(basename "$0") [options]
+
+Options:
+  -e, --env ENV     环境 (dev/staging/prod)
+  -t, --tag TAG     镜像标签
+  -h, --help        显示帮助
+EOF
+    exit 1
+}
+
+# 参数解析
+parse_args() {
+    while [[ $# -gt 0 ]]; do
+        case "$1" in
+            -e|--env) ENV="$2"; shift 2 ;;
+            -t|--tag) TAG="$2"; shift 2 ;;
+            -h|--help) usage ;;
+            *) log_error "未知参数: $1"; usage ;;
+        esac
+    done
+}
+
+# 错误处理
+cleanup() {
+    log_info "清理临时文件..."
+    rm -rf /tmp/deploy-*
+}
+trap cleanup EXIT
+```
+
+## CI/CD 集成
+
+```yaml
+# .github/workflows/deploy.yml
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 部署到服务器
+        env:
+          HOST: ${{ secrets.DEPLOY_HOST }}
+          USERNAME: ${{ secrets.DEPLOY_USER }}
+          SSH_KEY: ${{ secrets.DEPLOY_KEY }}
+        run: |
+          # 使用 SSH 密钥登录并部署
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+          ssh -o StrictHostKeyChecking=no $USERNAME@$HOST << 'EOF'
+            set -euo pipefail
+            cd /app
+            git pull origin main
+            docker compose pull
+            docker compose up -d --force-recreate
+            docker system prune -f
+            echo "部署完成"
+          EOF
+```
+
+## 运维常用脚本
+
+```bash
+# 日志轮转与归档
+#!/bin/bash
+BACKUP_DIR="/backup/$(date +%Y%m%d)"
+LOG_DIR="/var/log/myapp"
+RETENTION_DAYS=30
+
+mkdir -p "$BACKUP_DIR"
+
+for log in "$LOG_DIR"/*.log; do
+    if [[ -f "$log" ]] && [[ $(stat -f%m "$log") -gt 86400 ]]; then
+        gzip -c "$log" > "$BACKUP_DIR/$(basename "$log").$(date +%H%M%S).gz"
+        : > "$log"  # 清空原文件
+        log_info "已归档: $log"
+    fi
+done
+
+# 删除过期备份
+find /backup -type d -mtime +$RETENTION_DAYS -exec rm -rf {} +
+```
+
+## 监控健康检查
+
+```bash
+#!/bin/bash
+# healthcheck.sh
+ENDPOINT="http://localhost:3000/health"
+THRESHOLD=3
+FAIL_COUNT=0
+
+for i in $(seq 1 $THRESHOLD); do
+    if curl -sf "$ENDPOINT" > /dev/null 2>&1; then
+        log_info "Health check passed"
+        exit 0
+    fi
+    FAIL_COUNT=$((FAIL_COUNT + 1))
+    sleep 5
+done
+
+log_error "Health check failed after $FAIL_COUNT attempts"
+# 触发告警
+curl -X POST -H "Content-Type: application/json" \
+    -d "{\"text\": \"服务健康检查失败: $ENDPOINT\"}" \
+    "$WEBHOOK_URL"
+exit 1
+```
+

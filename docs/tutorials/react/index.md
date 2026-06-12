@@ -352,3 +352,347 @@ import styles from './Button.module.css'
    ```
 5. **避免不必要的状态提升**：状态尽量下沉
 6. **key 属性**：列表项使用稳定且唯一的 key
+
+---
+
+# 企业级实践
+
+## 项目结构
+
+```
+src/
+├── app/                  # 应用层
+│   ├── App.tsx
+│   ├── router.tsx
+│   └── providers.tsx      # Context 提供者组合
+├── features/             # 功能模块
+│   ├── auth/
+│   │   ├── api.ts
+│   │   ├── components/
+│   │   ├── hooks.ts
+│   │   ├── types.ts
+│   │   └── index.ts
+│   └── dashboard/
+├── shared/               # 共享模块
+│   ├── api/              # 通用 API 客户端
+│   ├── components/       # 通用组件
+│   ├── hooks/            # 通用 Hooks
+│   ├── utils/            # 工具函数
+│   └── types/            # 全局类型
+├── layouts/              # 布局组件
+├── styles/               # 全局样式
+└── test/                 # 测试工具
+```
+
+## API 层封装
+
+```ts
+// shared/api/client.ts
+import { create } from 'apisauce'
+import { useAuthStore } from '@/features/auth/store'
+
+const api = create({
+  baseURL: import.meta.env.VITE_API_URL,
+  timeout: 30000,
+  headers: { 'Content-Type': 'application/json' },
+})
+
+// 请求拦截：注入 Token
+api.addRequestTransform(request => {
+  const token = useAuthStore.getState().token
+  if (token) {
+    request.headers!['Authorization'] = `Bearer ${token}`
+  }
+})
+
+// 响应拦截：统一错误处理
+api.addResponseTransform(response => {
+  if (response.status === 401) {
+    useAuthStore.getState().logout()
+    window.location.href = '/login'
+  }
+  if (response.status === 403) {
+    navigate('/forbidden')
+  }
+})
+
+// 类型安全封装
+async function get<T>(url: string, params?: Record<string, unknown>): Promise<T> {
+  const response = await api.get<T>(url, params)
+  if (!response.ok) throw new ApiError(response)
+  return response.data!
+}
+
+export const apiClient = { get, post, put, del }
+```
+
+## 全局状态 + 服务端状态
+
+```ts
+// 服务端状态使用 TanStack Query
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
+
+// 查询
+function useUsers(params: PaginationParams) {
+  return useQuery({
+    queryKey: ['users', params],
+    queryFn: () => api.get<User[]>('/users', params),
+    staleTime: 30_000,        // 30秒内不重新请求
+    gcTime: 5 * 60_000,       // 5分钟缓存
+    retry: 3,                 // 失败重试 3 次
+    refetchOnWindowFocus: false,
+    placeholderData: keepPreviousData,  // 分页时保留旧数据
+  })
+}
+
+// 变更
+function useCreateUser() {
+  const queryClient = useQueryClient()
+
+  return useMutation({
+    mutationFn: (data: CreateUserDto) => api.post('/users', data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['users'] })
+      toast.success('创建成功')
+    },
+    onError: (error: ApiError) => {
+      toast.error(error.message)
+    },
+  })
+}
+
+// 乐观更新
+function useToggleTodo() {
+  const queryClient = useQueryClient()
+
+  return useMutation({
+    mutationFn: (id: string) => api.patch(`/todos/${id}`, { done: true }),
+    onMutate: async (id) => {
+      await queryClient.cancelQueries({ queryKey: ['todos'] })
+      const previous = queryClient.getQueryData(['todos'])
+      queryClient.setQueryData(['todos'], (old: Todo[]) =>
+        old.map(t => t.id === id ? { ...t, done: true } : t)
+      )
+      return { previous }
+    },
+    onError: (_, __, context) => {
+      queryClient.setQueryData(['todos'], context?.previous)
+      toast.error('操作失败')
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries({ queryKey: ['todos'] })
+    },
+  })
+}
+```
+
+## 表单处理
+
+```tsx
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+
+const schema = z.object({
+  email: z.string().email('请输入有效邮箱'),
+  password: z.string().min(8, '密码至少8位').max(128),
+  remember: z.boolean().optional(),
+})
+
+type FormData = z.infer<typeof schema>
+
+function LoginForm() {
+  const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<FormData>({
+    resolver: zodResolver(schema),
+    defaultValues: { remember: false },
+  })
+
+  const mutation = useLogin()
+
+  const onSubmit = (data: FormData) => {
+    mutation.mutate(data)
+  }
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <input {...register('email')} aria-invalid={!!errors.email} />
+      {errors.email && <span role="alert">{errors.email.message}</span>}
+
+      <input type="password" {...register('password')} />
+      {errors.password && <span>{errors.password.message}</span>}
+
+      <label>
+        <input type="checkbox" {...register('remember')} />
+        记住我
+      </label>
+
+      <button type="submit" disabled={isSubmitting}>
+        {isSubmitting ? '登录中...' : '登录'}
+      </button>
+    </form>
+  )
+}
+```
+
+## 权限管理
+
+```tsx
+function usePermissions() {
+  const { user } = useAuth()
+  const permissions = user?.permissions ?? []
+
+  return {
+    can: (action: string, resource: string) =>
+      permissions.includes(`${resource}:${action}`),
+    canAny: (actions: string[], resource: string) =>
+      actions.some(a => permissions.includes(`${resource}:${a}`)),
+    role: user?.role,
+    isAdmin: user?.role === 'admin',
+  }
+}
+
+// 权限组件
+function RequireAuth({ permissions, children }: Props) {
+  const { can } = usePermissions()
+  const hasAccess = permissions.some(p => can(p.action, p.resource))
+
+  if (!hasAccess) return <Navigate to="/forbidden" />
+  return <>{children}</>
+}
+
+// 使用
+<RequireAuth permissions={[{ action: 'edit', resource: 'users' }]}>
+  <UserEditPage />
+</RequireAuth>
+```
+
+## 国际化
+
+```tsx
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
+import Backend from 'i18next-http-backend'
+
+i18n.use(initReactI18next).use(Backend).init({
+  fallbackLng: 'zh-CN',
+  supportedLngs: ['zh-CN', 'en-US', 'ja-JP'],
+  ns: ['common', 'auth', 'dashboard'],
+  defaultNS: 'common',
+  interpolation: { escapeValue: false },
+  backend: {
+    loadPath: '/locales/{{lng}}/{{ns}}.json',
+  },
+})
+
+// 使用
+import { useTranslation } from 'react-i18next'
+function Welcome() {
+  const { t, i18n } = useTranslation('auth')
+  return <h1>{t('welcome', { name: user.name })}</h1>
+}
+```
+
+## 监控与性能
+
+```tsx
+// Web Vitals 上报
+import { onLCP, onFID, onCLS, onINP } from 'web-vitals'
+
+function reportWebVitals() {
+  onLCP(metric => sendToAnalytics('LCP', metric.value))
+  onFID(metric => sendToAnalytics('FID', metric.value))
+  onCLS(metric => sendToAnalytics('CLS', metric.value))
+  onINP(metric => sendToAnalytics('INP', metric.value))
+}
+
+// 组件 Profiler
+function onRenderCallback(
+  id: string,
+  phase: 'mount' | 'update',
+  actualDuration: number,
+) {
+  if (actualDuration > 16) {  // 超过一帧（60fps）
+    console.warn(`Slow render: ${id} took ${actualDuration}ms`)
+    sendToAnalytics('slow-render', { id, phase, duration: actualDuration })
+  }
+}
+
+<Profiler id="UserList" onRender={onRenderCallback}>
+  <UserList />
+</Profiler>
+```
+
+---
+
+## 生态全景
+
+```
+┌─────────────────────────────────────────────┐
+│              React 生态系统                    │
+├──────────────────┬──────────────────────────┤
+│   元框架          │  状态管理                 │
+│   Next.js        │  Zustand, Jotai          │
+│   Remix          │  Redux Toolkit           │
+│   Gatsby         │  XState                  │
+├──────────────────┼──────────────────────────┤
+│   数据获取        │  样式                    │
+│   TanStack Query │  Tailwind CSS            │
+│   SWR            │  styled-components       │
+│   RTK Query      │  CSS Modules             │
+├──────────────────┼──────────────────────────┤
+│   表单            │  测试                    │
+│   React Hook Form│  Testing Library         │
+│   Formik         │  Vitest                  │
+│   TanStack Form  │  Playwright              │
+├──────────────────┼──────────────────────────┤
+│   动画            │  组件库                  │
+│   Framer Motion  │  shadcn/ui               │
+│   React Spring   │  Radix UI                │
+│   GSAP           │  MUI, Ant Design         │
+└──────────────────┴──────────────────────────┘
+```
+
+### 元框架选型
+
+| 框架 | 路由 | 数据 | 部署 | 适用场景 |
+|------|------|------|------|---------|
+| **Next.js** | 文件路由 | RSC/SSR/SSG | Vercel | 全场景 |
+| **Remix** | 文件路由 | Loader/Action | Fly.io | 数据密集 |
+| **Gatsby** | 文件路由 | GraphQL | Netlify | 内容站点 |
+
+### 组件库决策
+
+```
+shadcn/ui (推荐) —— 基于 Radix + Tailwind，可复制、可定制
+Radix UI         —— 无样式、无障碍原语
+Ark UI           —— 无样式、Chakra UI 团队新作
+MUI             —— Material Design 完整实现
+Ant Design      —— 企业级、中后台首选
+Chakra UI       —— 主题系统强大
+Headless UI     —— Tailwind 团队无样式组件
+```
+
+### 全栈脚手架
+
+```sh
+# Next.js 全栈
+npx create-next-app@latest my-app --typescript --tailwind --app
+
+# 依赖
+npm install @tanstack/react-query zustand react-hook-form zod
+npm install @radix-ui/react-dialog @radix-ui/react-dropdown-menu
+npm install -D @playwright/test vitest @testing-library/react
+```
+
+### Monorepo 结构的 React 项目
+
+```
+apps/
+  web/        —— Next.js
+  admin/      —— React + Vite
+  mobile/     —— React Native
+packages/
+  ui/         —— 组件库
+  utils/      —— 工具函数
+  config/     —— ESLint/TypeScript 配置
+```

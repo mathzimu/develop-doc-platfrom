@@ -318,3 +318,304 @@ node --prof-process isolate-*.log > profile.txt
 6. **环境变量**：敏感信息使用环境变量，不硬编码
 7. **HTTPS**：生产环境强制使用 HTTPS
 8. **日志安全**：不记录密码、token 等敏感信息
+
+---
+
+# 企业级实践
+
+## 项目结构
+
+```
+src/
+├── main.ts              # 入口
+├── config/              # 配置
+├── middleware/          # 中间件
+├── routes/              # 路由
+├── controllers/        # 控制器
+├── services/           # 服务层
+├── repositories/       # 数据访问
+├── models/             # 数据模型
+├── validators/         # 数据验证
+├── utils/              # 工具
+├── types/              # 类型
+└── __tests__/
+```
+
+## Express 生产级配置
+
+```ts
+import express, { type Request, type Response, type NextFunction } from 'express'
+import helmet from 'helmet'
+import cors from 'cors'
+import rateLimit from 'express-rate-limit'
+import compression from 'compression'
+import { createLogger } from './utils/logger'
+import { errorHandler } from './middleware/errorHandler'
+
+const app = express()
+
+// 安全
+app.use(helmet())
+app.use(cors({
+  origin: process.env.ALLOWED_ORIGINS?.split(',') ?? '*',
+  credentials: true,
+}))
+
+// 限流
+app.use(rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  standardHeaders: true,
+  legacyHeaders: false,
+}))
+
+// 压缩
+app.use(compression())
+
+// 解析
+app.use(express.json({ limit: '10mb' }))
+app.use(express.urlencoded({ extended: true }))
+
+// 请求追踪
+app.use((req: Request, _res: Response, next: NextFunction) => {
+  req.id = crypto.randomUUID()
+  next()
+})
+
+// 路由
+app.use('/api/v1', routes)
+
+// 错误处理
+app.use(errorHandler)
+
+const server = app.listen(process.env.PORT ?? 3000, () => {
+  logger.info(`Server started on port ${process.env.PORT ?? 3000}`)
+})
+
+// 优雅关闭
+process.on('SIGTERM', () => {
+  logger.info('SIGTERM received, shutting down...')
+  server.close(() => {
+    db.disconnect()
+    process.exit(0)
+  })
+})
+```
+
+## 错误处理中间件
+
+```ts
+// middleware/errorHandler.ts
+import type { Request, Response, NextFunction } from 'express'
+import { ZodError } from 'zod'
+import { logger } from '../utils/logger'
+
+export class AppError extends Error {
+  constructor(
+    public statusCode: number,
+    public code: string,
+    message: string,
+    public details?: unknown,
+  ) {
+    super(message)
+    this.name = 'AppError'
+  }
+}
+
+export function errorHandler(
+  err: Error,
+  req: Request,
+  res: Response,
+  _next: NextFunction,
+) {
+  // Zod 验证错误
+  if (err instanceof ZodError) {
+    return res.status(400).json({
+      error: 'VALIDATION_ERROR',
+      message: '请求参数验证失败',
+      details: err.errors.map(e => ({
+        field: e.path.join('.'),
+        message: e.message,
+      })),
+    })
+  }
+
+  // 自定义错误
+  if (err instanceof AppError) {
+    return res.status(err.statusCode).json({
+      error: err.code,
+      message: err.message,
+      details: err.details,
+    })
+  }
+
+  // 未知错误
+  logger.error('Unhandled error', {
+    error: err.message,
+    stack: err.stack,
+    requestId: req.id,
+  })
+
+  return res.status(500).json({
+    error: 'INTERNAL_ERROR',
+    message: '服务器内部错误',
+    requestId: req.id,
+  })
+}
+```
+
+## 结构化日志
+
+```ts
+// utils/logger.ts
+import pino from 'pino'
+
+const logger = pino({
+  level: process.env.LOG_LEVEL ?? 'info',
+  transport: process.env.NODE_ENV === 'development'
+    ? { target: 'pino-pretty', options: { colorize: true } }
+    : undefined,
+  redact: {
+    paths: ['req.headers.authorization', 'req.body.password', 'res.headers["set-cookie"]'],
+    censor: '**[REDACTED]**',
+  },
+  serializers: {
+    req: (req) => ({
+      id: req.id,
+      method: req.method,
+      url: req.url,
+      ip: req.ip,
+    }),
+    res: (res) => ({
+      statusCode: res.statusCode,
+      duration: res.duration,
+    }),
+    err: pino.stdSerializers.err,
+  },
+})
+
+export { logger }
+```
+
+## 数据验证（Zod）
+
+```ts
+// validators/user.ts
+import { z } from 'zod'
+
+export const createUserSchema = z.object({
+  name: z.string().min(1).max(100),
+  email: z.string().email(),
+  age: z.number().int().min(0).max(150).optional(),
+  role: z.enum(['user', 'admin']).default('user'),
+})
+
+export const updateUserSchema = createUserSchema.partial()
+
+export const paginationSchema = z.object({
+  page: z.coerce.number().int().positive().default(1),
+  size: z.coerce.number().int().min(1).max(100).default(20),
+  sort: z.string().optional(),
+  search: z.string().optional(),
+})
+
+// 中间件
+function validate(schema: z.ZodSchema) {
+  return (req: Request, _res: Response, next: NextFunction) => {
+    try {
+      req.validated = schema.parse(req.body)
+      next()
+    } catch (error) {
+      next(error)
+    }
+  }
+}
+```
+
+---
+
+## 生态全景
+
+```
+┌──────────────────────────────────────────┐
+│           Node.js 生态系统                 │
+├──────────────────┬───────────────────────┤
+│   Web 框架        │   ORM                 │
+│   Express        │   Prisma              │
+│   Fastify        │   Drizzle ORM         │
+│   NestJS         │   TypeORM             │
+│   Hono           │   Sequelize           │
+│   Koa            │                       │
+├──────────────────┼───────────────────────┤
+│   认证            │  实时通信              │
+│   Passport.js    │   Socket.io           │
+│   Lucia          │   WebSockets          │
+│   next-auth      │   SSE                 │
+│   JWT            │   WebRTC              │
+├──────────────────┼───────────────────────┤
+│   测试            │  工具                 │
+│   Vitest         │   Zod                 │
+│   Playwright     │   date-fns            │
+│   Supertest      │   Lodash              │
+│   Testcontainers │   Pino                │
+├──────────────────┼───────────────────────┤
+│   队列            │  监控                 │
+│   BullMQ         │   Sentry              │
+│   Bee-Queue      │   OpenTelemetry       │
+│   Agenda         │   PM2                 │
+└──────────────────┴───────────────────────┘
+```
+
+### 框架选型
+
+| 框架 | 特点 | 适用 |
+|------|------|------|
+| **Express** | 最大社区、灵活 | 中小型 API |
+| **Fastify** | 高性能、Schema 验证 | API 网关、微服务 |
+| **NestJS** | 模块化、装饰器、DI | 企业级后端 |
+| **Hono** | 超轻量、多运行时 | Edge、Serverless |
+| **AdonisJS** | 全栈、Laravel 风格 | 全栈应用 |
+
+### ORM 选型
+
+```ts
+// Prisma —— 类型安全、自动迁移（推荐）
+// schema.prisma 定义模型 → prisma generate 生成客户端
+
+// Drizzle ORM —— SQL 风格、零抽象
+await db.select().from(users).where(eq(users.email, email))
+
+// TypeORM —— 装饰器风格
+@Entity()
+class User {
+  @PrimaryGeneratedColumn()
+  id: number
+}
+```
+
+### 运行时生态
+
+```js
+// Edge Runtime —— 边缘计算
+// Vercel Edge Functions, Cloudflare Workers
+
+// Serverless
+// AWS Lambda, Vercel Functions, Netlify Functions
+
+// 进程管理
+PM2          —— 进程守护、集群模式（推荐）
+Forever      —— 简单进程守护
+nodemon      —— 开发热重启
+
+// 容器化
+Docker + Node.js  —— 标准部署方式
+```
+
+### 包管理
+
+```sh
+# 开发工作流
+npm init @fastify/my-app    # Fastify 脚手架
+npx create-nest-app my-app   # NestJS 脚手架
+npx prisma init              # Prisma 初始化
+```

@@ -297,3 +297,129 @@ g++ -c file1.cpp -o file1.o
 g++ -c file2.cpp -o file2.o
 g++ file1.o file2.o -o app
 ```
+
+---
+
+# 企业级实践
+
+## CMake 构建系统
+
+```cmake
+# CMakeLists.txt
+cmake_minimum_required(VERSION 3.20)
+project(MyApp VERSION 1.0.0 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# 依赖
+find_package(fmt REQUIRED)
+find_package(spdlog REQUIRED)
+find_package(Boost REQUIRED COMPONENTS json)
+
+# 源码
+file(GLOB_RECURSE SOURCES src/*.cpp)
+file(GLOB_RECURSE HEADERS include/*.h)
+
+# 库
+add_library(mycore ${SOURCES})
+target_include_directories(mycore PUBLIC include)
+target_link_libraries(mycore PRIVATE fmt::fmt spdlog::spdlog Boost::json)
+
+# 测试
+enable_testing()
+add_subdirectory(tests)
+
+# 安装
+install(TARGETS mycore DESTINATION lib)
+install(FILES ${HEADERS} DESTINATION include)
+```
+
+## 日志系统
+
+```cpp
+#include <spdlog/spdlog.h>
+#include <spdlog/sinks/rotating_file_sink.h>
+#include <spdlog/sinks/stdout_color_sinks.h>
+
+class Logger {
+public:
+    static void init() {
+        auto console = std::make_shared<spdlog::sinks::stdout_color_sink_mt>();
+        console->set_pattern("[%Y-%m-%d %H:%M:%S.%e] [%^%l%$] [%t] %v");
+
+        auto file = std::make_shared<spdlog::sinks::rotating_file_sink_mt>(
+            "logs/app.log", 10 * 1024 * 1024, 5
+        );
+        file->set_pattern("[%Y-%m-%d %H:%M:%S.%e] [%l] [%t] [%s:%#] %v");
+
+        auto logger = std::make_shared<spdlog::logger>("app",
+            spdlog::sinks_init_list{console, file});
+        logger->set_level(spdlog::level::info);
+        spdlog::set_default_logger(logger);
+    }
+};
+
+// 使用
+spdlog::info("Server started on port {}", port);
+spdlog::warn("High memory usage: {}%", usage);
+spdlog::error("Failed to connect to database: {}", err.what());
+```
+
+## 单元测试（Google Test）
+
+```cpp
+// tests/test_user_service.cpp
+#include <gtest/gtest.h>
+#include <gmock/gmock.h>
+#include "user_service.h"
+
+class MockUserRepository : public UserRepository {
+public:
+    MOCK_METHOD(User, findById, (int id), (override));
+    MOCK_METHOD(std::vector<User>, findAll, (), (override));
+};
+
+TEST(UserServiceTest, GetUserById) {
+    MockUserRepository mock_repo;
+    EXPECT_CALL(mock_repo, findById(1))
+        .WillOnce(testing::Return(User{1, "Alice", "alice@test.com"}));
+
+    UserService service(&mock_repo);
+    auto user = service.getUserById(1);
+    EXPECT_EQ(user.name, "Alice");
+}
+
+int main(int argc, char **argv) {
+    testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
+```
+
+## 性能分析
+
+```cpp
+// 使用 perf 进行 CPU 分析
+// perf record -g ./myapp
+// perf report -g
+
+// 使用 Google Benchmark
+#include <benchmark/benchmark.h>
+
+static void BM_StringCreation(benchmark::State& state) {
+    for (auto _ : state) {
+        std::string created("hello");
+        benchmark::DoNotOptimize(created);
+    }
+}
+BENCHMARK(BM_StringCreation);
+
+BENCHMARK_MAIN();
+
+// AddressSanitizer 内存检测
+// 编译: g++ -fsanitize=address -g -O1 -fno-omit-frame-pointer
+// UBSan: g++ -fsanitize=undefined
+// ThreadSanitizer: g++ -fsanitize=thread
+```
+

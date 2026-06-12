@@ -350,4 +350,293 @@ import { useCounterStore } from '@/stores/counter'
 const store = useCounterStore()
 store.count     // 直接访问
 store.increment()
+
+---
+
+# 企业级实践
+
+## 项目结构
+
+```
+src/
+├── app/
+│   ├── App.vue
+│   └── router.ts
+├── features/
+│   ├── auth/
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── composables/
+│   │   ├── stores/
+│   │   └── types.ts
+│   └── dashboard/
+├── shared/
+│   ├── components/     # 通用组件
+│   ├── composables/    # 通用组合式函数
+│   └── utils/
+├── layouts/
+└── styles/
+```
+
+## API 层
+
+```ts
+// shared/api/http.ts
+import axios, { AxiosError, type AxiosInstance } from 'axios'
+import { useAuthStore } from '@/features/auth/stores'
+import { useToast } from '@/shared/composables/useToast'
+
+const http: AxiosInstance = axios.create({
+  baseURL: import.meta.env.VITE_API_URL,
+  timeout: 30000,
+})
+
+http.interceptors.request.use(config => {
+  const token = useAuthStore.getState().token
+  if (token) config.headers.Authorization = `Bearer ${token}`
+  return config
+})
+
+http.interceptors.response.use(
+  response => response,
+  (error: AxiosError) => {
+    if (error.response?.status === 401) {
+      useAuthStore.getState().logout()
+      router.push('/login')
+    }
+    return Promise.reject(error)
+  }
+)
+
+// 类型安全封装
+export function useApi() {
+  const get = async <T>(url: string, params?: Record<string, unknown>): Promise<T> => {
+    const { data } = await http.get<T>(url, { params })
+    return data
+  }
+  const post = async <T>(url: string, body?: unknown): Promise<T> => {
+    const { data } = await http.post<T>(url, body)
+    return data
+  }
+  return { get, post, put, del }
+}
+```
+
+## 服务端状态管理
+
+```ts
+// 使用 TanStack Query（Vue Query）
+import { useQuery, useMutation, useQueryClient } from '@tanstack/vue-query'
+
+export function useUsers(params: Ref<PaginationParams>) {
+  return useQuery({
+    queryKey: ['users', params],
+    queryFn: () => api.get<User[]>('/users', { ...params.value }),
+    keepPreviousData: true,
+    staleTime: 30_000,
+  })
+}
+
+export function useCreateUser() {
+  const queryClient = useQueryClient()
+  const toast = useToast()
+
+  return useMutation({
+    mutationFn: (data: CreateUserDto) => api.post('/users', data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['users'] })
+      toast.success('创建成功')
+    },
+    onError: (error: Error) => toast.error(error.message),
+  })
+}
+```
+
+## 组合式函数（Composables）模式
+
+```ts
+// 表单处理
+export function useForm<T extends Record<string, unknown>>(initial: T) {
+  const form = reactive({ ...initial })
+  const errors = ref<Partial<Record<keyof T, string>>>({})
+  const isSubmitting = ref(false)
+
+  const validate = (schema: Record<string, (v: unknown) => string | null>) => {
+    for (const [key, validator] of Object.entries(schema)) {
+      const error = validator(form[key as keyof T])
+      if (error) errors.value[key as keyof T] = error
+    }
+    return Object.keys(errors.value).length === 0
+  }
+
+  const reset = () => Object.assign(form, initial)
+
+  return { form, errors, isSubmitting, validate, reset, toRaw: () => toRaw(form) }
+}
+
+// 分页
+export function usePagination(fetchFn: (params: PaginationParams) => Promise<PageResult>) {
+  const page = ref(1)
+  const size = ref(20)
+  const total = ref(0)
+  const items = ref<unknown[]>([])
+  const loading = ref(false)
+
+  const load = async () => {
+    loading.value = true
+    try {
+      const result = await fetchFn({ page: page.value, size: size.value })
+      items.value = result.items
+      total.value = result.total
+    } finally {
+      loading.value = false
+    }
+  }
+
+  watch([page, size], load, { immediate: true })
+
+  return { page, size, total, items, loading, load }
+}
+```
+
+## 权限指令
+
+```ts
+// 自定义指令：v-permission
+app.directive('permission', {
+  mounted(el: HTMLElement, binding) {
+    const { value } = binding
+    const permissions = useAuthStore().permissions
+    const hasPermission = permissions.some(p =>
+      value ? p.startsWith(value) : true
+    )
+    if (!hasPermission) {
+      el.parentNode?.removeChild(el)
+    }
+  },
+})
+
+// 使用
+<button v-permission="'users:edit'">编辑用户</button>
+```
+
+## 测试策略
+
+```ts
+// Vitest + Vue Test Utils
+import { describe, it, expect, vi } from 'vitest'
+import { mount } from '@vue/test-utils'
+import { createTestingPinia } from '@pinia/testing'
+import UserList from './UserList.vue'
+
+describe('UserList', () => {
+  it('renders users', async () => {
+    const wrapper = mount(UserList, {
+      global: {
+        plugins: [createTestingPinia({
+          initialState: {
+            users: {
+              items: [{ id: 1, name: 'Alice' }],
+              loading: false,
+            },
+          },
+        })],
+      },
+    })
+    expect(wrapper.text()).toContain('Alice')
+  })
+})
+```
+
+---
+
+## 生态全景
+
+```
+┌─────────────────────────────────────────┐
+│            Vue 生态系统                    │
+├──────────────────┬──────────────────────┤
+│   元框架          │  状态管理              │
+│   Nuxt 3         │  Pinia                │
+│   VitePress      │  Vuex (维护模式)       │
+│   Quasar         │                       │
+├──────────────────┼──────────────────────┤
+│   组件库          │  工具                 │
+│   Element Plus   │  VueUse               │
+│   Naive UI       │  Vue Router           │
+│   Ant Design Vue │  TanStack Vue Query   │
+│   PrimeVue       │  Vue-i18n             │
+│   Radix Vue      │  Vee-Validate         │
+├──────────────────┼──────────────────────┤
+│   构建            │  测试                 │
+│   Vite           │  Vitest               │
+│   UnoCSS         │  Vue Test Utils       │
+│   Nuxt DevTools  │  Cypress              │
+└──────────────────┴──────────────────────┘
+```
+
+### 元框架选型
+
+| 框架 | 特点 | 适用 |
+|------|------|------|
+| **Nuxt 3** | 全栈、SSR/SSG、自动导入 | 生产应用 |
+| **VitePress** | 文档站点 | 技术文档 |
+| **Quasar** | 跨平台（Web/Mobile/Desktop） | 多端项目 |
+| **VuePress** | 文档站点（Vue 2） | 旧项目 |
+
+### 组件库推荐
+
+```ts
+// Element Plus —— 中后台首选
+import { ElButton, ElTable, ElDialog } from 'element-plus'
+
+// Naive UI —— TypeScript 友好、按需加载
+import { NButton, NDataTable } from 'naive-ui'
+
+// Radix Vue —— 无样式无障碍组件
+import { Dialog, DropdownMenu } from 'radix-vue'
+```
+
+### 工具库
+
+```ts
+// VueUse —— 300+ 组合式函数
+import { useMouse, useDebounce, useLocalStorage } from '@vueuse/core'
+
+const { x, y } = useMouse()
+const storage = useLocalStorage('key', 'default')
+
+// Vue Router
+import { createRouter, createWebHistory } from 'vue-router'
+
+// Pinia
+import { defineStore } from 'pinia'
+
+// Vue-i18n
+import { createI18n } from 'vue-i18n'
+```
+
+### Nuxt 3 项目模板
+
+```sh
+npx nuxi init my-app
+cd my-app
+npm install
+npm run dev
+```
+
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+    '@vueuse/nuxt',
+    '@nuxtjs/i18n',
+  ],
+  devtools: { enabled: true },
+})
+```
+
+
 ```

@@ -309,3 +309,214 @@ import type { User } from './types'  // type-only import
 | `rootDir` | 源代码根目录 |
 | `declaration` | 生成 `.d.ts` 类型声明 |
 | `sourceMap` | 生成源码映射 |
+
+---
+
+# 企业级实践
+
+## 严格模式配置
+
+```json
+{
+  "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
+```
+
+## 声明文件（.d.ts）最佳实践
+
+```ts
+// 为第三方库编写声明
+declare module 'legacy-lib' {
+  export function doSomething(input: string): Promise<Result>
+
+  export interface Result {
+    id: number
+    data: unknown
+  }
+}
+
+// 全局类型
+declare global {
+  interface Window {
+    __APP_VERSION__: string
+    __PUBLIC_PATH__: string
+  }
+}
+
+// 类型推导辅助
+export type DeepPartial<T> = T extends object
+  ? { [P in keyof T]?: DeepPartial<T[P]> }
+  : T
+
+export type Nullable<T> = T | null | undefined
+
+export type Brand<T, B> = T & { __brand: B }
+type Email = Brand<string, 'Email'>
+type Phone = Brand<string, 'Phone'>
+```
+
+## Monorepo 类型共享
+
+```ts
+// packages/shared/src/types.ts
+export interface User {
+  id: string
+  email: string
+  role: 'admin' | 'user'
+}
+
+// packages/api/src/types.ts
+import type { User } from '@my/shared'
+export type { User }
+export interface ApiResponse<T> {
+  data: T
+  meta: { page: number; total: number }
+}
+
+// packages/web/src/types.ts
+import type { User } from '@my/shared'
+export type { User }
+```
+
+## 条件类型与映射类型
+
+```ts
+// 条件类型
+type IsString<T> = T extends string ? true : false
+type A = IsString<'hello'>  // true
+type B = IsString<42>       // false
+
+// infer 推导
+type ReturnType<T> = T extends (...args: any[]) => infer R ? R : never
+type Fn = (x: number) => string
+type R = ReturnType<Fn>  // string
+
+// 模板字面量类型
+type EventName = `on${Capitalize<string>}`
+type Events = 'click' | 'focus' | 'blur'
+type Handlers = `handle${Capitalize<Events>}`  // 'handleClick' | 'handleFocus' | 'handleBlur'
+```
+
+## 类型安全
+
+```ts
+// 品牌类型防止混淆
+type UserId = Brand<string, 'UserId'>
+type OrderId = Brand<string, 'OrderId'>
+
+function getUser(id: UserId) { /* ... */ }
+function getOrder(id: OrderId) { /* ... */ }
+
+const userId = 'user_123' as UserId
+const orderId = 'order_456' as OrderId
+
+getUser(userId)   // ✓ 编译通过
+getUser(orderId)  // ✗ 类型错误（防止传错 ID）
+
+// 单元类型（Discriminated Unions）
+type Result<T> =
+  | { status: 'loading' }
+  | { status: 'success'; data: T }
+  | { status: 'error'; error: Error }
+
+function handleResult(result: Result<User>) {
+  switch (result.status) {
+    case 'loading': return '加载中'
+    case 'success': return result.data.name  // ✓ 类型收窄
+    case 'error':   return result.error.message
+  }
+}
+```
+
+---
+
+## 生态全景
+
+```
+┌─────────────────────────────────────────────┐
+│           TypeScript 生态系统                  │
+├──────────────────┬──────────────────────────┤
+│   编译工具        │  Linter / Formatter       │
+│   tsc            │  Biome（推荐）             │
+│   swc            │  ESLint                   │
+│   esbuild        │  Prettier                 │
+│   sucrase        │  dprint                   │
+├──────────────────┼──────────────────────────┤
+│  运行时类型        │  验证库                   │
+│   ts-node        │  Zod（推荐）               │
+│   tsx            │  Valibot                  │
+│   Bun            │  ArkType                  │
+│   Deno           │  Yup                      │
+├──────────────────┼──────────────────────────┤
+│  框架支持         │ 工具                      │
+│   Next.js        │  tRPC                     │
+│   Nuxt           │  TypeScript ESLint        │
+│   SvelteKit      │  ts-reset                 │
+│   Remix          │  ts-pattern               │
+└──────────────────┴──────────────────────────┘
+```
+
+### 编译工具对比
+
+| 工具 | 编译速度 | 类型检查 | 用途 |
+|------|---------|---------|------|
+| **tsc** | 慢 | ✅ | 官方编译器 |
+| **swc** | 快 | ❌ | Rust 编写的转译器 |
+| **esbuild** | 极快 | ❌ | Go 编写的打包器 |
+| **sucrase** | 极快 | ❌ | 开发环境 |
+
+推荐：开发用 `tsc --noEmit` 检查类型，构建用 `swc` 或 `esbuild` 编译。
+
+### 运行时类型验证
+
+```ts
+// Zod —— 类型安全的运行时验证（推荐）
+import { z } from 'zod'
+
+const UserSchema = z.object({
+  id: z.string().uuid(),
+  email: z.string().email(),
+  age: z.number().min(0).max(150).optional(),
+  role: z.enum(['admin', 'user']).default('user'),
+})
+
+type User = z.infer<typeof UserSchema>
+// 自动推导为 { id: string; email: string; age?: number; role: 'admin' | 'user' }
+
+const result = UserSchema.parse(data)  // 运行时验证
+```
+
+### tRPC —— 端到端类型安全 API
+
+```ts
+// Server
+const appRouter = t.router({
+  user: t.procedure.input(z.string()).query(({ input }) => {
+    return db.user.find(input)
+  }),
+})
+
+// Client（自动类型推导）
+const user = await trpc.user.query('123')
+```
+
+### tsconfig 严格模式
+
+```json
+{
+  "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true,
+    "noPropertyAccessFromIndexSignature": true
+  }
+}
+```
