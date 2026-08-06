@@ -22,7 +22,25 @@ export default defineConfig({
 
     nav: [
       { text: '教程', link: '/tutorials/', activeMatch: '/tutorials/' },
-      { text: '部署', link: '/guide/deployment' },
+      {
+        text: '参考',
+        activeMatch: '/reference/',
+        items: [
+          { text: '官方文档索引', link: '/reference/official-docs' },
+          { text: '规范与标准', link: '/reference/standards' },
+          { text: '工具链与包管理', link: '/reference/tooling' },
+        ],
+      },
+      {
+        text: '平台',
+        activeMatch: '/guide/',
+        items: [
+          { text: '平台指南', link: '/guide/' },
+          { text: '项目结构', link: '/guide/project-structure' },
+          { text: '配置', link: '/guide/configuration' },
+          { text: '部署', link: '/guide/deployment' },
+        ],
+      },
       {
         text: '版本',
         items: [

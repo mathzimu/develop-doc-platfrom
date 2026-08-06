@@ -16,6 +16,31 @@ JavaScript 是一种轻量级的解释型（或 JIT 编译）编程语言，是 
 - [工程实践](/tutorials/javascript/04-engineering) — 项目架构、测试、构建、监控、安全
 - [生态全景](/tutorials/javascript/05-ecosystem) — 运行时、构建工具、框架、测试栈
 
+## 前置知识
+
+- 了解 [HTML](/tutorials/html/) 与 [CSS](/tutorials/css/) 基础
+- 熟悉命令行基本操作
+- 无需其他编程经验
+
 ## 学习路线
 
 建议按顺序学习：先掌握**基础语法**，再深入**进阶主题**，通过**实战项目**巩固，最后了解**工程实践**与**生态全景**。每个部分均可独立阅读。
+
+## 官方文档
+
+语法语义、内置对象方法、Web API 行为一律以下列文档与规范为准。
+
+| 类型 | 链接 |
+|------|------|
+| 教程与参考（中文） | [MDN JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) |
+| 内置对象参考 | [MDN 标准内置对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects) |
+| 语言规范 | [ECMA-262](https://tc39.es/ecma262/) · [ECMA-402 国际化](https://tc39.es/ecma402/) |
+| 新特性进度 | [TC39 Proposals](https://github.com/tc39/proposals) |
+| Web API | [MDN Web API](https://developer.mozilla.org/zh-CN/docs/Web/API) · [Fetch 规范](https://fetch.spec.whatwg.org/) |
+| 模块 | [MDN JavaScript 模块](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules) |
+| 运行时 | [Node.js API](https://nodejs.org/docs/latest/api/) · [Deno](https://docs.deno.com/) · [Bun](https://bun.sh/docs) |
+| 构建与包管理 | [Vite](https://cn.vite.dev/guide/) · [Rollup](https://rollupjs.org/introduction/) · [esbuild](https://esbuild.github.io/) · [npm](https://docs.npmjs.com/) |
+| 质量工具 | [ESLint](https://eslint.org/docs/latest/) · [Prettier](https://prettier.io/docs/) · [Vitest](https://cn.vitest.dev/guide/) |
+| 调试与兼容性 | [Chrome DevTools](https://developer.chrome.com/docs/devtools) · [Can I use](https://caniuse.com/) |
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
