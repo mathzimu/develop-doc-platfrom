@@ -33,3 +33,36 @@ server.listen(3000, () => {
 ```
 
 选择一个章节开始学习吧！
+
+## 环境要求
+
+- Node.js 18+（建议使用当前 LTS）
+- npm / pnpm / yarn 任一包管理器
+- 实战项目额外需要 PostgreSQL 与 Docker
+
+## 前置知识
+
+- 熟悉 [JavaScript](/tutorials/javascript/)（ES6+、Promise、async/await）
+- 了解 HTTP 基本概念（方法、状态码、请求头）
+
+## 官方文档
+
+核心模块 API、Event Loop 行为、版本差异以官方文档为准。
+
+| 类型 | 链接 |
+|------|------|
+| API 文档 | [nodejs.org/api](https://nodejs.org/docs/latest/api/) · [中文站](https://nodejs.org/zh-cn) |
+| 入门指南 | [Node.js Learn](https://nodejs.org/en/learn) |
+| 模块系统 | [ESM](https://nodejs.org/api/esm.html) · [CommonJS](https://nodejs.org/api/modules.html) |
+| 并发与流 | [Worker Threads](https://nodejs.org/api/worker_threads.html) · [Stream](https://nodejs.org/api/stream.html) |
+| 内置测试与调试 | [node:test](https://nodejs.org/api/test.html) · [调试指南](https://nodejs.org/en/learn/getting-started/debugging) |
+| 版本策略 | [Release Schedule](https://github.com/nodejs/release#release-schedule) |
+| 版本管理 | [nvm](https://github.com/nvm-sh/nvm) · [fnm](https://github.com/Schniz/fnm) |
+| Web 框架 | [Express](https://expressjs.com/zh-cn/) · [Fastify](https://fastify.dev/docs/latest/) · [NestJS](https://docs.nestjs.com/) · [Hono](https://hono.dev/docs/) |
+| ORM 与数据库 | [Prisma](https://www.prisma.io/docs) · [Drizzle](https://orm.drizzle.team/docs/overview) · [node-postgres](https://node-postgres.com/) |
+| 校验与鉴权 | [Zod](https://zod.dev/) · [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519.html) |
+| 日志与监控 | [Pino](https://getpino.io/) · [OpenTelemetry JS](https://opentelemetry.io/docs/languages/js/) |
+| 其他运行时 | [Deno](https://docs.deno.com/) · [Bun](https://bun.sh/docs) |
+| 安全 | [Node.js 安全最佳实践](https://nodejs.org/en/learn/getting-started/security-best-practices) · [OWASP Cheat Sheets](https://cheatsheetseries.owasp.org/) |
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
