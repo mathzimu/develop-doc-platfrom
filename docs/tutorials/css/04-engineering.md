@@ -340,6 +340,16 @@ module.exports = {
 | Tailwind CSS | 工具类优先，极小产物 | 快速开发，组件库 |
 | CSS Modules | 局部作用域，构建时 | 传统 React/Vue 项目 |
 | styled-components | 运行时动态样式 | 高度动态主题 |
-| Emotion | 高性能运行时 | SSR 项目 |
 | Vanilla Extract | 零运行时 CSS | 大型企业项目 |
 | Panda CSS | 构建时 + 类型安全 | Monorepo |
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 方法论 | [BEM](https://getbem.com/) · [OOCSS](https://github.com/stubbornella/oocss) |
+| 预处理 | [Sass](https://sass-lang.com/documentation/) · [PostCSS](https://postcss.org/) |
+| 检查与规范 | [Stylelint](https://stylelint.io/) |
+| 视觉回归 | [Percy](https://docs.percy.io/) · [Chromatic](https://www.chromatic.com/docs/) · [Playwright 截图](https://playwright.dev/docs/screenshots) |
+| 性能 | [渲染性能（web.dev）](https://web.dev/articles/rendering-performance) · [Critical Path](https://web.dev/articles/critical-rendering-path) |
+| CSS 方案 | [Tailwind CSS](https://tailwindcss.com/docs) · [Emotion](https://emotion.sh/docs/introduction) · [Vanilla Extract](https://vanilla-extract.style/) |

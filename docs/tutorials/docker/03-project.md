@@ -279,3 +279,13 @@ docker compose exec -T postgres psql -U myapp myapp < backup.sql
 # 全量停止并清理
 docker compose down -v
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| Dockerfile | [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/) |
+| Compose | [Compose File Reference](https://docs.docker.com/reference/compose-file/) |
+| 数据卷 | [Volumes](https://docs.docker.com/storage/volumes/) · [Bind mounts](https://docs.docker.com/storage/bind-mounts/) |
+| 网络 | [Docker 网络](https://docs.docker.com/engine/network/) |
+| 多阶段构建 | [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/) |

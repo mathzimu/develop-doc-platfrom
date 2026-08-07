@@ -79,3 +79,13 @@ git config --global user.signingkey <KEY>
 git config --global commit.gpgsign true
 git commit -S -m "signed commit"
 ```
+
+## 官方文档入口
+
+| 类别 | 入口 |
+|------|------|
+| 官方文档 | [git-scm.com/doc](https://git-scm.com/doc) · [Git 命令参考](https://git-scm.com/docs) · [Pro Git（中文）](https://git-scm.com/book/zh/v2) |
+| 托管平台 | [GitHub Docs](https://docs.github.com/zh) · [GitLab Docs](https://docs.gitlab.com/) · [Bitbucket Docs](https://support.atlassian.com/bitbucket-cloud/) |
+| 规范 | [Conventional Commits](https://www.conventionalcommits.org/zh-hans/v1.0.0/) · [SemVer](https://semver.org/lang/zh-CN/) |
+| 版本发布 | [semantic-release](https://semantic-release.gitbook.io/) · [changesets](https://changesets.githubblog.com/) · [standard-version](https://github.com/conventional-changelog/standard-version) |
+| 安全工具 | [gitleaks](https://github.com/gitleaks/gitleaks) · [trufflehog](https://github.com/trufflesecurity/trufflehog) · [Git LFS](https://git-lfs.com/) |

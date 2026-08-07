@@ -226,3 +226,12 @@ python search.py . "TODO|FIXME" --type content --ext .py .md
 6. **结果去重**：软链接和硬链接的去重处理
 7. **交互模式**：基于 `prompt_toolkit` 的交互式搜索
 8. **配置文件**：支持 `.searchconfig` 配置默认排除规则
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 标准库 | [pathlib](https://docs.python.org/3/library/pathlib.html) · [os](https://docs.python.org/3/library/os.html) · [argparse](https://docs.python.org/3/library/argparse.html) |
+| 测试 | [pytest](https://docs.pytest.org/en/stable/) |
+| 打包 | [Python Packaging Guide](https://packaging.python.org/) |
+| CLI 增强 | [click](https://click.palletsprojects.com/) · [typer](https://typer.tiangolo.com/) |

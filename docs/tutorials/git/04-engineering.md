@@ -309,3 +309,14 @@ git log --since="2025-01-01" --format='' --numstat | awk '{added+=$1; deleted+=$
 npm install -g gitinspector
 gitinspector --format html > report.html
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 分支策略 | [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/) · [Trunk-Based Development](https://trunkbaseddevelopment.com/) · [GitHub Flow](https://docs.github.com/zh/get-started/using-github/github-flow) |
+| 提交规范 | [Conventional Commits](https://www.conventionalcommits.org/zh-hans/v1.0.0/) |
+| Hooks | [Git Hooks](https://git-scm.com/docs/githooks) · [husky](https://typicode.github.io/husky/) · [commitlint](https://commitlint.js.org/) |
+| 大文件 | [Git LFS](https://git-lfs.com/) |
+| 代码所有权 | [CODEOWNERS](https://docs.github.com/zh/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) |
+| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) · [GitLab CI](https://docs.gitlab.com/ci/) |

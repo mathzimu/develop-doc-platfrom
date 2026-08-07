@@ -235,3 +235,14 @@ jobs:
       - run: go test -v -race -cover ./...
       - run: go vet ./...
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 项目结构 | [go 命令文档](https://pkg.go.dev/cmd/go) · [Go Modules](https://go.dev/ref/mod) |
+| 依赖注入 | [wire](https://github.com/google/wire) · [fx](https://github.com/uber-go/fx) |
+| Lint | [golangci-lint](https://golangci-lint.run/) · [go vet](https://pkg.go.dev/cmd/vet) |
+| 测试 | [testing 包](https://pkg.go.dev/testing) · [testify](https://github.com/stretchr/testify) |
+| 数据库 | [GORM](https://gorm.io/zh_CN/docs/) · [pgx](https://pkg.go.dev/github.com/jackc/pgx/v5) |
+| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) |

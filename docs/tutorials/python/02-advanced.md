@@ -483,3 +483,17 @@ def bad(words: list[str]) -> str:
 def good(words: list[str]) -> str:
     return "".join(words)  # O(n)
 ```
+
+## 官方文档
+
+类型系统、GIL、异步、装饰器与元类细节以下列一手文档为准。
+
+| 主题 | 链接 |
+|------|------|
+| 语言参考 | [Language Reference](https://docs.python.org/3/reference/index.html) |
+| 数据模型 | [Data Model（特殊方法）](https://docs.python.org/3/reference/datamodel.html) |
+| 类型注解 | [typing 模块](https://docs.python.org/3/library/typing.html) · [PEP 484](https://peps.python.org/pep-0484/) · [PEP 695（新类型语法）](https://peps.python.org/pep-0695/) |
+| 并发 | [asyncio](https://docs.python.org/3/library/asyncio.html) · [并发执行](https://docs.python.org/3/library/concurrency.html) |
+| GIL 与 CPython | [Python Wiki GIL](https://wiki.python.org/moin/GlobalInterpreterLock) · [PEP 703（移除 GIL）](https://peps.python.org/pep-0703/) |
+| 装饰器/元类 | [Python Decorators 指南](https://docs.python.org/3/glossary.html#term-decorator) · [元类](https://docs.python.org/3/reference/datamodel.html#customizing-class-creation) |
+| 性能分析 | [profile](https://docs.python.org/3/library/profile.html) · [timeit](https://docs.python.org/3/library/timeit.html) |

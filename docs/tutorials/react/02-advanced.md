@@ -449,3 +449,17 @@ const useBearStore = create<BearStore>(set => ({
   reset: () => set({ bears: 0 }),
 }))
 ```
+
+## 官方文档
+
+渲染机制、Hooks 规则、并发特性以官方文档为准。
+
+| 主题 | 链接 |
+|------|------|
+| 渲染机制 | [react.dev 渲染](https://react.dev/learn/render-and-commit) · [React 为何使用 refs](https://react.dev/learn/referencing-values-with-refs) |
+| 协调 | [React 处理器 (reconciliation)](https://react.dev/learn/understanding-your-ui-as-a-tree) · [官方 diffing 说明](https://legacy.reactjs.org/docs/reconciliation.html) |
+| Hooks | [Hooks 参考](https://react.dev/reference/react/hooks) · [自定义 Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks) |
+| 并发特性 | [useTransition](https://react.dev/reference/react/useTransition) · [useDeferredValue](https://react.dev/reference/react/useDeferredValue) · [并发指南](https://react.dev/learn/concurrent-rendering-101) |
+| 服务端组件 | [Server Components](https://react.dev/reference/rsc/server-components) |
+| 状态管理参考 | [Zustand](https://zustand.docs.pmnd.rs/) · [Redux Toolkit](https://redux-toolkit.js.org/) · [XState](https://stately.ai/docs) |
+| 源码与 RFC | [facebook/react](https://github.com/facebook/react) · [reactjs/rfcs](https://github.com/reactjs/rfcs) |

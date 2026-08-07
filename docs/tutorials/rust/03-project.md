@@ -722,3 +722,13 @@ mod tests {
 ```
 
 继续学习请前往 [04-工程实践](/tutorials/rust/04-engineering)。
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 命令行解析 | [clap](https://docs.rs/clap/latest/clap/) |
+| 序列化 | [serde](https://serde.rs/) · [serde_json](https://docs.rs/serde_json) |
+| 错误处理 | [anyhow](https://docs.rs/anyhow) · [thiserror](https://docs.rs/thiserror) |
+| 测试 | [Rust Book 测试章节](https://doc.rust-lang.org/book/ch11-00-testing.html) |
+| Cargo | [Cargo Book](https://doc.rust-lang.org/cargo/) |

@@ -60,3 +60,12 @@ mongoimport --db mydb --collection products --file products.json --drop
 # 实时监控
 mongostat --host localhost:27017 --rowcount 10 2
 ```
+
+## 官方文档入口
+
+| 类别 | 入口 |
+|------|------|
+| 核心手册 | [MongoDB Manual](https://www.mongodb.com/docs/manual/) · [CRUD 与聚合参考](https://www.mongodb.com/docs/manual/reference/operator/aggregation-pipeline/) |
+| 驱动 | [Node.js Driver](https://www.mongodb.com/docs/drivers/node/current/) · [PyMongo](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/) · [Java Sync Driver](https://www.mongodb.com/docs/drivers/java/sync/) |
+| ODM/工具 | [Mongoose](https://mongoosejs.com/docs/guide.html) · [mongosh](https://www.mongodb.com/docs/mongodb-shell/) · [Compass](https://www.mongodb.com/docs/compass/current/) · [Database Tools](https://www.mongodb.com/docs/database-tools/) |
+| 云服务 | [MongoDB Atlas](https://www.mongodb.com/docs/atlas/) |

@@ -400,3 +400,15 @@ describe('Posts API', () => {
   })
 })
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| Node.js API | [nodejs.org/api](https://nodejs.org/docs/latest/api/) |
+| Web 框架 | [Express](https://expressjs.com/zh-cn/) · [Fastify](https://fastify.dev/docs/latest/) |
+| ORM | [Prisma](https://www.prisma.io/docs) |
+| 校验 | [Zod](https://zod.dev/) |
+| 鉴权 | [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519.html) |
+| 测试 | [Vitest](https://vitest.dev/) · [Supertest](https://github.com/ladjs/supertest) |
+| PostgreSQL | [官方文档](https://www.postgresql.org/docs/current/) |

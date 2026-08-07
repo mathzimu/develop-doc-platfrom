@@ -350,3 +350,15 @@ members = [
 ```
 
 继续学习请前往 [05-生态全景](/tutorials/rust/05-ecosystem)。
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 项目结构 | [Cargo Book](https://doc.rust-lang.org/cargo/) · [Cargo Workspaces](https://doc.rust-lang.org/cargo/reference/workspaces.html) |
+| 错误处理 | [thiserror](https://docs.rs/thiserror) · [anyhow](https://docs.rs/anyhow) |
+| 配置管理 | [config-rs](https://github.com/mehcode/config-rs) · [dotenvy](https://docs.rs/dotenvy) |
+| 测试 | [Cargo test](https://doc.rust-lang.org/cargo/commands/cargo-test.html) · [Rust Book 测试](https://doc.rust-lang.org/book/ch11-00-testing.html) |
+| Lint/Format | [Clippy](https://doc.rust-lang.org/clippy/) · [rustfmt](https://rust-lang.github.io/rustfmt/) |
+| 日志/可观测 | [tracing](https://docs.rs/tracing) · [OpenTelemetry Rust](https://docs.rs/opentelemetry) |
+| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) · [actions-rs](https://github.com/actions-rs) |

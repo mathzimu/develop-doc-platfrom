@@ -22,3 +22,30 @@ docker compose version
 # 第一个容器
 docker run hello-world
 ```
+
+## 环境要求
+
+- **Docker Desktop**（macOS / Windows，见 [官方安装](https://docs.docker.com/get-docker/)）；Linux 用 Docker Engine
+- Docker Compose v2（Docker Desktop 已内置）
+- 建议分配 4GB+ 内存给 Docker 虚拟机
+- 实战项目需准备 Docker Hub 账号（可选）
+
+## 前置知识
+
+- 基础的命令行操作（可参考 [Bash 教程](/tutorials/bash/)）
+- 了解 Linux 基本概念（进程、文件、网络、端口）
+- 无需编程经验
+
+## 官方文档
+
+镜像分层、Dockerfile 指令、Compose 配置以一手文档为准。
+
+| 类型 | 链接 |
+|------|------|
+| 官方文档 | [docs.docker.com](https://docs.docker.com/) |
+| Dockerfile 参考 | [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/) |
+| Compose 参考 | [Compose File Reference](https://docs.docker.com/reference/compose-file/) |
+| CLI 参考 | [Docker CLI](https://docs.docker.com/reference/cli/docker/) |
+| 容器标准 | [OCI Specifications](https://opencontainers.org/) |
+
+更多入口见 [官方文档索引](/reference/official-docs)。

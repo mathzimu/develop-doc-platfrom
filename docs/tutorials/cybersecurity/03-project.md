@@ -179,3 +179,12 @@ if __name__ == "__main__":
 nmap -sT -p 1-1024 --open -T4 scanme.nmap.org
 masscan 192.168.1.0/24 -p80,443 --rate=1000
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 端口扫描 | [nmap（官方读物）](https://nmap.org/book/man.html) |
+| 网络扫描 | [masscan](https://github.com/robertdavidgraham/masscan) |
+| Python 网络 | [Python socket](https://docs.python.org/3/library/socket.html) · [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) |
+| 合法实践 | [PortSwigger Web Security Academy](https://portswigger.net/web-security) · [nmap 合法说明](https://nmap.org/book/legal-issues.html) |

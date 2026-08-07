@@ -327,3 +327,14 @@ log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] [$level] $*" >&2
 }
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 脚本规范 | [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html) |
+| 静态检查 | [ShellCheck](https://www.shellcheck.net/) · [shfmt](https://github.com/mvdan/sh) · [bashate](https://github.com/openstack/bashate) |
+| 测试 | [Bats-core](https://bats-core.readthedocs.io/en/stable/) |
+| 日志轮转 | [logrotate(8)](https://man7.org/linux/man-pages/man8/logrotate.8.html) |
+| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) · [GitLab CI](https://docs.gitlab.com/ci/) |
+| 健康检查 | [systemd](https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html) · [supervisord](http://supervisord.org/) |

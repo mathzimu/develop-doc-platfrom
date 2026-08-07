@@ -399,3 +399,14 @@ function App() {
   )
 }
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 项目结构 | [React 项目结构建议](https://react.dev/learn/principles-for-structuring-state) |
+| API 与状态 | [TanStack Query](https://tanstack.com/query/latest/docs) · [Zustand](https://zustand.docs.pmnd.rs/) |
+| 测试 | [Vitest](https://vitest.dev/) · [Testing Library](https://testing-library.com/docs/react-testing-library/intro/) · [Playwright](https://playwright.dev/docs/intro) |
+| 错误监控 | [Sentry React](https://docs.sentry.io/platforms/javascript/guides/react/) |
+| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) · [Vercel](https://vercel.com/docs) |
+| 国际化 | [react-i18next](https://react.i18next.com/) |

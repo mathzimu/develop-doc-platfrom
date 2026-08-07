@@ -302,3 +302,13 @@ await author.save()
 console.log('测试数据已导入')
 await mongoose.disconnect()
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| CRUD | [MongoDB CRUD 指南](https://www.mongodb.com/docs/manual/crud/) |
+| 聚合 | [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) |
+| 索引 | [MongoDB 索引](https://www.mongodb.com/docs/manual/indexes/) |
+| ODM | [Mongoose](https://mongoosejs.com/docs/guide.html) |
+| 数据建模 | [Data Modeling](https://www.mongodb.com/docs/manual/data-modeling/) |

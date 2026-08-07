@@ -75,3 +75,14 @@ cargo watch -x test        # 监听变化自动测试
 cargo outdated             # 检查过时依赖
 cargo audit                # 检查安全漏洞
 ```
+
+## 官方文档入口
+
+| 类别 | 入口 |
+|------|------|
+| 语言与标准库 | [The Rust Book](https://doc.rust-lang.org/book/) · [std 文档](https://doc.rust-lang.org/std/) · [Rust Reference](https://doc.rust-lang.org/reference/) |
+| 包管理 | [Cargo Book](https://doc.rust-lang.org/cargo/) · [crates.io](https://crates.io/) |
+| Web 框架 | [Axum docs.rs](https://docs.rs/axum/latest/axum/) · [Actix Web](https://actix.rs/docs/) · [Rocket](https://rocket.rs/) |
+| ORM/数据库 | [Diesel](https://diesel.rs/) · [SeaORM](https://www.sea-orm.io/) · [SQLx](https://github.com/launchbadge/sqlx) |
+| 序列化/异步 | [Serde](https://serde.rs/) · [Tokio](https://tokio.rs/tokio/tutorial) |
+| 开发工具 | [rustfmt](https://rust-lang.github.io/rustfmt/) · [Clippy](https://doc.rust-lang.org/clippy/) · [cargo-edit](https://docs.rs/cargo-edit) |

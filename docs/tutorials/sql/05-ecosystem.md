@@ -120,6 +120,15 @@ ORDER BY total_time DESC LIMIT 10;
 -- SET GLOBAL long_query_time = 1;
 ```
 
-```
+## 官方文档入口
 
-```
+| 类别 | 入口 |
+|------|------|
+| SQL 标准 | [ISO/IEC 9075](https://www.iso.org/standard/76583.html)（各数据库方言以官方手册为准） |
+| PostgreSQL | [官方文档](https://www.postgresql.org/docs/current/) · [中文文档](http://www.postgres.cn/docs/current/) |
+| MySQL | [MySQL 8.4 参考手册](https://dev.mysql.com/doc/refman/8.4/en/) |
+| SQLite | [SQLite 文档](https://sqlite.org/docs.html) |
+| SQL Server | [T-SQL 参考](https://learn.microsoft.com/zh-cn/sql/t-sql/language-reference) |
+| Oracle | [Oracle Database 文档](https://docs.oracle.com/en/database/oracle/oracle-database/index.html) |
+| ORM | [SQLAlchemy](https://docs.sqlalchemy.org/en/20/) · [Prisma](https://www.prisma.io/docs) · [Drizzle](https://orm.drizzle.team/) · [Hibernate](https://hibernate.org/) · [MyBatis](https://mybatis.org/mybatis-3/zh_CN/) · [GORM](https://gorm.io/zh_CN/docs/) |
+| 迁移/连接池 | [Flyway](https://documentation.red-gate.com/flyway) · [Liquibase](https://docs.liquibase.com/) · [Alembic](https://alembic.sqlalchemy.org/en/latest/) · [PgBouncer](https://www.pgbouncer.org/) · [ProxySQL](https://proxysql.com/documentation/) |

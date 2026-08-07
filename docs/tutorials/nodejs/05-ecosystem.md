@@ -83,3 +83,16 @@ npm init @fastify/my-app    # Fastify 脚手架
 npx create-nest-app my-app   # NestJS 脚手架
 npx prisma init              # Prisma 初始化
 ```
+
+## 官方文档入口
+
+| 类别 | 入口 |
+|------|------|
+| 运行时 | [Node.js API](https://nodejs.org/docs/latest/api/) · [Release Schedule](https://github.com/nodejs/release#release-schedule) |
+| Web 框架 | [Express](https://expressjs.com/zh-cn/) · [Fastify](https://fastify.dev/docs/latest/) · [NestJS](https://docs.nestjs.com/) · [Hono](https://hono.dev/docs/) · [AdonisJS](https://adonisjs.com/docs) · [Koa](https://koajs.com/) |
+| ORM | [Prisma](https://www.prisma.io/docs) · [Drizzle](https://orm.drizzle.team/docs/overview) · [TypeORM](https://typeorm.io/) · [Sequelize](https://sequelize.org/) |
+| 认证 | [Passport.js](https://www.passportjs.org/docs/) · [next-auth](https://next-auth.js.org/) · [lucia](https://lucia-auth.com/) |
+| 实时通信 | [Socket.io](https://socket.io/docs/) · [WebRTC](https://developer.mozilla.org/zh-CN/docs/Web/API/WebRTC_API) |
+| 测试 | [Vitest](https://vitest.dev/) · [Playwright](https://playwright.dev/) · [Supertest](https://github.com/ladjs/supertest) · [Testcontainers](https://testcontainers.com/) |
+| 队列 | [BullMQ](https://docs.bullmq.io/) · [Agenda](https://github.com/agenda/agenda) |
+| 监控/日志 | [Pino](https://getpino.io/) · [Sentry](https://docs.sentry.io/) · [OpenTelemetry](https://opentelemetry.io/docs/) · [PM2](https://pm2.keymetrics.io/) |

@@ -232,3 +232,13 @@ const keys = Object.keys(obj)  // ("a" | "b")[] 而不是 string[]
 // 3. JSON.parse 泛型支持
 const data = JSON.parse('{"a":1}')  // unknown 而不是 any
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 严格模式 | [tsconfig 全集](https://www.typescriptlang.org/tsconfig) · [strict](https://www.typescriptlang.org/tsconfig#strict) |
+| 声明文件 | [Declaration Files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) · [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) |
+| Monorepo | [Turborepo](https://turborepo.com/docs) · [Nx](https://nx.dev/getting-started/intro) |
+| Lint | [typescript-eslint](https://typescript-eslint.io/getting-started/) · [Biome](https://biomejs.dev/zh-cn/) |
+| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) |

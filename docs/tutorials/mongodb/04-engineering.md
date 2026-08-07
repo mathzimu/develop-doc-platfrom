@@ -262,3 +262,14 @@ jobs:
           # 滚动重启应用
           curl -X POST ${{ secrets.DEPLOY_WEBHOOK }}
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 数据建模 | [Data Modeling](https://www.mongodb.com/docs/manual/data-modeling/) |
+| 分片 | [Sharding](https://www.mongodb.com/docs/manual/sharding/) · [分片键选择](https://www.mongodb.com/docs/manual/core/sharding-choose-a-shard-key/) |
+| 副本集 | [Replication](https://www.mongodb.com/docs/manual/replication/) |
+| 索引优化 | [Indexes](https://www.mongodb.com/docs/manual/indexes/) |
+| 监控 | [mongostat/mongotop](https://www.mongodb.com/docs/database-tools/) · [Atlas Performance Advisor](https://www.mongodb.com/docs/atlas/performance-advisor/) |
+| 安全 | [Security Checklist](https://www.mongodb.com/docs/manual/administration/security-checklist/) |

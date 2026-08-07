@@ -329,3 +329,16 @@ func main() {
     s = slices.Compact(s) // 去重相邻重复
 }
 ```
+
+## 官方文档
+
+并发模型、接口底层、内存模型与泛型细节以官方规范为准。
+
+| 主题 | 链接 |
+|------|------|
+| 语言规范 | [Go Spec](https://go.dev/ref/spec) |
+| 内存模型 | [Go Memory Model](https://go.dev/ref/mem) |
+| 并发 | [Concurrency（博客）](https://go.dev/blog/concurrency-is-not-parallelism) · [Go Concurrency Patterns](https://go.dev/blog/pipelines) · [Go 语言并发教程](https://go.dev/doc/effective_go) |
+| 泛型 | [Go 泛型教程](https://go.dev/doc/tutorial/generics) · [Type Parameters Proposal](https://go.googlesource.com/proposal/+/master/design/43651-type-parameters.md) |
+| 标准库与工具 | [pkg.go.dev/std](https://pkg.go.dev/std) · [go 命令文档](https://pkg.go.dev/cmd/go) · [testing 包](https://pkg.go.dev/testing) |
+| 测试进阶 | [Testing（中文）](https://go.dev/blog/table-driven-tests) · [fuzzing](https://go.dev/doc/security/fuzz/) |

@@ -52,3 +52,14 @@
 | Jackson / Gson | JSON 序列化 | 对象 ⇄ JSON |
 | OpenFeign | 声明式 HTTP 客户端 | 接口注解，REST 调用 |
 | Resilience4j | 容错库 | 熔断、重试、限流 |
+
+## 官方文档入口
+
+| 类别 | 入口 |
+|------|------|
+| JDK 与语言 | [Java SE 文档](https://docs.oracle.com/en/java/javase/21/) · [Java SE 21 API](https://docs.oracle.com/en/java/javase/21/docs/api/index.html) · [语言规范 JLS](https://docs.oracle.com/javase/specs/) |
+| Web 框架 | [Spring Boot](https://docs.spring.io/spring-boot/index.html) · [Quarkus](https://quarkus.io/guides/) · [Micronaut](https://docs.micronaut.io/latest/guide/) · [Jakarta EE](https://jakarta.ee/specifications/) |
+| ORM | [Hibernate](https://hibernate.org/) · [MyBatis](https://mybatis.org/mybatis-3/zh_CN/) · [MyBatis-Plus](https://baomidou.com/) · [jOOQ](https://www.jooq.org/) |
+| 构建工具 | [Maven](https://maven.apache.org/guides/) · [Gradle](https://docs.gradle.org/current/userguide/userguide.html) |
+| 测试 | [JUnit 5](https://junit.org/junit5/docs/current/user-guide/) · [Mockito](https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/module-summary.html) · [Testcontainers](https://java.testcontainers.org/) · [REST Assured](https://rest-assured.io/) |
+| 监控/工具 | [Micrometer](https://micrometer.io/) · [Spring Boot Actuator](https://docs.spring.io/spring-boot/reference/actuator/index.html) · [Lombok](https://projectlombok.org/) · [MapStruct](https://mapstruct.org/) · [Flyway](https://documentation.red-gate.com/flyway) · [Jackson](https://github.com/FasterXML/jackson) · [OpenFeign](https://docs.spring.io/spring-cloud-openfeign/reference/) · [Resilience4j](https://resilience4j.readme.io/) |

@@ -41,3 +41,15 @@ Handlebars: {{variable}}   {{#if}}  {{#each}}
 
 推荐：Nunjucks（语法强大）或 Pug（简洁）
 ```
+
+## 官方文档与规范
+
+| 类别 | 入口 |
+|------|------|
+| HTML 标准 | [WHATWG HTML Living Standard](https://html.spec.whatwg.org/multipage/) · [W3C 校验器](https://validator.w3.org/) |
+| 元素与属性参考 | [MDN HTML](https://developer.mozilla.org/zh-CN/docs/Web/HTML) · [MDN 元素索引](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element) |
+| 可访问性 | [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/) |
+| 兼容性查询 | [Can I use](https://caniuse.com/) |
+| 模板引擎 | [Nunjucks](https://mozilla.github.io/nunjucks/) · [EJS](https://ejs.co/) · [Pug](https://pugjs.org/) · [Handlebars](https://handlebarsjs.com/) |
+| 静态站点生成 | [Astro](https://docs.astro.build/zh-cn/) · [Eleventy](https://www.11ty.dev/docs/) · [Hugo](https://gohugo.io/documentation/) |
+| HTML 邮件 | [MJML](https://documentation.mjml.io/) |

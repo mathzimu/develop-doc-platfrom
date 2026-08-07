@@ -585,3 +585,17 @@ public:
     void execute(vector<int>& data) const { strategy->sort(data); }
 };
 ```
+
+## 官方文档
+
+移动语义、指针、模板、并发、资源管理与现代化编程，以 cppreference 与标准草案为准。
+
+| 主题 | 链接 |
+|------|------|
+| 语言与 STL | [cppreference（中文）](https://zh.cppreference.com/w/cpp) · [cppreference（英文）](https://en.cppreference.com/w/cpp) |
+| 标准草案 | [eel.is C++ Draft](https://eel.is/c++draft/) · [ISO/IEC 14882](https://isocpp.org/std/the-standard) |
+| 移动语义 | [移动构造函数](https://en.cppreference.com/w/cpp/language/move_constructor) · [引用折叠](https://en.cppreference.com/w/cpp/language/reference) |
+| 智能指针 | [std::unique_ptr](https://en.cppreference.com/w/cpp/memory/unique_ptr) · [std::shared_ptr](https://en.cppreference.com/w/cpp/memory/shared_ptr) |
+| 模板与泛型 | [模板（C++ 编程指南）](https://en.cppreference.com/w/cpp/language/templates) · [SFINAE](https://en.cppreference.com/w/cpp/language/sfinae) |
+| 并发 | [std::thread](https://en.cppreference.com/w/cpp/thread) · [并发支持](https://en.cppreference.com/w/cpp/thread) |
+| Modern C++ 指南 | [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) |

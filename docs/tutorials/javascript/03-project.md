@@ -274,3 +274,12 @@ render()
 6. **进度统计**：使用图表展示每日完成情况
 7. **多用户**：接入后端 API，支持多设备同步
 8. **PWA**：添加 Service Worker，支持离线使用
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 语言规范 | [ECMA-262](https://tc39.es/ecma262/) · [MDN JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) |
+| localStorage | [MDN Web Storage](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Storage_API) |
+| Service Worker / PWA | [MDN Service Worker](https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API) |
+| 测试 | [Vitest](https://vitest.dev/) · [Jest](https://jestjs.io/zh-Hans/) |

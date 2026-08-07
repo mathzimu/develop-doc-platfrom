@@ -83,3 +83,13 @@ deploy: lint test
 - [bash-guide](https://github.com/Idnan/bash-guide) — Bash 速查
 - [pure-bash-bible](https://github.com/dylanaraps/pure-bash-bible) — 纯 Bash 实现合集
 - [explainshell](https://explainshell.com/) — 逐段解释 Shell 命令
+
+## 官方文档入口
+
+| 类别 | 入口 |
+|------|------|
+| 语言规范 | [GNU Bash Manual](https://www.gnu.org/software/bash/manual/bash.html) · [POSIX Shell Command Language](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html) |
+| 编码规范 | [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html) |
+| 质量工具 | [ShellCheck](https://www.shellcheck.net/) · [shfmt](https://github.com/mvdan/sh) · [Bats-core](https://bats-core.readthedocs.io/en/stable/) |
+| 现代 CLI | [jq](https://jqlang.github.io/jq/) · [yq](https://mikefarah.gitbook.io/yq) · [ripgrep](https://github.com/BurntSushi/ripgrep) · [fd](https://github.com/sharkdp/fd) · [bat](https://github.com/sharkdp/bat) · [fzf](https://github.com/junegunn/fzf) · [httpie](https://httpie.io/docs/cli) |
+| 任务/配置管理 | [GNU coreutils](https://www.gnu.org/software/coreutils/manual/coreutils.html) · [Ansible](https://docs.ansible.com/) · [Terraform](https://developer.hashicorp.com/terraform/docs) |

@@ -269,3 +269,14 @@ LIMIT 10;
 | 慢查询/分钟 | > 5 | > 20 |
 | 复制延迟 | > 10s | > 60s |
 | 磁盘使用率 | > 80% | > 90% |
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 迁移工具 | [Flyway](https://documentation.red-gate.com/flyway) · [Liquibase](https://docs.liquibase.com/) · [Alembic](https://alembic.sqlalchemy.org/en/latest/) |
+| SQL Lint | [sqlfluff](https://docs.sqlfluff.com/en/stable/) · [SchemeLint](https://www.schemalint.com/) |
+| 连接池 | [PgBouncer](https://www.pgbouncer.org/) · [ProxySQL](https://proxysql.com/documentation/) |
+| 备份 | [PG 备份与恢复](https://www.postgresql.org/docs/current/backup.html) · [mysqldump](https://dev.mysql.com/doc/refman/8.4/en/mysqldump.html) |
+| 监控 | [pg_stat_statements](https://www.postgresql.org/docs/current/pgstatstatements.html) · [slow query log](https://dev.mysql.com/doc/refman/8.4/en/slow-query-log.html) |
+| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) |

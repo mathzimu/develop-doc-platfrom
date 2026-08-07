@@ -304,3 +304,17 @@ class CircuitBreaker {
   }
 }
 ```
+
+## 官方文档
+
+Change Streams、事务、时序集合、分片与加密细节以 MongoDB Manual 为准。
+
+| 主题 | 链接 |
+|------|------|
+| 聚合与管道 | [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) · [聚合阶段参考](https://www.mongodb.com/docs/manual/reference/operator/aggregation-pipeline/) |
+| Change Streams | [Change Streams](https://www.mongodb.com/docs/manual/changeStreams/) |
+| 事务 | [Transactions](https://www.mongodb.com/docs/manual/core/transactions/) |
+| 时序集合 | [Time Series](https://www.mongodb.com/docs/manual/core/timeseries-collections/) |
+| 搜索 | [Atlas Search](https://www.mongodb.com/docs/atlas/atlas-search/) · [Vector Search](https://www.mongodb.com/docs/atlas/atlas-vector-search/) |
+| 加密 | [Queryable Encryption](https://www.mongodb.com/docs/manual/core/queryable-encryption/) · [Encryption at Rest](https://www.mongodb.com/docs/manual/core/security-encryption-at-rest/) |
+| 数据建模 | [Data Modeling](https://www.mongodb.com/docs/manual/data-modeling/) |

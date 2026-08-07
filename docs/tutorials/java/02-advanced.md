@@ -329,7 +329,20 @@ module com.example.myapp {
 
     opens com.example.myapp.internal to spring.core;
 
-    provides com.example.myapp.spi.Plugin
+provides com.example.myapp.spi.Plugin
         with com.example.myapp.impl.MyPlugin;
 }
 ```
+
+## 官方文档
+
+JVM 内存模型、并发、反射、模块系统等细节以 Oracle 官方规范与 API 为准。
+
+| 主题 | 链接 |
+|------|------|
+| 语言与 JVM 规范 | [Java Language Specification](https://docs.oracle.com/javase/specs/) · [JVMS](https://docs.oracle.com/javase/specs/jvms/se21/html/) |
+| API 参考 | [Java SE 21 API](https://docs.oracle.com/en/java/javase/21/docs/api/index.html) |
+| 内存模型 | [Java Memory Model（JLS §17）](https://docs.oracle.com/javase/specs/jls/se21/html/jls-17.html) · [虚拟线程（JEP 444）](https://openjdk.org/jeps/444) |
+| 并发 | [java.util.concurrent](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/package-summary.html) · [内存模型指南](https://docs.oracle.com/javase/specs/jls/se21/html/jls-17.html) |
+| 反射与模块 | [java.lang.reflect](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/reflect/package-summary.html) · [JPMS（JEP 261）](https://openjdk.org/jeps/261) |
+| 运行时 | [jfr/JFR](https://docs.oracle.com/en/java/javase/21/specialized-debugging-instructions.html) · [Diagnostic Commands](https://docs.oracle.com/en/java/javase/21/docs/specs/man/jcmd.html) |

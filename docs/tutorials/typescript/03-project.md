@@ -272,3 +272,14 @@ async function main() {
   }
 }
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 类型手册 | [TypeScript 手册](https://www.typescriptlang.org/docs/handbook/intro.html) |
+| tsconfig | [tsconfig 全集](https://www.typescriptlang.org/tsconfig) |
+| 泛型 | [TypeScript 泛型](https://www.typescriptlang.org/docs/handbook/2/generics.html) |
+| 类型定义 | [Declaration Files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) |
+| 运行时校验 | [Zod](https://zod.dev/) |
+| 测试 | [Vitest](https://vitest.dev/) · [tsx](https://tsx.is/) |

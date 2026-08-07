@@ -155,3 +155,12 @@
 - 部署为 GitHub Pages 在线简历
 - 添加多语言版本（`hreflang`）
 - 集成 Google Analytics 统计访问
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 结构化数据 | [Schema.org](https://schema.org/docs/documents.html) · [Google 结构化数据](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=zh-cn) |
+| 可访问性 | [WCAG 2.2](https://www.w3.org/TR/WCAG22/) · [WAI-ARIA APG](https://www.w3.org/WAI/ARIA/apg/) |
+| 性能指标 | [Core Web Vitals](https://web.dev/articles/vitals) |
+| 校验工具 | [W3C Validator](https://validator.w3.org/) |

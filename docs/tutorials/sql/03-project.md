@@ -321,3 +321,12 @@ CREATE TABLE orders (
     PARTITION p_future VALUES LESS THAN MAXVALUE
 );
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| DDL/索引 | [PostgreSQL 官方文档](https://www.postgresql.org/docs/current/) · [MySQL 手册](https://dev.mysql.com/doc/refman/8.4/en/) |
+| 索引优化 | [PG 索引](https://www.postgresql.org/docs/current/indexes.html) · [MySQL 优化](https://dev.mysql.com/doc/refman/8.4/en/optimization.html) |
+| 分区表 | [PG 表分区](https://www.postgresql.org/docs/current/ddl-partitioning.html) · [MySQL 分区](https://dev.mysql.com/doc/refman/8.4/en/partitioning.html) |
+| 事务 | [PG 事务隔离](https://www.postgresql.org/docs/current/transaction-iso.html) · [InnoDB 事务](https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-model.html) |

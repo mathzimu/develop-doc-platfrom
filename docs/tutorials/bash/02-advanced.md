@@ -420,3 +420,16 @@ for line in "${lines[@]}"; do
     echo "$line"
 done
 ```
+
+## 官方文档
+
+正则、进程替换、信号、数组、I/O 等细节以 GNU Bash 手册与 POSIX 规范为准。
+
+| 主题 | 链接 |
+|------|------|
+| 官方手册 | [GNU Bash Manual](https://www.gnu.org/software/bash/manual/bash.html) |
+| POSIX 规范 | [POSIX Shell Command Language](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html) |
+| 正则与文本 | [GNU grep](https://www.gnu.org/software/grep/manual/) · [GNU sed](https://www.gnu.org/software/sed/manual/sed.html) · [GNU awk](https://www.gnu.org/software/gawk/manual/gawk.html) |
+| 核心工具 | [GNU coreutils](https://www.gnu.org/software/coreutils/manual/coreutils.html) |
+| 编码规范 | [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html) |
+| 静态检查 | [ShellCheck](https://www.shellcheck.net/) · [shfmt](https://github.com/mvdan/sh) |

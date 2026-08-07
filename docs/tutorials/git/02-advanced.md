@@ -345,3 +345,16 @@ git log -L 10,20:file.txt     # 显示某文件的第 10-20 行历史
 git grep "TODO" HEAD~10       # 在历史版本中搜索
 git log -S "deprecatedFunc" --source --all  # 查找某函数何时被引入/删除
 ```
+
+## 官方文档
+
+对象模型、Rebase、Reflog、克隆策略等内部机制以官方文档为准。
+
+| 主题 | 链接 |
+|------|------|
+| 底层对象 | [Pro Git 内部原理](https://git-scm.com/book/zh/v2/Git-%E5%86%85%E9%83%A8%E5%8E%9F%E7%90%86-Git-%E5%AF%B9%E8%B1%A1) · [Object 模型](https://git-scm.com/book/zh/v2/Git-%E5%86%85%E9%83%A8%E5%8E%9F%E7%90%86-Git-%E5%AF%B9%E8%B1%A1) |
+| Rebase | [git rebase](https://git-scm.com/docs/git-rebase) · [交互式 Rebase（Pro Git）](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E9%87%8D%E5%9F%BA) |
+| 高级撤销/恢复 | [git reflog](https://git-scm.com/docs/git-reflog) · [撤销操作（Pro Git）](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%92%A4%E9%94%80%E6%93%8D%E4%BD%9C) |
+| gitignore | [gitignore 文档](https://git-scm.com/docs/gitignore) · [gitignore 模板](https://github.com/github/gitignore) |
+| 历史重建 | [git-filter-repo](https://github.com/newren/git-filter-repo) |
+| 深入阅读 | [Pro Git（中文）](https://git-scm.com/book/zh/v2) |

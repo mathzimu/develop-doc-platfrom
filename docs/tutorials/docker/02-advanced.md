@@ -372,3 +372,16 @@ DB_USER=postgres
 DB_PASS=secret
 NODE_ENV=production
 ```
+
+## 官方文档
+
+镜像分层、网络模式、存储驱动、多架构与安全细节以官方文档为准。
+
+| 主题 | 链接 |
+|------|------|
+| 镜像与分层 | [About images](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/) · [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/) |
+| 网络 | [Docker 网络](https://docs.docker.com/engine/network/) · [网络驱动](https://docs.docker.com/engine/network/drivers/) |
+| 存储驱动 | [Storage drivers](https://docs.docker.com/storage/storagedriver/) · [Volumes](https://docs.docker.com/storage/volumes/) |
+| 多架构构建 | [Multi-platform builds](https://docs.docker.com/build/building/multi-platform/) |
+| 安全 | [Docker security](https://docs.docker.com/engine/security/) · [Build secrets](https://docs.docker.com/build/building/secrets/) · [Seccomp/AppArmor](https://docs.docker.com/engine/security/apparmor/) |
+| 构建后端 | [BuildKit / buildx](https://docs.docker.com/build/) |

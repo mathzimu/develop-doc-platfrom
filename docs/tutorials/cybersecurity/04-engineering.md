@@ -165,4 +165,16 @@ add_header Strict-Transport-Security "max-age=63072000; includeSubDomains; prelo
 | **SOC 2** | 云服务提供商 | 安全性、可用性、机密性 |
 | **GDPR** | 欧盟公民数据 | 数据最小化、用户删除权、明确同意 |
 | **PCI DSS** | 支付卡数据 | 加密存储、访问控制、定期扫描 |
+| **PCI DSS** | 支付卡数据 | 加密存储、访问控制、定期扫描 |
 | **等级保护** | 中国信息系统 | 分级保护、安全评估 |
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| SSDLC | [OWASP SAMM](https://owaspsamm.org/) · [Microsoft SDL](https://www.microsoft.com/en-us/securityengineering/sdl) |
+| 威胁建模 | [OWASP Threat Modeling](https://owasp.org/www-community/Threat_Modeling) · [STRIDE](https://learn.microsoft.com/zh-cn/azure/architecture/patterns/threat-model-2018) |
+| API 安全 | [OWASP API Security Top 10](https://owasp.org/www-project-api-security/) · [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) |
+| 密钥管理 | [HashiCorp Vault](https://www.hashicorp.com/products/vault) · [AWS KMS](https://docs.aws.amazon.com/kms/) |
+| 安全头 | [OWASP Secure Headers](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html) |
+| 合规框架 | [ISO 27001](https://www.iso.org/standard/82.html) · [NIST SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [GDPR](https://gdpr.eu/) · [PCI DSS](https://www.pcisecuritystandards.org/) |

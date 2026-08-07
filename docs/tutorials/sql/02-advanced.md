@@ -353,3 +353,15 @@ ranked AS (
 SELECT * FROM ranked WHERE product_rank <= 3
 ORDER BY month, product_rank;
 ```
+
+## 官方文档
+
+索引策略、执行计划、事务隔离、窗口函数等以数据库厂商文档为准。
+
+| 主题 | 链接 |
+|------|------|
+| 执行计划 | [PostgreSQL EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) · [MySQL EXPLAIN](https://dev.mysql.com/doc/refman/8.4/en/explain-output.html) |
+| 索引策略 | [PG 索引](https://www.postgresql.org/docs/current/indexes.html) · [MySQL 优化](https://dev.mysql.com/doc/refman/8.4/en/optimization.html) · [PgXact（索引）](https://www.postgresql.org/docs/current/indexes-types.html) |
+| 事务与隔离 | [PG 事务隔离](https://www.postgresql.org/docs/current/transaction-iso.html) · [InnoDB 事务模型](https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-model.html) |
+| 窗口函数与 CTE | [PG 窗口函数](https://www.postgresql.org/docs/current/tutorial-window.html) · [PG WITH](https://www.postgresql.org/docs/current/queries-with.html) |
+| 主从与复制 | [PG 复制](https://www.postgresql.org/docs/current/high-availability.html) · [MySQL 复制](https://dev.mysql.com/doc/refman/8.4/en/replication.html) |

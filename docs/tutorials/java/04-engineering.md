@@ -262,3 +262,14 @@ jobs:
           MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 构建 | [Maven](https://maven.apache.org/guides/) · [Gradle](https://docs.gradle.org/current/userguide/userguide.html) |
+| 测试 | [JUnit 5](https://junit.org/junit5/docs/current/user-guide/) · [Mockito](https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/module-summary.html) · [Testcontainers](https://java.testcontainers.org/) |
+| 代码质量 | [Checkstyle](https://checkstyle.org/) · [SpotBugs](https://spotbugs.readthedocs.io/en/stable/) |
+| 监控 | [Spring Boot Actuator](https://docs.spring.io/spring-boot/reference/actuator/index.html) · [Micrometer](https://micrometer.io/) · [Prometheus](https://prometheus.io/docs/) |
+| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) · [Maven Central 发布](https://central.sonatype.org/) |
+| 安全 | [OWASP Dependency Check](https://owasp.org/www-project-dependency-check/) · [Snyk](https://snyk.io/) |

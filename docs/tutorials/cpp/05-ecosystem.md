@@ -92,3 +92,13 @@ C++ 拥有庞大且活跃的生态。以下整理了各领域的常用工具和�
 - **游戏开发**：CMake + flatbuffers + ImGui + spdlog
 - **企业应用**：CMake + Conan/vcpkg + gRPC + Qt + Google Test
 - **嵌入式**：CMake + GCC/Clang + doctest + spdlog（静态链接）
+
+## 官方文档入口
+
+| 类别 | 入口 |
+|------|------|
+| 语言与标准库 | [cppreference（中文）](https://zh.cppreference.com/w/cpp) · [cppreference（英文）](https://en.cppreference.com/w/cpp) · [标准草案](https://eel.is/c++draft/) · [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) |
+| 构建/包管理 | [CMake](https://cmake.org/documentation/) · [Meson](https://mesonbuild.com/) · [Bazel](https://bazel.build/) · [Xmake](https://xmake.io/) · [Conan](https://docs.conan.io/2/) · [vcpkg](https://learn.microsoft.com/zh-cn/vcpkg/) |
+| 测试 | [GoogleTest](https://google.github.io/googletest/) · [Catch2](https://github.com/catchorg/Catch2) · [doctest](https://github.com/onqtam/doctest) · [Boost.Test](https://www.boost.org/doc/libs/release/libs/test/) |
+| 网络 | [Boost.Asio](https://www.boost.org/doc/libs/release/libs/asio/) · [libcurl](https://curl.se/libcurl/) · [gRPC C++](https://grpc.io/docs/languages/cpp/) · [cpp-httplib](https://github.com/yhirose/cpp-httplib) |
+| 编译器与诊断 | [GCC](https://gcc.gnu.org/onlinedocs/) · [Clang](https://clang.llvm.org/docs/) · [MSVC](https://learn.microsoft.com/zh-cn/cpp/) · [Sanitizers](https://github.com/google/sanitizers/wiki) · [clang-tidy](https://clang.llvm.org/extra/clang-tidy/) |

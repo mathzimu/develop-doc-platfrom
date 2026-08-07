@@ -251,3 +251,13 @@ spec:
         type: Utilization
         averageUtilization: 80
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 多阶段构建 | [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/) |
+| Compose 生产 | [Compose 部署](https://docs.docker.com/compose/production/) · [Dockerfile 最佳实践](https://docs.docker.com/build/building/best-practices/) |
+| 镜像扫描 | [Trivy](https://trivy.dev/latest/docs/) · [Docker Scout](https://docs.docker.com/scout/) |
+| Kubernetes 部署 | [Kubernetes（中文）](https://kubernetes.io/zh-cn/docs/home/) · [kubectl](https://kubernetes.io/zh-cn/docs/reference/kubectl/) |
+| 安全加固 | [docker-bench-security](https://github.com/docker/docker-bench-security) · [cis-docker-benchmark](https://www.cisecurity.org/benchmark/docker) |

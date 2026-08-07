@@ -495,3 +495,15 @@ jobs:
 ```
 
 该工作流在每次推送和 PR 时自动运行：代码风格检查（ruff）、类型检查（mypy）和测试（pytest）。矩阵构建确保代码在多个 Python 版本上兼容。
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 项目配置 | [pyproject.toml / PEP 621](https://packaging.python.org/en/latest/specifications/pyproject-toml/) |
+| Lint/Format | [Ruff](https://docs.astral.sh/ruff/) |
+| 类型检查 | [mypy](https://mypy.readthedocs.io/en/stable/) · [pyright](https://github.com/microsoft/pyright) |
+| 测试 | [pytest](https://docs.pytest.org/en/stable/) · [pytest-cov](https://pytest-cov.readthedocs.io/) |
+| 迁移 | [Alembic](https://alembic.sqlalchemy.org/en/latest/) |
+| 容器化 | [Docker 官方 Python 镜像](https://hub.docker.com/_/python) |
+| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) · [Codecov](https://docs.codecov.com/docs) |

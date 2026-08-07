@@ -257,3 +257,13 @@ feature/*:    login     payment               release work
 | 解决冲突 | `git merge --no-ff` / 手动编辑 |
 | 发布 | `git tag -a v1.0.0 -m "msg"` |
 | Hotfix | `git checkout -b hotfix/xxx main` |
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 分支与合并 | [Pro Git 分支](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6) |
+| 远程协作 | [Pro Git 远程仓库](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%8D%8F%E4%BD%9C) |
+| Rebase | [git rebase](https://git-scm.com/docs/git-rebase) |
+| 标签 | [git tag](https://git-scm.com/docs/git-tag) |
+| 拉取请求 | [GitHub PR 文档](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) |

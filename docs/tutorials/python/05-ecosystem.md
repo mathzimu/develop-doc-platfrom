@@ -134,3 +134,15 @@ poetry add --dev pytest
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 ```
+
+## 官方文档入口
+
+| 类别 | 入口 |
+|------|------|
+| 语言与标准库 | [官方文档（中文）](https://docs.python.org/zh-cn/3/) · [标准库](https://docs.python.org/3/library/index.html) · [PEP Index](https://peps.python.org/) |
+| 打包分发 | [Python Packaging Guide](https://packaging.python.org/) · [PyPI](https://pypi.org/) |
+| Web 框架 | [FastAPI](https://fastapi.tiangolo.com/zh/) · [Django](https://docs.djangoproject.com/zh-hans/stable/) · [Flask](https://flask.palletsprojects.com/) · [Litestar](https://litestar.dev/) |
+| ORM/迁移 | [SQLAlchemy](https://docs.sqlalchemy.org/en/20/) · [Tortoise ORM](https://tortoise.github.io/) · [Alembic](https://alembic.sqlalchemy.org/en/latest/) |
+| 任务队列 | [Celery](https://docs.celeryq.dev/en/stable/) · [Arq](https://arq-docs.helpmanual.io/) · [Dramatiq](https://dramatiq.io/) |
+| 数据科学 | [NumPy](https://numpy.org/doc/stable/) · [pandas](https://pandas.pydata.org/docs/) · [SciPy](https://scipy.org/doc/) · [SciKit-learn](https://scikit-learn.org/stable/) · [PyTorch](https://pytorch.org/docs/stable/index.html) |
+| 工具链 | [pip](https://pip.pypa.io/en/stable/) · [uv](https://docs.astral.sh/uv/) · [Poetry](https://python-poetry.org/docs/) · [ruff](https://docs.astral.sh/ruff/) · [mypy](https://mypy.readthedocs.io/en/stable/) · [pytest](https://docs.pytest.org/en/stable/) |

@@ -392,3 +392,13 @@ ctest --output-on-failure
 - 输出 JSON/CSV 格式
 - 可视化词云（配合 Python 脚本）
 - 支持正则分词以处理更复杂的情况
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 标准库 | [cppreference（中文）](https://zh.cppreference.com/w/cpp) · [STL 容器](https://zh.cppreference.com/w/cpp/container) |
+| 正则 | [std::regex](https://en.cppreference.com/w/cpp/regex) |
+| 文件流 | [std::fstream](https://en.cppreference.com/w/cpp/io/basic_fstream) |
+| 构建 | [CMake](https://cmake.org/documentation/) |
+| 测试 | [GoogleTest](https://google.github.io/googletest/) |

@@ -475,3 +475,13 @@ spring:
     <scope>runtime</scope>
 </dependency>
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| Spring Boot | [Spring Boot 官方文档](https://docs.spring.io/spring-boot/index.html) · [中文指南](https://springdoc.cn/spring-boot/) |
+| Spring Data JPA | [JPA 参考](https://docs.spring.io/spring-data/jpa/reference/) |
+| Maven | [Maven 指南](https://maven.apache.org/guides/) |
+| 测试 | [JUnit 5](https://junit.org/junit5/docs/current/user-guide/) · [Mockito](https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/module-summary.html) |
+| H2 数据库 | [H2 Database](https://www.h2database.com/html/main.html) |

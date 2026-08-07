@@ -365,3 +365,13 @@ customElements.define('custom-card', CustomCard)
 - 图片需使用绝对 URL
 - 总宽度建议 600px 以内
 - 不支持 JavaScript
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 无障碍标准 | [WCAG 2.2](https://www.w3.org/TR/WCAG22/) · [WAI-ARIA APG](https://www.w3.org/WAI/ARIA/apg/) |
+| 性能指标 | [Core Web Vitals](https://web.dev/articles/vitals) · [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) |
+| PWA / SW | [Service Workers](https://www.w3.org/TR/service-workers/) · [MDN PWA](https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps) |
+| 结构化数据 | [Schema.org](https://schema.org/docs/documents.html) |
+| 邮件规范 | [MJML 文档](https://documentation.mjml.io/) · [CanIUse Email](https://www.caniemail.com/) |

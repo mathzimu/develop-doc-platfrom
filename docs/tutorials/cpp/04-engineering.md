@@ -344,3 +344,14 @@ jobs:
           cmake --build .
           ctest --output-on-failure
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| 构建 | [CMake](https://cmake.org/documentation/) · [CTest](https://cmake.org/cmake/help/latest/manual/ctest.1.html) |
+| 包管理 | [Conan](https://docs.conan.io/2/) · [vcpkg](https://learn.microsoft.com/zh-cn/vcpkg/) |
+| 测试 | [GoogleTest](https://google.github.io/googletest/) · [Catch2](https://github.com/catchorg/Catch2) |
+| Sanitizers | [AddressSanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer) · [ThreadSanitizer](https://github.com/google/sanitizers/wiki/ThreadSanitizerCppManual) |
+| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) · [Pre-commit C++](https://pre-commit.com/) |
+| 代码质量 | [clang-tidy](https://clang.llvm.org/extra/clang-tidy/) · [clang-format](https://clang.llvm.org/docs/ClangFormat.html) |

@@ -67,3 +67,18 @@
 | **CISM** | 管理 | 信息安全经理 |
 | **AWS Security** | 云安全 | AWS 云安全工程师 |
 | **CSSLP** | 开发 | 安全开发生命周期 |
+
+> 注：以上认证信息为通用参考，报考前请以各机构官方信息为准。
+
+> 注：以上资质信息为通用参考，具体以各家官方为准。
+
+## 官方文档入口
+
+| 类别 | 入口 |
+|------|------|
+| Web 风险与实践 | [OWASP Top 10](https://owasp.org/www-project-top-ten/) · [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/) · [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) |
+| 弱点/漏洞库 | [CWE](https://cwe.mitre.org/) · [CVE](https://www.cve.org/) · [NVD](https://nvd.nist.gov/) · [MITRE ATT&CK](https://attack.mitre.org/) |
+| 认证协议 | [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519.html) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749.html) · [OpenID Connect](https://openid.net/specs/openid-connect-core-1_0.html) · [WebAuthn](https://www.w3.org/TR/webauthn-3/) |
+| 密钥管理 | [HashiCorp Vault](https://developer.hashicorp.com/vault/docs) · [AWS KMS](https://docs.aws.amazon.com/kms/) · [Azure Key Vault](https://learn.microsoft.com/zh-cn/azure/key-vault/) · [GCP Cloud KMS](https://cloud.google.com/kms/docs) · [SOPS](https://getsops.io/) |
+| 监控/ID | [Wazuh](https://documentation.wazuh.com/) · [Snort](https://www.snort.org/documents) · [Suricata](https://suricata.readthedocs.io/) · [Falco](https://falco.org/docs/) |
+| 合规框架 | [ISO 27001](https://www.iso.org/standard/82.html) · [NIST CSF](https://www.nist.gov/cyberframework) · [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks) |

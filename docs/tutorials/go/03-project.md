@@ -221,3 +221,12 @@ func TestCreateAndResolve(t *testing.T) {
     assert.Equal(t, "https://example.com", got)
 }
 ```
+
+## 官方文档
+
+| 主题 | 链接 |
+|------|------|
+| Go 语言 | [Go 官方文档](https://go.dev/doc/) · [net/http](https://pkg.go.dev/net/http) |
+| 测试 | [testing 包](https://pkg.go.dev/testing) · [testing 入门](https://go.dev/doc/tutorial/add-a-test) |
+| 缓存 | [Redis](https://redis.io/docs/) · [go-redis](https://github.com/redis/go-redis) |
+| 数据库 | [pgx](https://pkg.go.dev/github.com/jackc/pgx/v5) · [GORM](https://gorm.io/zh_CN/docs/) |

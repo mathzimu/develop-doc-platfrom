@@ -322,3 +322,16 @@ Subgrid 适合内部元素需要与外部网格对齐的场景，如卡片列表
   color: light-dark(#1a1a2e, #e2e8f0); /* 现代浏览器 */
 }
 ```
+
+## 官方文档
+
+本节涉及 CSS 架构、设计系统、容器查询与 Houdini，以规范草案与 MDN 为准。
+
+| 主题 | 链接 |
+|------|------|
+| 规范草案 | [CSSWG Drafts](https://drafts.csswg.org/) · [W3C CSS 当前工作](https://www.w3.org/Style/CSS/current-work) |
+| 设计系统与 Token | [MDN 使用自定义属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties) |
+| 容器查询 | [MDN 容器查询](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_containment/Container_queries) |
+| 层叠层 | [MDN `@layer`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@layer) · [CSS 层叠规范](https://drafts.csswg.org/css-cascade-5/) |
+| 颜色与混合 | [CSS Color 5](https://drafts.csswg.org/css-color-5/) · [`color-mix()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value/color-mix) · [OKLCH](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch) |
+| 兼容性查询 | [Can I use](https://caniuse.com/) |
