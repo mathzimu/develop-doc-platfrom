@@ -46,6 +46,12 @@ func main() {
 `byte` | `0` | `uint8` 别名
 `rune` | `0` | `int32` 别名，表示 Unicode
 
+::: tip 关键记忆点
+- Go 变量**声明即初始化为零值**（无需手动赋初值），不会出现未定义行为。
+- `:=` 短声明只能在**函数内部**使用；`var` 可在包级使用。
+- `rune` 才是真正的「字符」（Unicode 码点），`byte` 只是 `uint8`，处理中文必须用 `rune` 遍历。
+:::
+
 ## 控制流
 
 ```go
@@ -181,6 +187,12 @@ s := make([]int, 3, 5)       // len=3, cap=5
 s = append(s, 1, 2)           // 未超 cap，不重新分配
 s = append(s, 3)              // 超过 cap，底层数组重新分配
 
+::: tip 关键点：切片的三要素
+- 切片 = **指针（指向底层数组）+ 长度 len + 容量 cap**。
+- 切片**共享底层数组**：`slice := nums[1:4]` 与原数组共享内存，修改会互相影响；需要独立副本时用 `copy`。
+- `append` 超出 cap 会分配新数组（旧数据复制过去），此时新切片不再共享原数组——这正是很多「改了切片但原数组没变」的来源。
+:::
+
 // 映射
 ages := make(map[string]int)
 ages["Alice"] = 30
@@ -242,6 +254,12 @@ type Shape interface {
 type Circle struct {
     Radius float64
 }
+
+::: tip 关键点：隐式接口
+- Go 的接口是**鸭子类型**：只要一个类型实现了接口的全部方法，就自动满足该接口，**不需要 `implements` 声明**。
+- 这带来「小接口」哲学——常用 `io.Reader` / `io.Writer` 这类仅含一两个方法的接口，组合出强大抽象。
+- 推荐「**接受接口、返回具体类型**」，便于替换实现与单元测试。
+:::
 
 func (c Circle) Area() float64 {
     return math.Pi * c.Radius * c.Radius
@@ -313,6 +331,8 @@ wg.Wait()
 
 ## 错误处理
 
+Go 没有 `try/catch`，而是把错误当作**普通返回值**（最后一个返回值通常是 `error`）。这是 Go 显式错误处理的核心风格。
+
 ```go
 // 错误即值
 result, err := doSomething()
@@ -350,6 +370,12 @@ defer func() {
         fmt.Println("恢复:", r)
     }
 }()
+
+::: tip 关键点
+- **不要滥用 panic**：panic 应只用于真正不可恢复的程序错误。常规错误处理一律用 `error` 返回值并显式 `if err != nil` 检查。
+- `defer + recover` 仅用于 goroutine 顶层兜底，避免单个协程崩溃拖垮整个进程。
+- `fmt.Errorf("...: %w", err)` 的 `%w` 会**包装**原错误，配合 `errors.Is` / `errors.As` 做错误类型判断。
+:::
 ```
 
 ## 常用标准库

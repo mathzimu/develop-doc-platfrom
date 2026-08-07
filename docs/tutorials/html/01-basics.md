@@ -89,6 +89,10 @@ HTML 提供六级标题 `<h1>` 到 `<h6>`，以及段落标签 `<p>`。
 | `href` | 目标 URL |
 | `target="_blank"` | 在新标签页打开 |
 | `rel="noopener noreferrer"` | 与 `_blank` 配合使用，防止安全漏洞 |
+
+::: warning `target="_blank"` 务必加 `rel="noopener"`
+用 `_blank` 打开新标签时，新页面可通过 `window.opener` 访问原页面的 `window` 对象，存在篡改与性能隐患。加 `rel="noopener noreferrer"` 会切断该引用，是现代浏览器的安全标配。
+:::
 | `download` | 提示下载文件而非导航 |
 
 ## 图片
@@ -294,6 +298,13 @@ HTML 元素分为块级（block）和行内（inline）两类。块级元素独�
 ## 语义化 HTML5
 
 使用语义标签可以提升可访问性和 SEO：
+
+::: tip 为什么语义化重要
+- **可访问性**：屏幕阅读器依靠 `<nav>`、`<main>`、`<article>` 等语义标签理解页面结构；用一堆 `<div>` 会让读屏软件 "看不见" 结构。
+- **SEO**：搜索引擎更看重 `<h1>`、`<header>` 等语义节点来推断内容主题。
+- **可维护性**：语义标签自带含义，比无意义的 `<div class="header">` 更易读、CSS 更简洁。
+- 经验法则：**能用语义标签就别用 `<div>`/`<span>`**，样式交给 CSS。
+:::
 
 ```html
 <header>     <!-- 页面或区域头部 -->

@@ -20,6 +20,10 @@ let nothing: null = null
 let undefinedVar: undefined = undefined
 let anything: any = '可以是任何类型'  // 避免使用
 
+::: warning 不要用 `any`
+`any` 会**关闭类型检查**，失去使用 TS 的意义。能用 `unknown`（配合类型守卫收窄）就不要用 `any`；项目应开启 `strict` 模式并尽量 `noImplicitAny`。
+:::
+
 // 联合类型
 let id: string | number = 'abc123'
 
@@ -115,6 +119,12 @@ type Person = Named & Aged  // 同时具有 name 和 age
 | 联合类型 | 不支持 | 支持 |
 | 映射类型 | 不支持 | 支持 |
 | 工具类型 | `Pick`, `Omit` 等 | 同 |
+
+::: tip 如何选择
+- 描述**对象形状 / 类约定**优先用 `interface`（支持声明合并，适合库的类型扩展）。
+- 需要联合、元组、条件类型、映射类型时用 `type`。
+- 两者在绝大多数场景下可互换，团队内保持统一即可。
+:::
 
 ## 函数
 
@@ -290,6 +300,11 @@ enum LogLevel {
   Error, Warn, Info, Debug,
 }
 console.log(LogLevel[0])  // 'Error'
+
+::: warning 枚举的取舍
+- 数字枚举会生成**反向映射**和运行时对象，体积较大；`const enum` 会在编译期内联，不产生运行时代码。
+- 多数现代项目更倾向用 **字符串字面量联合类型**（`type Status = 'idle' | 'loading'`）替代枚举：零运行时开销、更易重构、与类型系统契合更紧。
+:::
 ```
 
 ## 类型守卫

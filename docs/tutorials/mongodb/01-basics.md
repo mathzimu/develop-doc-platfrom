@@ -4,6 +4,8 @@ MongoDB 是一种 NoSQL 文档数据库，将数据存储为 JSON 风格的 BSON
 
 ## 核心概念
 
+MongoDB 属于文档型 NoSQL 数据库，数据以 **BSON**（Binary JSON）形式存储在集合中。与关系型数据库相比，它没有固定表结构（schema-less），同一集合中的文档可以拥有不同的字段，更适合快速迭代与存储结构易变的数据。
+
 | 关系型数据库 | MongoDB |
 |-------------|---------|
 | Database（数据库） | Database（数据库） |
@@ -12,12 +14,24 @@ MongoDB 是一种 NoSQL 文档数据库，将数据存储为 JSON 风格的 BSON
 | Column（列） | Field（字段） |
 | Primary Key | `_id`（自动生成 ObjectId） |
 
+::: tip 关键概念
+- **文档（Document）** 是 MongoDB 的最小数据单元，等价于一行记录，用 BSON 表示。
+- **集合（Collection）** 是一组文档的容器，等价于表，但不需要预先定义字段。
+- **`_id`** 是集合内唯一的主键，未指定时 Mongo 会自动生成 12 字节的 ObjectId（含时间戳，可粗略按时间排序）。
+:::
+
 ## 基本数据类型
 
 ```
 String, Number, Boolean, Array, Object, Null
 ObjectId, Date, Binary, Regex, Code
 ```
+
+::: tip 易混淆点
+- **Number** 默认是双精度浮点（`double`）；需要整数时用 `Int32`/`Int64`，高精度货币用 `Decimal128`。
+- **Array / Object** 让文档可以嵌套，这是文档库相比行表的优势——一次查询即可拿到关联数据，减少 join。
+- **ObjectId** 不是字符串，比较时要用 `ObjectId("...")` 而非普通字符串。
+:::
 
 ## 安装与连接
 
@@ -49,6 +63,8 @@ db.users.drop()     // 删除集合
 
 ## 文档操作（CRUD）
 
+MongoDB 的读写操作都以 **集合** 为作用对象，方法名采用 `操作 + One/Many` 的命名（如 `insertOne` / `insertMany`）。所有写入操作默认返回 `{ acknowledged: true, insertedId }` 等结果对象。
+
 ### 创建
 
 ```js
@@ -72,6 +88,8 @@ db.users.insertMany([
 ```
 
 ### 查询
+
+`find()` 返回游标（cursor），不会立即把全部数据载入内存；`pretty()` 仅用于 shell 美化输出。条件对象采用 **查询操作符**（`$gt`/`$lt`/`$in` 等）表达范围与逻辑。
 
 ```js
 // 查询所有
@@ -159,6 +177,8 @@ db.users.deleteMany({})    // 删除全部（保留集合）
 
 ## 索引
 
+索引用于加速查询、约束唯一性。没有合适索引时，MongoDB 会执行 **全集合扫描（COLLSCAN）**，数据量大时极慢。索引建立在字段上，`1` 表示升序、`-1` 表示降序（单字段索引方向不影响结果，仅影响复合索引的排序匹配）。
+
 ```js
 // 单字段索引
 db.users.createIndex({ email: 1 })           // 1: 升序, -1: 降序
@@ -179,6 +199,8 @@ db.users.dropIndex("email_1")
 ```
 
 ## 聚合管道
+
+聚合管道（Aggregation Pipeline）是一组 **有序的阶段（stage）** 组成的处理链，前一个阶段的输出是后一个阶段的输入，类似 Unix 管道。常用阶段包括 `$match`（筛选）、`$group`（分组聚合）、`$sort`、`$limit`、`$lookup`（关联）、`$unwind`（展开数组）。当查询涉及统计、分组、连表时，优先使用聚合管道而非在应用层循环处理。
 
 ```js
 db.orders.aggregate([
@@ -218,6 +240,8 @@ db.orders.aggregate([
 ```
 
 ## Mongoose（Node.js ODM）
+
+Mongoose 是 Node.js 生态最流行的 ODM（对象文档映射）库。它在原生驱动之上提供 **Schema 校验、中间件、虚拟字段、类型转换**，让代码更符合面向对象习惯。在生产项目中，建议用 Mongoose 定义 Schema 约束写入结构，而非直接调用原生 `db.collection`。
 
 ```js
 import mongoose from 'mongoose'

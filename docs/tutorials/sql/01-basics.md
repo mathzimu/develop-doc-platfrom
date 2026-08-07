@@ -133,6 +133,11 @@ FROM users
 LEFT JOIN orders ON users.id = orders.user_id;
 ```
 
+::: tip 关键点：LEFT JOIN 的 NULL 陷阱
+- `LEFT JOIN` 保证**左表全部行**出现；右表无匹配时，对应列返回 `NULL`。
+- 常见坑：在 `WHERE` 里对右表列加条件（如 `WHERE orders.amount > 100`）会把 `NULL` 行过滤掉，等价于 `INNER JOIN`。要筛选右表时，条件应写在 `ON` 子句中。
+:::
+
 ### 右连接（RIGHT JOIN）
 
 ```sql
@@ -313,6 +318,10 @@ SHOW INDEX FROM users;
 - 避免在索引列上使用函数
 - 小表不需要索引（全表扫描更快）
 
+::: tip 复合索引的「最左前缀」
+复合索引 `INDEX(city, age)` 等价于「先按 city 排序、再按 age 排序」。它能加速 `WHERE city = ?` 和 `WHERE city = ? AND age = ?`，但**无法**单独加速 `WHERE age = ?`（跳过了最左列）。设计复合索引时，把最常用于过滤的列放在最左。
+:::
+
 ## 事务
 
 ```sql
@@ -349,6 +358,11 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 | READ COMMITTED | 安全 | 可能 | 可能 |
 | REPEATABLE READ | 安全 | 安全 | 可能 |
 | SERIALIZABLE | 安全 | 安全 | 安全 |
+
+::: tip 隔离级别取舍
+- **脏读**：读到别的事务未提交的数据（最危险）；**不可重复读**：同一事务内两次读同一行结果不同；**幻读**：两次查询返回的行集合不同。
+- 级别越高越安全，但并发性能越低。多数业务用 `READ COMMITTED`（PG 默认）或 `REPEATABLE READ`（MySQL 默认）即可，仅在强一致场景才用 `SERIALIZABLE`。
+:::
 
 ## 视图
 

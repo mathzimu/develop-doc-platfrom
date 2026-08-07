@@ -11,6 +11,11 @@ javac HelloWorld.java   # 编译为字节码 .class
 java HelloWorld         # 运行
 ```
 
+::: tip 关键记忆点
+- Java 是**编译型 + 解释型结合**：`javac` 把源码编译成与平台无关的**字节码（.class）**，再由 **JVM（Java 虚拟机）** 解释/即时编译（JIT）执行。这也是「一次编写，到处运行」的原因。
+- `public class` 的类名**必须与文件名一致**，且一个文件只能有一个 `public` 类。
+:::
+
 ## Hello World
 
 ```java
@@ -89,6 +94,12 @@ Integer a = 100;          // 自动装箱 int → Integer
 int b = a;                // 自动拆箱 Integer → int
 Long big = 100L;
 Double d = 3.14;
+
+::: tip 自动装箱的坑
+- `Integer` 等包装类是对象，`==` 比较的是**引用**而非值；值比较要用 `.equals()` 或拆箱后比较。
+- 自动装箱会创建对象，在循环里频繁装箱（如 `Integer sum += i`）有额外开销；高频数值运算优先用基本类型。
+- `Integer` 缓存 -128~127 的对象，超出范围后 `==` 会返回 `false`，这点最易踩坑。
+:::
 
 // 引用类型
 String text = "Hello";
@@ -336,6 +347,12 @@ public class BusinessException extends RuntimeException {
 
     public int getErrorCode() { return errorCode; }
 }
+
+::: tip 受检异常 vs 非受检异常
+- **受检异常（Checked）**：`Exception` 的子类（除 `RuntimeException`），编译器强制 `try/catch` 或 `throws` 声明，用于可预期、调用方应处理的异常（如 IO）。
+- **非受检异常（Unchecked）**：`RuntimeException` 与 `Error` 的子类，编译器不强制处理，多用于编程错误（空指针、越界、非法参数）。
+- 业务异常通常继承 `RuntimeException`，避免强制调用方层层声明；`try-with-resources` 自动关闭实现 `AutoCloseable` 的资源，杜绝泄漏。
+:::
 ```
 
 ## 常用工具

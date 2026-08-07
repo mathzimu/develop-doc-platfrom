@@ -13,6 +13,11 @@ git add <file>    git commit          git push
                                         ←  git clone
 ```
 
+::: tip 关键记忆点
+- Git 维护**三个区域**：工作区（你编辑的文件）→ 暂存区（待提交快照）→ 本地仓库（已提交历史）。`add` 把改动搬进暂存区，`commit` 把暂存区固化为一次提交。
+- **几乎任何误操作都可恢复**：`reset`/`restore` 只移动指针，Git 的「悬空提交」在 `reflog` 中可找回（默认保留 30 天），所以 `reset --hard` 前务必确认。
+:::
+
 ## 初始配置
 
 ```sh
@@ -221,6 +226,12 @@ git reset HEAD file.txt       # 旧版语法
 git reset --soft HEAD~1       # 撤销提交，保留工作区和暂存区
 git reset --mixed HEAD~1      # 撤销提交，保留工作区，清空暂存区（默认）
 git reset --hard HEAD~1       # 完全回退，丢弃所有修改（危险）
+
+::: warning `reset --soft / --mixed / --hard` 的区别
+- `--soft`：只把 HEAD 回退，所有改动**仍在暂存区**（像没 commit 过）。
+- `--mixed`（默认）：HEAD 回退，改动回到**工作区未暂存**状态。
+- `--hard`：**直接丢弃**目标提交之后的所有改动，不可恢复（除非有 reflog）。生产环境回退公开分支请用 `git revert` 而非 `reset --hard`。
+:::
 
 # 回退到指定版本
 git reset --hard <commit-hash>
