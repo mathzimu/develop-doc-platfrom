@@ -28,6 +28,10 @@ createApp(App).mount('#app')
     <!-- 原始 HTML -->
     <div v-html="rawHtml"></div>
 
+::: danger 谨慎使用 `v-html`
+`v-html` 会把字符串作为 HTML 直接插入 DOM，**不会经过转义**，若内容来自用户输入会造成 XSS 漏洞。仅在内容绝对可信（如来自后台可信富文本）时使用，且务必做好服务端过滤。
+:::
+
     <!-- 属性绑定 -->
     <img :src="imageUrl" :alt="altText">
     <div :class="['container', isActive ? 'active' : '']">
@@ -117,6 +121,13 @@ watchEffect(() => {
   console.log(`count 现在是: ${count.value}`)
 })
 </script>
+
+::: tip 响应式的关键记忆点
+- **`ref` 包裹任意类型**，访问/修改都得用 `.value`（模板里自动解包，不用写 `.value`）；**`reactive` 只用于对象/数组**，直接 `.age++` 即可。
+- **必须通过 `.value` 修改 ref 才能触发更新**——直接重新赋值给 `count` 不行。
+- `computed` 有缓存（依赖不变不重算），适合派生状态；`watch`/`watchEffect` 用于「变化后执行副作用」（如请求、日志）。
+- 用 `reactive` 的对象**整体替换（`user = {...}`）会丢失响应性**，此时应改用 `ref`。
+:::
 ```
 
 ### ref vs reactive
