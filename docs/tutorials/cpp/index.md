@@ -4,7 +4,7 @@ C++ 是一种高性能的编译型语言，支持面向对象、泛型和函数�
 
 ## 教程目录
 
-- [01. C++ 基础语法](/tutorials/cpp/01-basics) — 变量、指针/引用、OOP、模板、STL、移动语义、文件操作、编译选项
+- [01. C++ 基础语法](/tutorials/cpp/01-basics) — 类型与初始化、命名空间、枚举、数组与 span、字符串与 string_view、指针/引用与 const-correctness、类型转换、异常处理、OOP、模板、STL、移动语义、Ranges、文件操作、编译选项
 - [02. C++ 进阶深入](/tutorials/cpp/02-advanced) — RAII、模板元编程、完美转发、C++17/20 新特性、内存管理、多线程、异常安全、设计模式
 - [03. 实战项目：文本文件词频统计](/tutorials/cpp/03-project) — 完整项目实践：CMake、文件读取、词频统计、排序、格式化输出、单元测试
 - [04. C++ 工程实践](/tutorials/cpp/04-engineering) — CMake、日志、测试、性能分析、包管理、CI/CD、Sanitizers

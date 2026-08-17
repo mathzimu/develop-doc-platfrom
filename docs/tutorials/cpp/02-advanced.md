@@ -270,11 +270,13 @@ concept SortableContainer = requires(T& c) {
 
 ### Coroutines (C++20)
 
+C++20 引入协程核心机制（`co_await` / `co_yield` / `co_return`），但**标准库未提供现成的生成器类型**——需自行实现 `promise_type` 或使用第三方库（如 cppcoro）。`std::generator` 在 C++23 才进入标准。
+
 ```cpp
 #include <coroutine>
-#include <generator>  // C++23
+#include <generator>  // C++23 才提供 std::generator
 
-// 简化生成器 (C++23)
+// 简化生成器（C++23）
 generator<int> range(int from, int to) {
     for (int i = from; i < to; ++i) {
         co_yield i;
@@ -286,6 +288,8 @@ for (int n : range(0, 5)) {
     cout << n << " ";  // 0 1 2 3 4
 }
 ```
+
+> 在 C++20 环境下若 `std::generator` 不可用，可借助 `cppcoro::async_generator` 或自行实现 `promise_type`，参考 [cppreference 协程](https://en.cppreference.com/w/cpp/coroutine)。
 
 ## 内存管理
 
@@ -599,3 +603,5 @@ public:
 | 模板与泛型 | [模板（C++ 编程指南）](https://en.cppreference.com/w/cpp/language/templates) · [SFINAE](https://en.cppreference.com/w/cpp/language/sfinae) |
 | 并发 | [std::thread](https://en.cppreference.com/w/cpp/thread) · [并发支持](https://en.cppreference.com/w/cpp/thread) |
 | Modern C++ 指南 | [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) |
+
+继续学习请前往 [03-实战项目：文本文件词频统计](/tutorials/cpp/03-project)。

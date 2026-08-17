@@ -355,3 +355,5 @@ jobs:
 | Sanitizers | [AddressSanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer) · [ThreadSanitizer](https://github.com/google/sanitizers/wiki/ThreadSanitizerCppManual) |
 | CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) · [Pre-commit C++](https://pre-commit.com/) |
 | 代码质量 | [clang-tidy](https://clang.llvm.org/extra/clang-tidy/) · [clang-format](https://clang.llvm.org/docs/ClangFormat.html) |
+
+继续学习请前往 [05-生态全景](/tutorials/cpp/05-ecosystem)。

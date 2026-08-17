@@ -102,3 +102,5 @@ C++ 拥有庞大且活跃的生态。以下整理了各领域的常用工具和�
 | 测试 | [GoogleTest](https://google.github.io/googletest/) · [Catch2](https://github.com/catchorg/Catch2) · [doctest](https://github.com/onqtam/doctest) · [Boost.Test](https://www.boost.org/doc/libs/release/libs/test/) |
 | 网络 | [Boost.Asio](https://www.boost.org/doc/libs/release/libs/asio/) · [libcurl](https://curl.se/libcurl/) · [gRPC C++](https://grpc.io/docs/languages/cpp/) · [cpp-httplib](https://github.com/yhirose/cpp-httplib) |
 | 编译器与诊断 | [GCC](https://gcc.gnu.org/onlinedocs/) · [Clang](https://clang.llvm.org/docs/) · [MSVC](https://learn.microsoft.com/zh-cn/cpp/) · [Sanitizers](https://github.com/google/sanitizers/wiki) · [clang-tidy](https://clang.llvm.org/extra/clang-tidy/) |
+
+更多入口见 [官方文档索引](/reference/official-docs)、[规范与标准](/reference/standards) 与 [工具链与包管理](/reference/tooling)。回到 [C++ 教程首页](/tutorials/cpp/)。
