@@ -28,24 +28,20 @@ cargo build --release
 - 基础编程概念（变量、函数、控制流）
 - 了解命令行操作
 
-## 官方文档
+## 官方文档与延伸阅读
 
 所有权与生命周期规则、trait 解析、unsafe 约束等细节以下列一手文档为准。
 
-| 类型 | 链接 |
-|------|------|
-| 官方书籍 | [The Rust Book](https://doc.rust-lang.org/book/) · [中文版](https://kaisery.github.io/trpl-zh-cn/) |
-| 标准库 | [std 文档](https://doc.rust-lang.org/std/) |
-| 语言参考 | [The Rust Reference](https://doc.rust-lang.org/reference/) |
-| 示例驱动学习 | [Rust by Example](https://doc.rust-lang.org/rust-by-example/) |
-| 编译错误索引 | [Error Index](https://doc.rust-lang.org/error_codes/error-index.html) |
-| 包管理 | [Cargo Book](https://doc.rust-lang.org/cargo/) · [crates.io](https://crates.io/) · [docs.rs](https://docs.rs/) |
-| 异步 | [Async Book](https://rust-lang.github.io/async-book/) · [Tokio 教程](https://tokio.rs/tokio/tutorial) |
-| unsafe 与 FFI | [Rustonomicon](https://doc.rust-lang.org/nomicon/) |
-| 宏 | [The Little Book of Rust Macros](https://veykril.github.io/tlborm/) |
-| Web 框架 | [Axum](https://docs.rs/axum/latest/axum/) · [Actix Web](https://actix.rs/docs/) |
-| 常用库 | [serde](https://serde.rs/) · [SQLx](https://docs.rs/sqlx/latest/sqlx/) · [clap](https://docs.rs/clap/latest/clap/) · [anyhow](https://docs.rs/anyhow/latest/anyhow/) |
-| 质量工具 | [Clippy](https://doc.rust-lang.org/clippy/) · [rustfmt](https://rust-lang.github.io/rustfmt/) |
-| 版本与提案 | [Edition Guide](https://doc.rust-lang.org/edition-guide/) · [RFCs](https://rust-lang.github.io/rfcs/) |
-
-更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
+- **官方书籍**：[The Rust Book](https://doc.rust-lang.org/book/) · [中文版](https://kaisery.github.io/trpl-zh-cn/)
+- **标准库**：[std 文档](https://doc.rust-lang.org/std/)
+- **语言参考**：[The Rust Reference](https://doc.rust-lang.org/reference/)
+- **示例学习**：[Rust by Example](https://doc.rust-lang.org/rust-by-example/)
+- **编译错误索引**：[Error Index](https://doc.rust-lang.org/error_codes/error-index.html)
+- **包管理**：[Cargo Book](https://doc.rust-lang.org/cargo/) · [crates.io](https://crates.io/) · [docs.rs](https://docs.rs/)
+- **异步**：[Async Book](https://rust-lang.github.io/async-book/) · [Tokio 教程](https://tokio.rs/tokio/tutorial)
+- **unsafe 与 FFI**：[The Rustonomicon](https://doc.rust-lang.org/nomicon/)
+- **宏**：[The Little Book of Rust Macros](https://veykril.github.io/tlborm/)
+- **Web 框架**：[Axum](https://docs.rs/axum/latest/axum/) · [Actix Web](https://actix.rs/docs/)
+- **常用库**：[serde](https://serde.rs/) · [SQLx](https://docs.rs/sqlx/latest/sqlx/) · [clap](https://docs.rs/clap/latest/clap/) · [anyhow](https://docs.rs/anyhow/latest/anyhow/)
+- **质量工具**：[Clippy](https://doc.rust-lang.org/clippy/) · [rustfmt](https://rust-lang.github.io/rustfmt/)
+- **版本与提案**：[Edition Guide](https://doc.rust-lang.org/edition-guide/) · [RFCs](https://rust-lang.github.io/rfcs/)

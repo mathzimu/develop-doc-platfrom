@@ -723,12 +723,16 @@ mod tests {
 
 继续学习请前往 [04-工程实践](/tutorials/rust/04-engineering)。
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 命令行解析 | [clap](https://docs.rs/clap/latest/clap/) |
-| 序列化 | [serde](https://serde.rs/) · [serde_json](https://docs.rs/serde_json) |
-| 错误处理 | [anyhow](https://docs.rs/anyhow) · [thiserror](https://docs.rs/thiserror) |
-| 测试 | [Rust Book 测试章节](https://doc.rust-lang.org/book/ch11-00-testing.html) |
-| Cargo | [Cargo Book](https://doc.rust-lang.org/cargo/) |
+- **官方书籍**：[The Rust Book](https://doc.rust-lang.org/book/) · [中文版](https://kaisery.github.io/trpl-zh-cn/)
+- **标准库**：[std 文档](https://doc.rust-lang.org/std/)
+- **语言参考**：[The Rust Reference](https://doc.rust-lang.org/reference/)
+- **包管理**：[Cargo Book](https://doc.rust-lang.org/cargo/) · [crates.io](https://crates.io/)
+- **命令行解析**：[clap](https://docs.rs/clap/latest/clap/)
+- **序列化**：[serde](https://serde.rs/) · [serde_json](https://docs.rs/serde_json)
+- **错误处理**：[anyhow](https://docs.rs/anyhow) · [thiserror](https://docs.rs/thiserror)
+- **测试**：[Rust Book 测试章节](https://doc.rust-lang.org/book/ch11-00-testing.html)
+- **版本与规范**：[Edition Guide](https://doc.rust-lang.org/edition-guide/) · [RFCs](https://rust-lang.github.io/rfcs/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

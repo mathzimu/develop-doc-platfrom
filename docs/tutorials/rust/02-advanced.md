@@ -388,19 +388,24 @@ fn integration_test() {
 }
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
 生命周期、智能指针、并发、宏、unsafe 与 async，详情以 The Rust Book 与 Reference 为准。
 
-| 主题 | 链接 |
-|------|------|
-| 所有权与借用 | [The Rust Book 所有权](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html) · [借用检查器](https://doc.rust-lang.org/book/ch10-00-generics.html) |
-| 生命周期 | [Rust Book 生命周期](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html) · [Nomicon 生命周期](https://doc.rust-lang.org/nomicon/lifetimes.html) |
-| 智能指针 | [Rust Book 智能指针](https://doc.rust-lang.org/book/ch15-00-smart-pointers.html) |
-| 并发 | [Rust Book 无畏并发](https://doc.rust-lang.org/book/ch16-00-concurrency.html) · [Send/Sync](https://doc.rust-lang.org/reference/types.html#static-type) |
-| 宏 | [The Little Book of Rust Macros](https://veykril.github.io/tlborm/) |
-| unsafe | [The Rustonomicon](https://doc.rust-lang.org/nomicon/) |
-| 异步 | [Async Book](https://rust-lang.github.io/async-book/) · [Tokio 教程](https://tokio.rs/tokio/tutorial) |
-| 编译错误索引 | [Error Index](https://doc.rust-lang.org/error_codes/error-index.html) |
+- **官方书籍**：[The Rust Book](https://doc.rust-lang.org/book/) · [中文版](https://kaisery.github.io/trpl-zh-cn/)
+- **标准库**：[std 文档](https://doc.rust-lang.org/std/)
+- **语言参考**：[The Rust Reference](https://doc.rust-lang.org/reference/)
+- **包管理**：[Cargo Book](https://doc.rust-lang.org/cargo/) · [crates.io](https://crates.io/)
+- **所有权与借用**：[The Rust Book 所有权](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html) · [借用检查器](https://doc.rust-lang.org/book/ch10-00-generics.html)
+- **生命周期**：[Rust Book 生命周期](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html) · [Nomicon 生命周期](https://doc.rust-lang.org/nomicon/lifetimes.html)
+- **智能指针**：[Rust Book 智能指针](https://doc.rust-lang.org/book/ch15-00-smart-pointers.html)
+- **并发**：[Rust Book 无畏并发](https://doc.rust-lang.org/book/ch16-00-concurrency.html) · [Send/Sync](https://doc.rust-lang.org/reference/types.html#static-type)
+- **宏**：[The Little Book of Rust Macros](https://veykril.github.io/tlborm/)
+- **unsafe**：[The Rustonomicon](https://doc.rust-lang.org/nomicon/)
+- **异步**：[Async Book](https://rust-lang.github.io/async-book/) · [Tokio 教程](https://tokio.rs/tokio/tutorial)
+- **编译错误索引**：[Error Index](https://doc.rust-lang.org/error_codes/error-index.html)
+- **版本与规范**：[Edition Guide](https://doc.rust-lang.org/edition-guide/) · [RFCs](https://rust-lang.github.io/rfcs/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
 
 继续学习请前往 [03-实战项目：JSON 解析器](/tutorials/rust/03-project)。

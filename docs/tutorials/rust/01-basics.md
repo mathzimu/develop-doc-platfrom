@@ -2,6 +2,8 @@
 
 Rust 是一门系统级编程语言，其核心设计理念是 **内存安全**、**无数据竞争** 和 **零成本抽象**。本章涵盖 Rust 最核心的基础概念。
 
+> **提示**：系统学习基础语法推荐阅读 [The Rust Book](https://doc.rust-lang.org/book/)（[中文版](https://kaisery.github.io/trpl-zh-cn/)），所有权等核心概念详见 [The Rust Reference](https://doc.rust-lang.org/reference/)。
+
 ## 变量与基本类型
 
 Rust 变量默认**不可变**，使用 `mut` 关键字使其可变。
@@ -471,3 +473,15 @@ fn main() {
 ```
 
 继续学习请前往 [02-进阶深入](/tutorials/rust/02-advanced)。
+
+## 官方文档与延伸阅读
+
+- **官方书籍**：[The Rust Book](https://doc.rust-lang.org/book/) · [中文版](https://kaisery.github.io/trpl-zh-cn/)
+- **标准库**：[std 文档](https://doc.rust-lang.org/std/)
+- **语言参考**：[The Rust Reference](https://doc.rust-lang.org/reference/)
+- **包管理**：[Cargo Book](https://doc.rust-lang.org/cargo/) · [crates.io](https://crates.io/)
+- **宏**：[The Little Book of Rust Macros](https://veykril.github.io/tlborm/)
+- **示例学习**：[Rust by Example](https://doc.rust-lang.org/rust-by-example/)
+- **版本与规范**：[Edition Guide](https://doc.rust-lang.org/edition-guide/) · [RFCs](https://rust-lang.github.io/rfcs/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
