@@ -354,14 +354,20 @@ SELECT * FROM ranked WHERE product_rank <= 3
 ORDER BY month, product_rank;
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-索引策略、执行计划、事务隔离、窗口函数等以数据库厂商文档为准。
+- **PostgreSQL**：[官方文档](https://www.postgresql.org/docs/current/) · [中文文档](http://www.postgres.cn/docs/current/)
+- **MySQL**：[MySQL 8.4 参考手册](https://dev.mysql.com/doc/refman/8.4/en/)
+- **SQLite**：[SQLite 文档](https://sqlite.org/docs.html)
+- **SQL Server**：[T-SQL 参考](https://learn.microsoft.com/zh-cn/sql/t-sql/language-reference)
+- **Oracle**：[Oracle Database 文档](https://docs.oracle.com/en/database/oracle/oracle-database/index.html)
+- **SQL 标准**：[ISO/IEC 9075](https://www.iso.org/standard/76583.html)
+- **执行计划**：[PostgreSQL EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) · [MySQL EXPLAIN](https://dev.mysql.com/doc/refman/8.4/en/explain-output.html)
+- **索引策略**：[PG 索引](https://www.postgresql.org/docs/current/indexes.html) · [MySQL 优化](https://dev.mysql.com/doc/refman/8.4/en/optimization.html) · [PgXact（索引）](https://www.postgresql.org/docs/current/indexes-types.html)
+- **事务与隔离**：[PG 事务隔离](https://www.postgresql.org/docs/current/transaction-iso.html) · [InnoDB 事务模型](https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-model.html)
+- **窗口函数与 CTE**：[PG 窗口函数](https://www.postgresql.org/docs/current/tutorial-window.html) · [PG WITH](https://www.postgresql.org/docs/current/queries-with.html)
+- **主从与复制**：[PG 复制](https://www.postgresql.org/docs/current/high-availability.html) · [MySQL 复制](https://dev.mysql.com/doc/refman/8.4/en/replication.html)
+- **迁移工具**：[Flyway](https://documentation.red-gate.com/flyway) · [Liquibase](https://docs.liquibase.com/) · [Atlas](https://atlasgo.io/docs)
+- **云数据库**：[Neon](https://neon.com/docs) · [Supabase](https://supabase.com/docs)
 
-| 主题 | 链接 |
-|------|------|
-| 执行计划 | [PostgreSQL EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) · [MySQL EXPLAIN](https://dev.mysql.com/doc/refman/8.4/en/explain-output.html) |
-| 索引策略 | [PG 索引](https://www.postgresql.org/docs/current/indexes.html) · [MySQL 优化](https://dev.mysql.com/doc/refman/8.4/en/optimization.html) · [PgXact（索引）](https://www.postgresql.org/docs/current/indexes-types.html) |
-| 事务与隔离 | [PG 事务隔离](https://www.postgresql.org/docs/current/transaction-iso.html) · [InnoDB 事务模型](https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-model.html) |
-| 窗口函数与 CTE | [PG 窗口函数](https://www.postgresql.org/docs/current/tutorial-window.html) · [PG WITH](https://www.postgresql.org/docs/current/queries-with.html) |
-| 主从与复制 | [PG 复制](https://www.postgresql.org/docs/current/high-availability.html) · [MySQL 复制](https://dev.mysql.com/doc/refman/8.4/en/replication.html) |
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

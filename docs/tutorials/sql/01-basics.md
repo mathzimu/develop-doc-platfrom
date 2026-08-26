@@ -6,6 +6,10 @@ SQL（Structured Query Language）是管理关系型数据库的标准语言，�
 
 关系型数据库以**表（table）** 的形式组织数据，表由**行（row/record）** 和**列（column/field）** 组成。表之间通过**外键（foreign key）** 建立关联。
 
+::: tip 方言差异
+SQL 标准语法一致，但函数名、分页写法、隔离级别实现等因数据库而异。本教程示例主要基于 [PostgreSQL](https://www.postgresql.org/docs/current/) 与 [MySQL 8.4 参考手册](https://dev.mysql.com/doc/refman/8.4/en/)，实际开发请以对应厂商文档为准。
+:::
+
 ```
 users                          orders
 ┌────┬───────┬──────┐         ┌────┬──────────┬─────────┐
@@ -334,6 +338,10 @@ COMMIT;     -- 提交
 -- ROLLBACK;  -- 回滚
 ```
 
+::: tip 隔离级别细节
+四种隔离级别的脏读/不可重复读/幻读表现以厂商实现为准，例如 [PostgreSQL 事务隔离](https://www.postgresql.org/docs/current/transaction-iso.html) 与 [InnoDB 事务模型](https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-model.html)。
+:::
+
 ### ACID 特性
 
 | 特性 | 说明 |
@@ -435,3 +443,18 @@ SELECT
 6. **批处理**：大量插入/更新时分批执行
 7. **使用连接池**：减少连接创建开销
 8. **归档旧数据**：分区表或单独表存储
+
+## 官方文档与延伸阅读
+
+- **PostgreSQL**：[官方文档](https://www.postgresql.org/docs/current/) · [中文文档](http://www.postgres.cn/docs/current/)
+- **MySQL**：[MySQL 8.4 参考手册](https://dev.mysql.com/doc/refman/8.4/en/)
+- **SQLite**：[SQLite 文档](https://sqlite.org/docs.html)
+- **SQL Server**：[T-SQL 参考](https://learn.microsoft.com/zh-cn/sql/t-sql/language-reference)
+- **Oracle**：[Oracle Database 文档](https://docs.oracle.com/en/database/oracle/oracle-database/index.html)
+- **SQL 标准**：[ISO/IEC 9075](https://www.iso.org/standard/76583.html)
+- **索引与执行计划**：[PG 索引](https://www.postgresql.org/docs/current/indexes.html) · [PG EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) · [MySQL 优化](https://dev.mysql.com/doc/refman/8.4/en/optimization.html)
+- **事务与隔离级别**：[PG 事务隔离](https://www.postgresql.org/docs/current/transaction-iso.html) · [InnoDB 事务模型](https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-model.html)
+- **迁移工具**：[Flyway](https://documentation.red-gate.com/flyway) · [Liquibase](https://docs.liquibase.com/) · [Atlas](https://atlasgo.io/docs)
+- **云数据库**：[Neon](https://neon.com/docs) · [Supabase](https://supabase.com/docs)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

@@ -270,13 +270,20 @@ LIMIT 10;
 | 复制延迟 | > 10s | > 60s |
 | 磁盘使用率 | > 80% | > 90% |
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 迁移工具 | [Flyway](https://documentation.red-gate.com/flyway) · [Liquibase](https://docs.liquibase.com/) · [Alembic](https://alembic.sqlalchemy.org/en/latest/) |
-| SQL Lint | [sqlfluff](https://docs.sqlfluff.com/en/stable/) · [SchemeLint](https://www.schemalint.com/) |
-| 连接池 | [PgBouncer](https://www.pgbouncer.org/) · [ProxySQL](https://proxysql.com/documentation/) |
-| 备份 | [PG 备份与恢复](https://www.postgresql.org/docs/current/backup.html) · [mysqldump](https://dev.mysql.com/doc/refman/8.4/en/mysqldump.html) |
-| 监控 | [pg_stat_statements](https://www.postgresql.org/docs/current/pgstatstatements.html) · [slow query log](https://dev.mysql.com/doc/refman/8.4/en/slow-query-log.html) |
-| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) |
+- **PostgreSQL**：[官方文档](https://www.postgresql.org/docs/current/) · [中文文档](http://www.postgres.cn/docs/current/)
+- **MySQL**：[MySQL 8.4 参考手册](https://dev.mysql.com/doc/refman/8.4/en/)
+- **SQLite**：[SQLite 文档](https://sqlite.org/docs.html)
+- **SQL Server**：[T-SQL 参考](https://learn.microsoft.com/zh-cn/sql/t-sql/language-reference)
+- **Oracle**：[Oracle Database 文档](https://docs.oracle.com/en/database/oracle/oracle-database/index.html)
+- **SQL 标准**：[ISO/IEC 9075](https://www.iso.org/standard/76583.html)
+- **迁移工具**：[Flyway](https://documentation.red-gate.com/flyway) · [Liquibase](https://docs.liquibase.com/) · [Alembic](https://alembic.sqlalchemy.org/en/latest/) · [Atlas](https://atlasgo.io/docs)
+- **连接池**：[PgBouncer](https://www.pgbouncer.org/) · [ProxySQL](https://proxysql.com/documentation/)
+- **备份**：[PG 备份与恢复](https://www.postgresql.org/docs/current/backup.html) · [mysqldump](https://dev.mysql.com/doc/refman/8.4/en/mysqldump.html)
+- **监控**：[pg_stat_statements](https://www.postgresql.org/docs/current/pgstatstatements.html) · [slow query log](https://dev.mysql.com/doc/refman/8.4/en/slow-query-log.html)
+- **SQL Lint**：[sqlfluff](https://docs.sqlfluff.com/en/stable/) · [SchemeLint](https://www.schemalint.com/)
+- **CI/CD**：[GitHub Actions](https://docs.github.com/zh/actions)
+- **云数据库**：[Neon](https://neon.com/docs) · [Supabase](https://supabase.com/docs)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
