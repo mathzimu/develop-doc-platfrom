@@ -330,15 +330,13 @@ func main() {
 }
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-并发模型、接口底层、内存模型与泛型细节以官方规范为准。
+- **官方文档**：[go.dev/doc](https://go.dev/doc/) · [Go Spec](https://go.dev/ref/spec) · [Go Memory Model](https://go.dev/ref/mem) · [pkg.go.dev/std](https://pkg.go.dev/std) · [Go Modules Reference](https://go.dev/ref/mod)
+- **命令与工具**：[go 命令文档](https://pkg.go.dev/cmd/go) · [testing 包](https://pkg.go.dev/testing)
+- **并发**：[Concurrency（博客）](https://go.dev/blog/concurrency-is-not-parallelism) · [Go Concurrency Patterns](https://go.dev/blog/pipelines) · [Effective Go](https://go.dev/doc/effective_go) · [Go Blog](https://go.dev/blog/)
+- **泛型**：[Go 泛型教程](https://go.dev/doc/tutorial/generics) · [Type Parameters Proposal](https://go.googlesource.com/proposal/+/master/design/43651-type-parameters.md)
+- **测试进阶**：[Table-Driven Tests（博客）](https://go.dev/blog/table-driven-tests) · [Fuzzing 文档](https://go.dev/doc/security/fuzz/)
+- **源码与提案**：[golang/go](https://github.com/golang/go) · [Go Proposals](https://github.com/golang/proposal)
 
-| 主题 | 链接 |
-|------|------|
-| 语言规范 | [Go Spec](https://go.dev/ref/spec) |
-| 内存模型 | [Go Memory Model](https://go.dev/ref/mem) |
-| 并发 | [Concurrency（博客）](https://go.dev/blog/concurrency-is-not-parallelism) · [Go Concurrency Patterns](https://go.dev/blog/pipelines) · [Go 语言并发教程](https://go.dev/doc/effective_go) |
-| 泛型 | [Go 泛型教程](https://go.dev/doc/tutorial/generics) · [Type Parameters Proposal](https://go.googlesource.com/proposal/+/master/design/43651-type-parameters.md) |
-| 标准库与工具 | [pkg.go.dev/std](https://pkg.go.dev/std) · [go 命令文档](https://pkg.go.dev/cmd/go) · [testing 包](https://pkg.go.dev/testing) |
-| 测试进阶 | [Testing（中文）](https://go.dev/blog/table-driven-tests) · [fuzzing](https://go.dev/doc/security/fuzz/) |
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

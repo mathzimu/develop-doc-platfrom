@@ -46,12 +46,13 @@
 | [Temporal](https://github.com/temporalio/temporal) | 工作流引擎，适合长流程任务编排 |
 | [NATS](https://github.com/nats-io/nats-server) | 高性能消息中间件 |
 
-## 官方文档入口
+## 官方文档与延伸阅读
 
-| 类别 | 入口 |
-|------|------|
-| 语言与标准库 | [Go 官方文档](https://go.dev/doc/) · [Go Spec](https://go.dev/ref/spec) · [pkg.go.dev 标准库](https://pkg.go.dev/std) · [Go Modules](https://go.dev/ref/mod) |
-| Web 框架 | [Gin](https://gin-gonic.com/docs/) · [Echo](https://echo.labstack.com/docs) · [Fiber](https://docs.gofiber.io/) · [chi](https://github.com/go-chi/chi) |
-| ORM/数据库 | [GORM](https://gorm.io/zh_CN/docs/) · [Ent](https://entgo.io/) · [sqlx](https://github.com/jmoiron/sqlx) · [pgx](https://github.com/jackc/pgx) · [database/sql](https://pkg.go.dev/database/sql) |
-| 工具链 | [Delve](https://github.com/go-delve/delve) · [golangci-lint](https://golangci-lint.run/) · [go vet](https://pkg.go.dev/cmd/vet) · [pprof](https://pkg.go.dev/net/http/pprof) |
-| 可观测性 | [OpenTelemetry](https://opentelemetry.io/docs/) · [Prometheus](https://prometheus.io/docs/) · [zap](https://github.com/uber-go/zap) |
+- **官方文档**：[go.dev/doc](https://go.dev/doc/) · [Go Spec（语言规范）](https://go.dev/ref/spec) · [pkg.go.dev 标准库](https://pkg.go.dev/std) · [Go Modules](https://go.dev/ref/mod) · [Go Blog](https://go.dev/blog/) · [Effective Go](https://go.dev/doc/effective_go)
+- **Web 框架**：[Gin](https://gin-gonic.com/docs/) · [Echo](https://echo.labstack.com/docs) · [Fiber](https://docs.gofiber.io/) · [chi](https://github.com/go-chi/chi)
+- **ORM/数据库**：[GORM](https://gorm.io/zh_CN/docs/) · [Ent](https://entgo.io/) · [sqlx](https://github.com/jmoiron/sqlx) · [pgx](https://github.com/jackc/pgx) · [database/sql](https://pkg.go.dev/database/sql)
+- **工具链**：[Delve](https://github.com/go-delve/delve) · [golangci-lint](https://golangci-lint.run/) · [go vet](https://pkg.go.dev/cmd/vet) · [pprof](https://pkg.go.dev/net/http/pprof)
+- **可观测性**：[OpenTelemetry](https://opentelemetry.io/docs/) · [Prometheus](https://prometheus.io/docs/) · [zap](https://github.com/uber-go/zap)
+- **源码与提案**：[golang/go](https://github.com/golang/go) · [Go Proposals](https://github.com/golang/proposal)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

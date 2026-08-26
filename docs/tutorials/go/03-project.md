@@ -222,11 +222,13 @@ func TestCreateAndResolve(t *testing.T) {
 }
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| Go 语言 | [Go 官方文档](https://go.dev/doc/) · [net/http](https://pkg.go.dev/net/http) |
-| 测试 | [testing 包](https://pkg.go.dev/testing) · [testing 入门](https://go.dev/doc/tutorial/add-a-test) |
-| 缓存 | [Redis](https://redis.io/docs/) · [go-redis](https://github.com/redis/go-redis) |
-| 数据库 | [pgx](https://pkg.go.dev/github.com/jackc/pgx/v5) · [GORM](https://gorm.io/zh_CN/docs/) |
+- **官方文档**：[go.dev/doc](https://go.dev/doc/) · [Go Spec](https://go.dev/ref/spec) · [pkg.go.dev 标准库](https://pkg.go.dev/std) · [Go Modules Reference](https://go.dev/ref/mod)
+- **HTTP 与标准库**：[net/http](https://pkg.go.dev/net/http)
+- **测试**：[testing 包](https://pkg.go.dev/testing) · [testing 入门](https://go.dev/doc/tutorial/add-a-test)
+- **缓存**：[Redis](https://redis.io/docs/) · [go-redis](https://github.com/redis/go-redis)
+- **数据库**：[pgx](https://pkg.go.dev/github.com/jackc/pgx/v5) · [GORM](https://gorm.io/zh_CN/docs/)
+- **常用框架**：[Gin](https://gin-gonic.com/docs/) · [Echo](https://echo.labstack.com/docs)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

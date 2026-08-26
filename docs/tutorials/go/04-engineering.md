@@ -236,13 +236,15 @@ jobs:
       - run: go vet ./...
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 项目结构 | [go 命令文档](https://pkg.go.dev/cmd/go) · [Go Modules](https://go.dev/ref/mod) |
-| 依赖注入 | [wire](https://github.com/google/wire) · [fx](https://github.com/uber-go/fx) |
-| Lint | [golangci-lint](https://golangci-lint.run/) · [go vet](https://pkg.go.dev/cmd/vet) |
-| 测试 | [testing 包](https://pkg.go.dev/testing) · [testify](https://github.com/stretchr/testify) |
-| 数据库 | [GORM](https://gorm.io/zh_CN/docs/) · [pgx](https://pkg.go.dev/github.com/jackc/pgx/v5) |
-| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) |
+- **官方文档**：[go.dev/doc](https://go.dev/doc/) · [Go Spec](https://go.dev/ref/spec) · [pkg.go.dev 标准库](https://pkg.go.dev/std)
+- **项目结构与模块**：[go 命令文档](https://pkg.go.dev/cmd/go) · [Go Modules Reference](https://go.dev/ref/mod)
+- **依赖注入**：[wire](https://github.com/google/wire) · [fx](https://github.com/uber-go/fx)
+- **Lint 与静态检查**：[golangci-lint](https://golangci-lint.run/) · [go vet](https://pkg.go.dev/cmd/vet)
+- **测试**：[testing 包](https://pkg.go.dev/testing) · [testify](https://github.com/stretchr/testify)
+- **数据库**：[GORM](https://gorm.io/zh_CN/docs/) · [pgx](https://pkg.go.dev/github.com/jackc/pgx/v5)
+- **CI/CD**：[GitHub Actions](https://docs.github.com/zh/actions)
+- **常用框架**：[Gin](https://gin-gonic.com/docs/) · [Echo](https://echo.labstack.com/docs)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

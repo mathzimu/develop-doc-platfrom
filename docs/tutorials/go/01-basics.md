@@ -47,7 +47,7 @@ func main() {
 `rune` | `0` | `int32` 别名，表示 Unicode
 
 ::: tip 关键记忆点
-- Go 变量**声明即初始化为零值**（无需手动赋初值），不会出现未定义行为。
+- Go 变量**声明即初始化为零值**（无需手动赋初值），不会出现未定义行为（基础语法详见 [Go 官方文档](https://go.dev/doc/)）。
 - `:=` 短声明只能在**函数内部**使用；`var` 可在包级使用。
 - `rune` 才是真正的「字符」（Unicode 码点），`byte` 只是 `uint8`，处理中文必须用 `rune` 遍历。
 :::
@@ -256,7 +256,7 @@ type Circle struct {
 }
 
 ::: tip 关键点：隐式接口
-- Go 的接口是**鸭子类型**：只要一个类型实现了接口的全部方法，就自动满足该接口，**不需要 `implements` 声明**。
+- Go 的接口是**鸭子类型**：只要一个类型实现了接口的全部方法，就自动满足该接口，**不需要 `implements` 声明**（详见 [Go 语言规范](https://go.dev/ref/spec)）。
 - 这带来「小接口」哲学——常用 `io.Reader` / `io.Writer` 这类仅含一两个方法的接口，组合出强大抽象。
 - 推荐「**接受接口、返回具体类型**」，便于替换实现与单元测试。
 :::
@@ -421,3 +421,12 @@ fmt.Println(later.Format("2006-01-02 15:04:05"))  // Go 的参考时间布局
 parts := strings.Split("a,b,c", ",")
 joined := strings.Join(parts, "-")
 n := strings.HasPrefix("golang", "go")
+
+## 官方文档与延伸阅读
+
+- **官方文档**：[go.dev/doc](https://go.dev/doc/) · [Go Spec（语言规范）](https://go.dev/ref/spec) · [pkg.go.dev 标准库](https://pkg.go.dev/std) · [Go Modules Reference](https://go.dev/ref/mod)
+- **官方博客与实践**：[Go Blog](https://go.dev/blog/) · [Effective Go](https://go.dev/doc/effective_go)
+- **常用框架**：[Gin](https://gin-gonic.com/docs/) · [Echo](https://echo.labstack.com/docs) · [GORM](https://gorm.io/zh_CN/docs/)
+- **源码与提案**：[golang/go](https://github.com/golang/go) · [Go Proposals](https://github.com/golang/proposal)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
