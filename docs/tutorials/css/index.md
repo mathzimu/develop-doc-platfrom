@@ -21,20 +21,13 @@ CSS（Cascading Style Sheets）用于控制 HTML 元素的显示样式和布局�
 - [工程实践](/tutorials/css/04-engineering) — CSS 方法论、PostCSS、视觉回归测试、渲染性能
 - [生态全景](/tutorials/css/05-ecosystem) — 工具链、框架、组件库
 
-## 官方文档
+## 官方文档与延伸阅读
 
-属性取值、浏览器支持、规范草案细节请查阅一手资料。
-
-| 类型 | 链接 |
-|------|------|
-| 教程与参考（中文） | [MDN CSS](https://developer.mozilla.org/zh-CN/docs/Web/CSS) |
-| 属性索引 | [MDN CSS 参考](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference) |
-| 布局 | [Flexbox 指南](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_flexible_box_layout) · [Grid 指南](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_grid_layout) |
-| 自定义属性 | [MDN 使用 CSS 自定义属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties) |
-| 容器查询与层叠层 | [容器查询](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_containment/Container_queries) · [`@layer`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@layer) |
-| 规范草案 | [CSSWG Drafts](https://drafts.csswg.org/) · [W3C CSS 工作进度](https://www.w3.org/Style/CSS/current-work) |
-| 框架 | [Tailwind CSS](https://tailwindcss.com/docs) · [Bootstrap](https://getbootstrap.com/docs/) · [Open Props](https://open-props.style/) |
-| 预处理与后处理 | [Sass](https://sass-lang.com/documentation/) · [PostCSS](https://postcss.org/) · [Stylelint](https://stylelint.io/) |
-| 兼容性与性能 | [Can I use](https://caniuse.com/) · [渲染性能（web.dev）](https://web.dev/articles/rendering-performance) |
-
-更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
+- **教程与参考**：[MDN CSS](https://developer.mozilla.org/zh-CN/docs/Web/CSS) · [MDN CSS 属性参考](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference)
+- **布局**：[Flexbox 指南](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_flexible_box_layout) · [Grid 指南](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_grid_layout)
+- **自定义属性**：[MDN 使用 CSS 自定义属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)
+- **容器查询与层叠层**：[容器查询](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_containment/Container_queries) · [`@layer`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@layer)
+- **规范**：[CSS Working Group Drafts](https://drafts.csswg.org/) · [W3C CSS 当前工作](https://www.w3.org/Style/CSS/current-work)
+- **框架**：[Tailwind CSS](https://tailwindcss.com/docs) · [Bootstrap](https://getbootstrap.com/docs/) · [Open Props](https://open-props.style/)
+- **预处理与后处理**：[Sass](https://sass-lang.com/documentation/) · [PostCSS](https://postcss.org/) · [Stylelint](https://stylelint.io/)
+- **兼容性与性能**：[Can I use](https://caniuse.com/) · [渲染性能（web.dev）](https://web.dev/articles/rendering-performance)
