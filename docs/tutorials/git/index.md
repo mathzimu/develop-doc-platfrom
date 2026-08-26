@@ -45,15 +45,9 @@ git add README.md
 git commit -m "init"
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-命令语义、内部对象行为与高级用法细节均以一手文档为准。
-
-| 类型 | 链接 |
-|------|------|
-| 官方文档 | [git-scm.com/doc](https://git-scm.com/doc) · [Pro Git 中文](https://git-scm.com/book/zh/v2) |
-| 命令参考 | [Git Reference](https://git-scm.com/docs) |
-| 托管平台 | [GitHub Docs](https://docs.github.com/zh) · [GitLab Docs](https://docs.gitlab.com/) |
-| 规范 | [Conventional Commits](https://www.conventionalcommits.org/zh-hans/v1.0.0/) · [SemVer](https://semver.org/lang/zh-CN/) |
-
-更多入口见 [官方文档索引](/reference/official-docs)。
+- **官方文档**：[git-scm.com/doc](https://git-scm.com/doc) · [Pro Git（中文）](https://git-scm.com/book/zh/v2) · [Git Reference](https://git-scm.com/docs)
+- **托管平台**：[GitHub Docs](https://docs.github.com/zh) · [GitLab Docs](https://docs.gitlab.com/)
+- **规范**：[Conventional Commits](https://www.conventionalcommits.org/zh-hans/v1.0.0/) · [SemVer](https://semver.org/lang/zh-CN/)
+- **相关工具**：[Git LFS](https://git-lfs.com/) · [git-filter-repo](https://github.com/newren/git-filter-repo) · [gitleaks](https://github.com/gitleaks/gitleaks)

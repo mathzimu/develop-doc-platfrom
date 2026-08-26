@@ -18,6 +18,10 @@ git add <file>    git commit          git push
 - **几乎任何误操作都可恢复**：`reset`/`restore` 只移动指针，Git 的「悬空提交」在 `reflog` 中可找回（默认保留 30 天），所以 `reset --hard` 前务必确认。
 :::
 
+::: tip 官方参考
+基础与进阶命令的权威说明见 [Git 官方文档](https://git-scm.com/doc) 与 [Pro Git（中文）](https://git-scm.com/book/zh/v2)。
+:::
+
 ## 初始配置
 
 ```sh
@@ -418,3 +422,12 @@ main  ─── 只包含发布版本
 | 恢复暂存 | `git stash pop` |
 | 撤销本地修改 | `git restore <file>` |
 | 查看差异 | `git diff` |
+
+## 官方文档与延伸阅读
+
+- **官方文档**：[git-scm.com/doc](https://git-scm.com/doc) · [Pro Git（中文）](https://git-scm.com/book/zh/v2) · [Git Reference](https://git-scm.com/docs)
+- **托管平台**：[GitHub Docs](https://docs.github.com/zh) · [GitLab Docs](https://docs.gitlab.com/)
+- **规范**：[Conventional Commits](https://www.conventionalcommits.org/zh-hans/v1.0.0/) · [SemVer](https://semver.org/lang/zh-CN/)
+- **相关工具**：[Git LFS](https://git-lfs.com/) · [git-filter-repo](https://github.com/newren/git-filter-repo) · [gitleaks](https://github.com/gitleaks/gitleaks)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

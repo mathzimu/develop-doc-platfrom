@@ -310,13 +310,13 @@ npm install -g gitinspector
 gitinspector --format html > report.html
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 分支策略 | [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/) · [Trunk-Based Development](https://trunkbaseddevelopment.com/) · [GitHub Flow](https://docs.github.com/zh/get-started/using-github/github-flow) |
-| 提交规范 | [Conventional Commits](https://www.conventionalcommits.org/zh-hans/v1.0.0/) |
-| Hooks | [Git Hooks](https://git-scm.com/docs/githooks) · [husky](https://typicode.github.io/husky/) · [commitlint](https://commitlint.js.org/) |
-| 大文件 | [Git LFS](https://git-lfs.com/) |
-| 代码所有权 | [CODEOWNERS](https://docs.github.com/zh/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) |
-| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) · [GitLab CI](https://docs.gitlab.com/ci/) |
+- **官方文档**：[git-scm.com/doc](https://git-scm.com/doc) · [Pro Git（中文）](https://git-scm.com/book/zh/v2) · [Git Reference](https://git-scm.com/docs)
+- **分支策略**：[Git Flow](https://nvie.com/posts/a-successful-git-branching-model/) · [Trunk-Based Development](https://trunkbaseddevelopment.com/) · [GitHub Flow](https://docs.github.com/zh/get-started/using-github/github-flow)
+- **提交规范**：[Conventional Commits](https://www.conventionalcommits.org/zh-hans/v1.0.0/) · [SemVer](https://semver.org/lang/zh-CN/)
+- **Git Hooks**：[Git Hooks](https://git-scm.com/docs/githooks) · [husky](https://typicode.github.io/husky/) · [commitlint](https://commitlint.js.org/)
+- **托管平台与 CI/CD**：[GitHub Docs](https://docs.github.com/zh) · [GitLab Docs](https://docs.gitlab.com/) · [GitHub Actions](https://docs.github.com/zh/actions) · [GitLab CI](https://docs.gitlab.com/ci/) · [CODEOWNERS](https://docs.github.com/zh/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
+- **相关工具**：[Git LFS](https://git-lfs.com/) · [git-filter-repo](https://github.com/newren/git-filter-repo) · [gitleaks](https://github.com/gitleaks/gitleaks)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

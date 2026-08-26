@@ -258,12 +258,13 @@ feature/*:    login     payment               release work
 | 发布 | `git tag -a v1.0.0 -m "msg"` |
 | Hotfix | `git checkout -b hotfix/xxx main` |
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 分支与合并 | [Pro Git 分支](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6) |
-| 远程协作 | [Pro Git 远程仓库](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%8D%8F%E4%BD%9C) |
-| Rebase | [git rebase](https://git-scm.com/docs/git-rebase) |
-| 标签 | [git tag](https://git-scm.com/docs/git-tag) |
-| 拉取请求 | [GitHub PR 文档](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) |
+- **官方文档**：[Pro Git（中文）](https://git-scm.com/book/zh/v2) · [Git Reference](https://git-scm.com/docs) · [git-scm.com/doc](https://git-scm.com/doc)
+- **分支与协作**：[Pro Git 分支](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6) · [Pro Git 远程仓库](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%8D%8F%E4%BD%9C)
+- **命令参考**：[git rebase](https://git-scm.com/docs/git-rebase) · [git tag](https://git-scm.com/docs/git-tag)
+- **托管平台**：[GitHub Docs](https://docs.github.com/zh) · [GitLab Docs](https://docs.gitlab.com/) · [GitHub PR 文档](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+- **规范**：[Conventional Commits](https://www.conventionalcommits.org/zh-hans/v1.0.0/) · [SemVer](https://semver.org/lang/zh-CN/)
+- **相关工具**：[Git LFS](https://git-lfs.com/) · [git-filter-repo](https://github.com/newren/git-filter-repo) · [gitleaks](https://github.com/gitleaks/gitleaks)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。 |
