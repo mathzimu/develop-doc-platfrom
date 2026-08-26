@@ -54,21 +54,27 @@ npm run preview    # 预览构建产物
 
 ```
 developer-doc-platform/
-├── docs/                       # 文档源码目录
-│   ├── .vitepress/
-│   │   ├── config.ts           # 站点主配置（导航、搜索、页脚、编辑链接等）
-│   │   ├── sidebar.ts          # 按目录自动生成侧边栏
-│   │   └── theme/              # 主题与样式覆盖
-│   ├── guide/                  # 平台指南（结构、配置、部署）
-│   ├── tutorials/              # 技术教程（18 个分类）
-│   ├── reference/              # 官方文档索引、规范、工具链
-│   ├── versions/               # 版本存档
-│   ├── public/                 # 静态资源（favicon.svg、logo.svg）
-│   └── index.md                # 首页
+├── docs/              # 文档源码
+│   ├── .vitepress/   # 配置与主题
+│   ├── guide/        # 平台指南
+│   ├── tutorials/    # 技术教程（18 个方向）
+│   ├── reference/    # 官方文档 / 规范 / 工具链索引
+│   ├── versions/     # 历史版本归档
+│   ├── public/       # 静态资源
+│   └── index.md      # 首页
 ├── .gitignore
-├── package.json                # 依赖与脚本
+├── package.json      # 依赖与脚本
 └── README.md
 ```
+
+各目录职责：
+
+- **docs/.vitepress/**：`config.ts` 站点主配置、`sidebar.ts` 自动生成侧边栏、`theme/` 主题与样式覆盖。
+- **docs/guide/**：平台自身的使用文档（结构、配置、部署）。
+- **docs/tutorials/**：18 个技术方向的教程，每方向一个子目录、内含五章标准内容。
+- **docs/reference/**：官方文档索引、规范标准、工具链与包管理索引。
+- **docs/versions/**：历史版本归档，通过导航栏版本切换器访问。
+- **docs/public/**：站点静态资源（如 `favicon.svg`、`logo.svg`）。
 
 ## 内容组织
 
