@@ -373,15 +373,19 @@ DB_PASS=secret
 NODE_ENV=production
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-镜像分层、网络模式、存储驱动、多架构与安全细节以官方文档为准。
+- **官方文档**：[docs.docker.com](https://docs.docker.com/)
+- **镜像与分层**：[About images](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/) · [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/)
+- **网络**：[Docker 网络](https://docs.docker.com/engine/network/) · [网络驱动](https://docs.docker.com/engine/network/drivers/)
+- **存储驱动与数据卷**：[Storage drivers](https://docs.docker.com/storage/storagedriver/) · [Volumes](https://docs.docker.com/storage/volumes/)
+- **多架构构建**：[Multi-platform builds](https://docs.docker.com/build/building/multi-platform/)
+- **安全**：[Docker security](https://docs.docker.com/engine/security/) · [Build secrets](https://docs.docker.com/build/building/secrets/) · [Seccomp/AppArmor](https://docs.docker.com/engine/security/apparmor/)
+- **构建后端**：[BuildKit / buildx](https://docs.docker.com/build/)
+- **Compose 参考**：[Compose File Reference](https://docs.docker.com/reference/compose-file/)
+- **CLI 参考**：[Docker CLI](https://docs.docker.com/reference/cli/docker/)
+- **容器标准**：[OCI Specifications](https://opencontainers.org/)
+- **编排**：[Kubernetes 中文文档](https://kubernetes.io/zh-cn/docs/home/) · [Helm](https://helm.sh/zh/docs/)
+- **安全扫描**：[Trivy](https://trivy.dev/latest/docs/) · [Docker Scout](https://docs.docker.com/scout/)
 
-| 主题 | 链接 |
-|------|------|
-| 镜像与分层 | [About images](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/) · [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/) |
-| 网络 | [Docker 网络](https://docs.docker.com/engine/network/) · [网络驱动](https://docs.docker.com/engine/network/drivers/) |
-| 存储驱动 | [Storage drivers](https://docs.docker.com/storage/storagedriver/) · [Volumes](https://docs.docker.com/storage/volumes/) |
-| 多架构构建 | [Multi-platform builds](https://docs.docker.com/build/building/multi-platform/) |
-| 安全 | [Docker security](https://docs.docker.com/engine/security/) · [Build secrets](https://docs.docker.com/build/building/secrets/) · [Seccomp/AppArmor](https://docs.docker.com/engine/security/apparmor/) |
-| 构建后端 | [BuildKit / buildx](https://docs.docker.com/build/) |
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。 |

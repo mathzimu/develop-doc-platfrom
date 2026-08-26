@@ -36,16 +36,13 @@ docker run hello-world
 - 了解 Linux 基本概念（进程、文件、网络、端口）
 - 无需编程经验
 
-## 官方文档
+## 官方文档与延伸阅读
 
-镜像分层、Dockerfile 指令、Compose 配置以一手文档为准。
-
-| 类型 | 链接 |
-|------|------|
-| 官方文档 | [docs.docker.com](https://docs.docker.com/) |
-| Dockerfile 参考 | [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/) |
-| Compose 参考 | [Compose File Reference](https://docs.docker.com/reference/compose-file/) |
-| CLI 参考 | [Docker CLI](https://docs.docker.com/reference/cli/docker/) |
-| 容器标准 | [OCI Specifications](https://opencontainers.org/) |
-
-更多入口见 [官方文档索引](/reference/official-docs)。
+- **官方文档**：[docs.docker.com](https://docs.docker.com/)
+- **Dockerfile 参考**：[Dockerfile Reference](https://docs.docker.com/reference/dockerfile/)
+- **Compose 参考**：[Compose File Reference](https://docs.docker.com/reference/compose-file/)
+- **CLI 参考**：[Docker CLI](https://docs.docker.com/reference/cli/docker/)
+- **构建后端**：[BuildKit / buildx](https://docs.docker.com/build/)
+- **容器标准**：[OCI Specifications](https://opencontainers.org/)
+- **编排**：[Kubernetes 中文文档](https://kubernetes.io/zh-cn/docs/home/) · [Helm](https://helm.sh/zh/docs/)
+- **安全扫描**：[Trivy](https://trivy.dev/latest/docs/) · [Docker Scout](https://docs.docker.com/scout/)

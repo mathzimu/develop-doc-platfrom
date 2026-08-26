@@ -252,12 +252,19 @@ spec:
         averageUtilization: 80
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 多阶段构建 | [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/) |
-| Compose 生产 | [Compose 部署](https://docs.docker.com/compose/production/) · [Dockerfile 最佳实践](https://docs.docker.com/build/building/best-practices/) |
-| 镜像扫描 | [Trivy](https://trivy.dev/latest/docs/) · [Docker Scout](https://docs.docker.com/scout/) |
-| Kubernetes 部署 | [Kubernetes（中文）](https://kubernetes.io/zh-cn/docs/home/) · [kubectl](https://kubernetes.io/zh-cn/docs/reference/kubectl/) |
-| 安全加固 | [docker-bench-security](https://github.com/docker/docker-bench-security) · [cis-docker-benchmark](https://www.cisecurity.org/benchmark/docker) |
+- **官方文档**：[docs.docker.com](https://docs.docker.com/)
+- **多阶段构建**：[Multi-stage builds](https://docs.docker.com/build/building/multi-stage/)
+- **Compose 生产**：[Compose 部署](https://docs.docker.com/compose/production/) · [Dockerfile 最佳实践](https://docs.docker.com/build/building/best-practices/)
+- **Dockerfile 参考**：[Dockerfile Reference](https://docs.docker.com/reference/dockerfile/)
+- **Compose 参考**：[Compose File Reference](https://docs.docker.com/reference/compose-file/)
+- **构建后端**：[BuildKit / buildx](https://docs.docker.com/build/)
+- **CLI 参考**：[Docker CLI](https://docs.docker.com/reference/cli/docker/)
+- **镜像扫描**：[Trivy](https://trivy.dev/latest/docs/) · [Docker Scout](https://docs.docker.com/scout/)
+- **Kubernetes 部署**：[Kubernetes（中文）](https://kubernetes.io/zh-cn/docs/home/) · [kubectl](https://kubernetes.io/zh-cn/docs/reference/kubectl/)
+- **容器标准**：[OCI Specifications](https://opencontainers.org/)
+- **编排**：[Helm](https://helm.sh/zh/docs/)
+- **安全加固**：[docker-bench-security](https://github.com/docker/docker-bench-security) · [cis-docker-benchmark](https://www.cisecurity.org/benchmark/docker)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。 |

@@ -37,6 +37,10 @@ docker compose version
 docker run hello-world
 ```
 
+::: tip 官方资源
+安装与基础命令以 [Docker 官方文档](https://docs.docker.com/) 为准，详见 [Get Docker](https://docs.docker.com/get-docker/)。
+:::
+
 ## 镜像管理
 
 ```sh
@@ -108,7 +112,7 @@ docker inspect -f '{{.NetworkSettings.IPAddress}}' web  # 提取 IP
 
 ## Dockerfile
 
-Dockerfile 是构建镜像的「配方」，每条指令生成一个只读层。指令顺序很重要：**变化越少的步骤越靠前**，以最大化复用构建缓存。
+Dockerfile 是构建镜像的「配方」，每条指令生成一个只读层。指令顺序很重要：**变化越少的步骤越靠前**，以最大化复用构建缓存。指令细节见 [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/)。
 
 ```dockerfile
 # 基础镜像
@@ -368,4 +372,18 @@ RUN npm install
 COPY . .
 EXPOSE 3000
 CMD ["node", "index.js"]
+
+## 官方文档与延伸阅读
+
+- **官方文档**：[docs.docker.com](https://docs.docker.com/)
+- **Dockerfile 参考**：[Dockerfile Reference](https://docs.docker.com/reference/dockerfile/)
+- **Compose 参考**：[Compose File Reference](https://docs.docker.com/reference/compose-file/)
+- **CLI 参考**：[Docker CLI](https://docs.docker.com/reference/cli/docker/)
+- **构建后端**：[BuildKit / buildx](https://docs.docker.com/build/)
+- **容器标准**：[OCI Specifications](https://opencontainers.org/)
+- **编排**：[Kubernetes 中文文档](https://kubernetes.io/zh-cn/docs/home/) · [Helm](https://helm.sh/zh/docs/)
+- **安全扫描**：[Trivy](https://trivy.dev/latest/docs/) · [Docker Scout](https://docs.docker.com/scout/)
+- **安装指南**：[Get Docker](https://docs.docker.com/get-docker/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
 ```

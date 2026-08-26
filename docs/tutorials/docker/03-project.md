@@ -280,12 +280,18 @@ docker compose exec -T postgres psql -U myapp myapp < backup.sql
 docker compose down -v
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| Dockerfile | [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/) |
-| Compose | [Compose File Reference](https://docs.docker.com/reference/compose-file/) |
-| 数据卷 | [Volumes](https://docs.docker.com/storage/volumes/) · [Bind mounts](https://docs.docker.com/storage/bind-mounts/) |
-| 网络 | [Docker 网络](https://docs.docker.com/engine/network/) |
-| 多阶段构建 | [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/) |
+- **官方文档**：[docs.docker.com](https://docs.docker.com/)
+- **Dockerfile 参考**：[Dockerfile Reference](https://docs.docker.com/reference/dockerfile/)
+- **Compose 参考**：[Compose File Reference](https://docs.docker.com/reference/compose-file/)
+- **数据管理**：[Volumes](https://docs.docker.com/storage/volumes/) · [Bind mounts](https://docs.docker.com/storage/bind-mounts/)
+- **网络**：[Docker 网络](https://docs.docker.com/engine/network/)
+- **多阶段构建**：[Multi-stage builds](https://docs.docker.com/build/building/multi-stage/)
+- **构建后端**：[BuildKit / buildx](https://docs.docker.com/build/)
+- **CLI 参考**：[Docker CLI](https://docs.docker.com/reference/cli/docker/)
+- **容器标准**：[OCI Specifications](https://opencontainers.org/)
+- **编排**：[Kubernetes 中文文档](https://kubernetes.io/zh-cn/docs/home/) · [Helm](https://helm.sh/zh/docs/)
+- **安全扫描**：[Trivy](https://trivy.dev/latest/docs/) · [Docker Scout](https://docs.docker.com/scout/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。 |
