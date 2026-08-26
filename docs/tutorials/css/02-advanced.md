@@ -323,15 +323,14 @@ Subgrid 适合内部元素需要与外部网格对齐的场景，如卡片列表
 }
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
 本节涉及 CSS 架构、设计系统、容器查询与 Houdini，以规范草案与 MDN 为准。
 
-| 主题 | 链接 |
-|------|------|
-| 规范草案 | [CSSWG Drafts](https://drafts.csswg.org/) · [W3C CSS 当前工作](https://www.w3.org/Style/CSS/current-work) |
-| 设计系统与 Token | [MDN 使用自定义属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties) |
-| 容器查询 | [MDN 容器查询](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_containment/Container_queries) |
-| 层叠层 | [MDN `@layer`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@layer) · [CSS 层叠规范](https://drafts.csswg.org/css-cascade-5/) |
-| 颜色与混合 | [CSS Color 5](https://drafts.csswg.org/css-color-5/) · [`color-mix()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value/color-mix) · [OKLCH](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch) |
-| 兼容性查询 | [Can I use](https://caniuse.com/) |
+- **教程与参考**：[MDN 使用自定义属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)
+- **容器查询与层叠层**：[MDN 容器查询](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_containment/Container_queries) · [MDN `@layer`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@layer) · [CSS 层叠规范](https://drafts.csswg.org/css-cascade-5/)
+- **颜色与混合**：[CSS Color 5](https://drafts.csswg.org/css-color-5/) · [`color-mix()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value/color-mix) · [OKLCH](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch)
+- **规范**：[CSSWG Drafts](https://drafts.csswg.org/) · [W3C CSS 当前工作](https://www.w3.org/Style/CSS/current-work)
+- **兼容性与性能**：[Can I use](https://caniuse.com/) · [渲染性能（web.dev）](https://web.dev/articles/rendering-performance)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

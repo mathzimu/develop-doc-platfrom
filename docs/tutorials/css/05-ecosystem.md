@@ -70,12 +70,14 @@ Autoprefixer → PurgeCSS → cssnano
 Stylelint 检查 → Percy 视觉测试
 ```
 
-## 官方文档入口
+## 官方文档与延伸阅读
 
-| 类别 | 入口 |
-|------|------|
-| 规范与参考 | [CSS 规范草案 CSSWG](https://drafts.csswg.org/) · [MDN CSS](https://developer.mozilla.org/zh-CN/docs/Web/CSS) · [MDN 属性参考](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference) |
-| 框架 | [Tailwind CSS](https://tailwindcss.com/docs) · [Bootstrap](https://getbootstrap.com/docs/) · [Bulma](https://bulma.io/documentation/) · [Open Props](https://open-props.style/) |
-| 预处理/后处理 | [Sass](https://sass-lang.com/documentation/) · [PostCSS](https://postcss.org/) |
-| 检查与优化 | [Stylelint](https://stylelint.io/) · [cssnano](https://cssnano.co/) · [PurgeCSS](https://purgecss.com/) |
-| 视觉回归测试 | [Percy](https://docs.percy.io/) · [Chromatic](https://www.chromatic.com/docs/) |
+- **教程与参考**：[MDN CSS](https://developer.mozilla.org/zh-CN/docs/Web/CSS) · [MDN CSS 属性参考](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference)
+- **框架**：[Tailwind CSS](https://tailwindcss.com/docs) · [Bootstrap](https://getbootstrap.com/docs/) · [Bulma](https://bulma.io/documentation/) · [Open Props](https://open-props.style/)
+- **预处理与后处理**：[Sass](https://sass-lang.com/documentation/) · [PostCSS](https://postcss.org/)
+- **检查与优化**：[Stylelint](https://stylelint.io/) · [cssnano](https://cssnano.co/) · [PurgeCSS](https://purgecss.com/)
+- **视觉回归测试**：[Percy](https://docs.percy.io/) · [Chromatic](https://www.chromatic.com/docs/)
+- **规范**：[CSS 规范草案 CSSWG](https://drafts.csswg.org/) · [W3C CSS 当前工作](https://www.w3.org/Style/CSS/current-work)
+- **兼容性与性能**：[Can I use](https://caniuse.com/) · [渲染性能（web.dev）](https://web.dev/articles/rendering-performance)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

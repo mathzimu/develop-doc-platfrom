@@ -41,6 +41,8 @@ p { color: blue; }
 [class*="icon"] { width: 16px; }
 ```
 
+> 💡 选择器的完整语法、优先级计算与浏览器支持见 [MDN CSS 选择器参考](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_selectors)。
+
 ### 组合选择器
 
 ```css
@@ -671,3 +673,15 @@ div    = 0,0,0,1
 7. **避免冗余选择器**：`.container .wrapper .content p` → 简化
 8. **善用 `gap`**：替代 `margin` 处理 Flexbox/Grid 子元素间距
 9. **减少嵌套**：尽量保持选择器深度不超过 3 层
+
+## 官方文档与延伸阅读
+
+- **教程与参考**：[MDN CSS](https://developer.mozilla.org/zh-CN/docs/Web/CSS) · [MDN CSS 属性参考](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference)
+- **选择器与盒模型**：[MDN CSS 选择器参考](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_selectors) · [MDN 使用 CSS 自定义属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)
+- **布局**：[Flexbox 指南](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_flexible_box_layout) · [Grid 指南](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_grid_layout)
+- **规范**：[CSSWG Drafts](https://drafts.csswg.org/) · [W3C CSS 当前工作](https://www.w3.org/Style/CSS/current-work)
+- **框架**：[Tailwind CSS](https://tailwindcss.com/docs) · [Bootstrap](https://getbootstrap.com/docs/) · [Open Props](https://open-props.style/)
+- **预处理与后处理**：[Sass](https://sass-lang.com/documentation/) · [PostCSS](https://postcss.org/) · [Stylelint](https://stylelint.io/)
+- **兼容性与性能**：[Can I use](https://caniuse.com/) · [渲染性能（web.dev）](https://web.dev/articles/rendering-performance)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
