@@ -590,18 +590,17 @@ public:
 };
 ```
 
-## 官方文档
-
-移动语义、指针、模板、并发、资源管理与现代化编程，以 cppreference 与标准草案为准。
-
-| 主题 | 链接 |
-|------|------|
-| 语言与 STL | [cppreference（中文）](https://zh.cppreference.com/w/cpp) · [cppreference（英文）](https://en.cppreference.com/w/cpp) |
-| 标准草案 | [eel.is C++ Draft](https://eel.is/c++draft/) · [ISO/IEC 14882](https://isocpp.org/std/the-standard) |
-| 移动语义 | [移动构造函数](https://en.cppreference.com/w/cpp/language/move_constructor) · [引用折叠](https://en.cppreference.com/w/cpp/language/reference) |
-| 智能指针 | [std::unique_ptr](https://en.cppreference.com/w/cpp/memory/unique_ptr) · [std::shared_ptr](https://en.cppreference.com/w/cpp/memory/shared_ptr) |
-| 模板与泛型 | [模板（C++ 编程指南）](https://en.cppreference.com/w/cpp/language/templates) · [SFINAE](https://en.cppreference.com/w/cpp/language/sfinae) |
-| 并发 | [std::thread](https://en.cppreference.com/w/cpp/thread) · [并发支持](https://en.cppreference.com/w/cpp/thread) |
-| Modern C++ 指南 | [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) |
-
 继续学习请前往 [03-实战项目：文本文件词频统计](/tutorials/cpp/03-project)。
+
+## 官方文档与延伸阅读
+
+- **语言标准**：[C++ Reference（cppreference 中文）](https://zh.cppreference.com/w/cpp) · [cppreference 英文](https://en.cppreference.com/w/cpp) · [标准草案](https://eel.is/c++draft/) · [ISO/IEC 14882](https://isocpp.org/std/the-standard) · [ISO C++](https://isocpp.org/std)
+- **官方教程**：[C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) · [learn.cpp](https://www.learncpp.com/)
+- **移动语义与智能指针**：[移动构造函数](https://en.cppreference.com/w/cpp/language/move_constructor) · [引用折叠](https://en.cppreference.com/w/cpp/language/reference) · [std::unique_ptr](https://en.cppreference.com/w/cpp/memory/unique_ptr) · [std::shared_ptr](https://en.cppreference.com/w/cpp/memory/shared_ptr)
+- **模板与泛型**：[模板](https://en.cppreference.com/w/cpp/language/templates) · [SFINAE](https://en.cppreference.com/w/cpp/language/sfinae)
+- **并发**：[std::thread](https://en.cppreference.com/w/cpp/thread)
+- **构建系统**：[CMake](https://cmake.org/documentation/) · [vcpkg](https://learn.microsoft.com/zh-cn/vcpkg/) · [Conan](https://docs.conan.io/2/)
+- **编译器**：[GCC](https://gcc.gnu.org/onlinedocs/) · [Clang](https://clang.llvm.org/docs/) · [MSVC](https://learn.microsoft.com/zh-cn/cpp/)
+- **测试/静态分析**：[GoogleTest](https://google.github.io/googletest/) · [Catch2](https://github.com/catchorg/Catch2) · [clang-tidy](https://clang.llvm.org/extra/clang-tidy/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

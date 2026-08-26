@@ -345,15 +345,14 @@ jobs:
           ctest --output-on-failure
 ```
 
-## 官方文档
-
-| 主题 | 链接 |
-|------|------|
-| 构建 | [CMake](https://cmake.org/documentation/) · [CTest](https://cmake.org/cmake/help/latest/manual/ctest.1.html) |
-| 包管理 | [Conan](https://docs.conan.io/2/) · [vcpkg](https://learn.microsoft.com/zh-cn/vcpkg/) |
-| 测试 | [GoogleTest](https://google.github.io/googletest/) · [Catch2](https://github.com/catchorg/Catch2) |
-| Sanitizers | [AddressSanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer) · [ThreadSanitizer](https://github.com/google/sanitizers/wiki/ThreadSanitizerCppManual) |
-| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) · [Pre-commit C++](https://pre-commit.com/) |
-| 代码质量 | [clang-tidy](https://clang.llvm.org/extra/clang-tidy/) · [clang-format](https://clang.llvm.org/docs/ClangFormat.html) |
-
 继续学习请前往 [05-生态全景](/tutorials/cpp/05-ecosystem)。
+
+## 官方文档与延伸阅读
+
+- **语言标准**：[C++ Reference（cppreference 中文）](https://zh.cppreference.com/w/cpp) · [cppreference 英文](https://en.cppreference.com/w/cpp) · [ISO C++](https://isocpp.org/std) · [标准草案](https://eel.is/c++draft/) · [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
+- **构建系统**：[CMake](https://cmake.org/documentation/) · [CTest](https://cmake.org/cmake/help/latest/manual/ctest.1.html) · [vcpkg](https://learn.microsoft.com/zh-cn/vcpkg/) · [Conan](https://docs.conan.io/2/)
+- **编译器**：[GCC](https://gcc.gnu.org/onlinedocs/) · [Clang](https://clang.llvm.org/docs/) · [MSVC](https://learn.microsoft.com/zh-cn/cpp/)
+- **测试/静态分析**：[GoogleTest](https://google.github.io/googletest/) · [Catch2](https://github.com/catchorg/Catch2) · [AddressSanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer) · [ThreadSanitizer](https://github.com/google/sanitizers/wiki/ThreadSanitizerCppManual) · [clang-tidy](https://clang.llvm.org/extra/clang-tidy/) · [clang-format](https://clang.llvm.org/docs/ClangFormat.html)
+- **CI/CD 与工具**：[GitHub Actions](https://docs.github.com/zh/actions) · [Pre-commit C++](https://pre-commit.com/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

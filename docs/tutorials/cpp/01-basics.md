@@ -1,6 +1,10 @@
 # C++ 基础语法
 
-C++ 是 C 的超集，在保留底层内存控制能力的同时，引入了面向对象、泛型等现代编程范式。本章覆盖类型与初始化、命名空间、枚举、数组、字符串、指针与引用、const-correctness、函数、类型转换、异常、OOP、模板、STL、移动语义、Ranges、文件与编译选项，示例默认使用 C++20。
+C++ 是 C 的超集，在保留底层内存控制能力的同时，引入了面向对象、泛型等现代编程范式。本章覆盖类型与初始化、命名空间、枚举、数组、字符串、指针与引用、const-correctness、函数、类型转换、异常、OOP、模板、STL、移动语义、Ranges、文件与编译选项，示例默认使用 C++20。类型与标准库细节以 [cppreference](https://en.cppreference.com/w/cpp) 为准。
+
+::: tip 官方参考
+本章所有语言与标准库行为以 [cppreference](https://en.cppreference.com/w/cpp) 与 [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) 为准。
+:::
 
 ## 变量与基本类型
 
@@ -1147,3 +1151,13 @@ g++ -E main.cpp -o main.i
 ```
 
 继续学习请前往 [02-进阶深入](/tutorials/cpp/02-advanced)。
+
+## 官方文档与延伸阅读
+
+- **语言标准**：[C++ Reference（cppreference）](https://en.cppreference.com/w/cpp) · [中文版](https://zh.cppreference.com/w/cpp) · [ISO C++](https://isocpp.org/std) · [标准草案](https://eel.is/c++draft/)
+- **官方教程**：[C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) · [learn.cpp](https://www.learncpp.com/)
+- **构建系统**：[CMake](https://cmake.org/documentation/) · [vcpkg](https://learn.microsoft.com/zh-cn/vcpkg/) · [Conan](https://docs.conan.io/2/)
+- **编译器**：[GCC](https://gcc.gnu.org/onlinedocs/) · [Clang](https://clang.llvm.org/docs/) · [MSVC](https://learn.microsoft.com/zh-cn/cpp/)
+- **测试/静态分析**：[GoogleTest](https://google.github.io/googletest/) · [Catch2](https://github.com/catchorg/Catch2) · [clang-tidy](https://clang.llvm.org/extra/clang-tidy/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

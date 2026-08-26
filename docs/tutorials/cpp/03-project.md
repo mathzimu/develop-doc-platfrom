@@ -393,14 +393,15 @@ ctest --output-on-failure
 - 可视化词云（配合 Python 脚本）
 - 支持正则分词以处理更复杂的情况
 
-## 官方文档
-
-| 主题 | 链接 |
-|------|------|
-| 标准库 | [cppreference（中文）](https://zh.cppreference.com/w/cpp) · [STL 容器](https://zh.cppreference.com/w/cpp/container) |
-| 正则 | [std::regex](https://en.cppreference.com/w/cpp/regex) |
-| 文件流 | [std::fstream](https://en.cppreference.com/w/cpp/io/basic_fstream) |
-| 构建 | [CMake](https://cmake.org/documentation/) |
-| 测试 | [GoogleTest](https://google.github.io/googletest/) |
-
 继续学习请前往 [04-工程实践](/tutorials/cpp/04-engineering)。
+
+## 官方文档与延伸阅读
+
+- **语言标准**：[C++ Reference（cppreference 中文）](https://zh.cppreference.com/w/cpp) · [STL 容器](https://zh.cppreference.com/w/cpp/container) · [cppreference 英文](https://en.cppreference.com/w/cpp) · [ISO C++](https://isocpp.org/std) · [标准草案](https://eel.is/c++draft/)
+- **官方教程**：[C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) · [learn.cpp](https://www.learncpp.com/)
+- **标准库细节**：[std::regex](https://en.cppreference.com/w/cpp/regex) · [std::fstream](https://en.cppreference.com/w/cpp/io/basic_fstream)
+- **构建系统**：[CMake](https://cmake.org/documentation/) · [vcpkg](https://learn.microsoft.com/zh-cn/vcpkg/) · [Conan](https://docs.conan.io/2/)
+- **编译器**：[GCC](https://gcc.gnu.org/onlinedocs/) · [Clang](https://clang.llvm.org/docs/) · [MSVC](https://learn.microsoft.com/zh-cn/cpp/)
+- **测试/静态分析**：[GoogleTest](https://google.github.io/googletest/) · [Catch2](https://github.com/catchorg/Catch2) · [clang-tidy](https://clang.llvm.org/extra/clang-tidy/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
