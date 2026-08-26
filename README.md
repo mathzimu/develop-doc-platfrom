@@ -1,8 +1,20 @@
 # Developer Doc Platform
 
-> 基于 [VitePress](https://vitepress.dev/zh/) 与 Markdown 构建的开发者文档平台，提供 18 个技术方向的系统化教程，并集中索引官方文档、规范标准与工具链。
+基于 [VitePress](https://vitepress.dev/zh/) 与 Markdown 构建的开发者文档平台：提供 18 个技术方向的系统化教程，并集中索引官方文档、规范标准与工具链。
 
-[特性](#特性) · [技术栈](#技术栈) · [快速开始](#快速开始) · [项目结构](#项目结构) · [内容组织](#内容组织) · [配置](#配置) · [部署](#部署) · [贡献](#贡献) · [许可证](#许可证)
+## 目录
+
+- [特性](#特性)
+- [技术栈](#技术栈)
+- [快速开始](#快速开始)
+- [项目结构](#项目结构)
+- [内容组织](#内容组织)
+- [配置](#配置)
+- [部署](#部署)
+- [贡献](#贡献)
+- [许可证](#许可证)
+
+---
 
 ## 特性
 
@@ -16,35 +28,26 @@
 
 ## 技术栈
 
-| 类别 | 选型 |
-|------|------|
-| 框架 | [VitePress](https://vitepress.dev/zh/) 1.6.4，基于 [Vue](https://vuejs.org/) 3 的静态站点生成器 |
-| 内容格式 | Markdown 为主，按需嵌入 Vue 组件增强交互 |
-| 包管理 | npm（同时兼容 pnpm / yarn） |
-| 搜索 | 内置 mini-search 本地全文搜索，无需后端服务 |
-| 部署 | 纯静态产物，支持 Docker / Vercel / Netlify / GitHub Pages / Cloudflare Pages |
+- **框架**：[VitePress](https://vitepress.dev/zh/) 1.6.4，基于 [Vue](https://vuejs.org/) 3 的静态站点生成器
+- **内容格式**：Markdown 为主，按需嵌入 Vue 组件增强交互
+- **包管理**：npm（同时兼容 pnpm / yarn）
+- **搜索**：内置 mini-search 本地全文搜索，无需后端服务
+- **部署**：纯静态产物，支持 Docker / Vercel / Netlify / GitHub Pages / Cloudflare Pages
 
 ## 快速开始
 
-### 环境要求
+**环境要求**
 
-- **Node.js 18+**（推荐 20 LTS）
-- **npm / pnpm / yarn** 任一包管理器
+- Node.js 18+（推荐 20 LTS）
+- npm / pnpm / yarn 任一包管理器
 
-### 本地开发
+**本地开发**
 
 ```bash
-# 安装依赖
-npm install
-
-# 启动本地开发服务器（默认 http://localhost:5173）
-npm run dev
-
-# 构建生产版本（输出到 docs/.vitepress/dist/）
-npm run build
-
-# 预览构建产物
-npm run preview
+npm install        # 安装依赖
+npm run dev        # 启动开发服务器（默认 http://localhost:5173）
+npm run build      # 构建生产版本（输出到 docs/.vitepress/dist/）
+npm run preview    # 预览构建产物
 ```
 
 ## 项目结构
@@ -73,13 +76,11 @@ developer-doc-platform/
 
 18 个技术方向，每个方向一个子目录，内含 `index.md` 与五个标准章节：
 
-| 章节 | 文件 | 内容 |
-|------|------|------|
-| 基础 | `01-basics.md` | 核心语法、常用 API、示例 |
-| 进阶 | `02-advanced.md` | 深入机制与高级用法 |
-| 实战 | `03-project.md` | 端到端项目实践 |
-| 工程 | `04-engineering.md` | 架构、安全、测试、性能、CI/CD |
-| 生态 | `05-ecosystem.md` | 相关工具、库、框架对比与选型 |
+1. **基础**（`01-basics.md`）— 核心语法、常用 API、示例
+2. **进阶**（`02-advanced.md`）— 深入机制与高级用法
+3. **实战**（`03-project.md`）— 端到端项目实践
+4. **工程**（`04-engineering.md`）— 架构、安全、测试、性能、CI/CD
+5. **生态**（`05-ecosystem.md`）— 相关工具、库、框架对比与选型
 
 ### 参考
 
@@ -96,7 +97,7 @@ developer-doc-platform/
 
 ## 配置
 
-站点行为由 `docs/.vitepress/config.ts` 集中定义，包括：
+站点行为由 `docs/.vitepress/config.ts` 集中定义：
 
 - **导航栏**：教程、参考、平台、版本切换（v1.0 / v0.9）
 - **侧边栏**：由 `sidebar.ts` 按文件系统结构自动生成（数字前缀排序、排除 `versions/` 等目录）
@@ -108,9 +109,9 @@ developer-doc-platform/
 
 ## 部署
 
-构建产物为纯静态文件，位于 `docs/.vitepress/dist/`，可托管到任意静态平台。支持的部署方式：
+构建产物为纯静态文件，位于 `docs/.vitepress/dist/`，可托管到任意静态平台：
 
-- **Docker**：`Dockerfile` + nginx（见下方示例）
+- **Docker**：`Dockerfile` + nginx
 - **Vercel / Netlify / Cloudflare Pages**：Git 自动部署，构建命令 `npm run build`，发布目录 `docs/.vitepress/dist`
 - **GitHub Pages**：GitHub Actions CI/CD
 
