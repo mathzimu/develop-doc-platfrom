@@ -227,11 +227,13 @@ python search.py . "TODO|FIXME" --type content --ext .py .md
 7. **交互模式**：基于 `prompt_toolkit` 的交互式搜索
 8. **配置文件**：支持 `.searchconfig` 配置默认排除规则
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 标准库 | [pathlib](https://docs.python.org/3/library/pathlib.html) · [os](https://docs.python.org/3/library/os.html) · [argparse](https://docs.python.org/3/library/argparse.html) |
-| 测试 | [pytest](https://docs.pytest.org/en/stable/) |
-| 打包 | [Python Packaging Guide](https://packaging.python.org/) |
-| CLI 增强 | [click](https://click.palletsprojects.com/) · [typer](https://typer.tiangolo.com/) |
+实战项目用到的标准库与工具的一手文档：
+
+- **命令行**：[argparse](https://docs.python.org/3/library/argparse.html) · [pathlib](https://docs.python.org/3/library/pathlib.html) · [os](https://docs.python.org/3/library/os.html) · [fnmatch](https://docs.python.org/3/library/fnmatch.html) · [re](https://docs.python.org/3/library/re.html)
+- **错误与异常**：[Built-in Exceptions](https://docs.python.org/3/library/exceptions.html) · [errno](https://docs.python.org/3/library/errno.html)
+- **进阶 CLI**：[click](https://click.palletsprojects.com/) · [typer](https://typer.tiangolo.com/) · [prompt_toolkit](https://python-prompt-toolkit.readthedocs.io/)
+- **并发加速**：[concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) · [asyncio](https://docs.python.org/3/library/asyncio.html)
+- **测试**：[pytest](https://docs.pytest.org/en/stable/)
+- **打包发布**：[Python Packaging Guide](https://packaging.python.org/) · [PyPI](https://pypi.org/)

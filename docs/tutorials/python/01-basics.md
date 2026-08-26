@@ -12,7 +12,7 @@ pip install package_name
 pip install -r requirements.txt
 pip freeze > requirements.txt
 
-# 虚拟环境
+# 虚拟环境（venv 模块）
 python -m venv .venv
 source .venv/bin/activate   # macOS/Linux
 # .venv\Scripts\activate    # Windows
@@ -32,7 +32,7 @@ year = 1991           # int
 is_popular = True     # bool
 nothing = None        # NoneType
 
-# 类型提示（3.5+）
+# 类型提示（PEP 484，3.5+；详见 typing 模块）
 name: str = "Python"
 count: int = 42
 items: list[str] = ["a", "b"]
@@ -73,7 +73,7 @@ z.imag  # 4.0
 ```python
 # 输出
 print("Hello, World!")
-print(f"版本: {version}")       # f-string（推荐）
+print(f"版本: {version}")       # f-string（PEP 498，推荐）
 print("版本: {}".format(version))
 print("版本: %s" % version)
 
@@ -147,7 +147,7 @@ status = "成年" if age >= 18 else "未成年"
 if 0 < x < 10:
     print("x 在 0 到 10 之间")
 
-# 模式匹配（3.10+）
+# 模式匹配（PEP 634，3.10+）
 match status:
     case "A":
         print("优秀")
@@ -549,3 +549,18 @@ pip install -r requirements.txt
    def good(items=None): ...  # 正确
    ```
 8. **使用 `__slots__`**：节省大量简单对象的内存
+
+## 官方文档与延伸阅读
+
+基础知识点的权威定义与完整 API 以下列一手文档为准（链接同见 [官方文档索引](/reference/official-docs)）：
+
+- **入门教程**：[Python 官方教程（中文）](https://docs.python.org/zh-cn/3/tutorial/) — 从基础语法到模块、类的系统性讲解
+- **内置函数**：[Built-in Functions](https://docs.python.org/3/library/functions.html) — `print` / `open` / `isinstance` / `enumerate` 等全部内置函数签名
+- **标准库概览**：[The Python Standard Library](https://docs.python.org/3/library/index.html) — `os` / `json` / `re` / `csv` / `collections` 等模块索引
+- **语言参考**：[Language Reference](https://docs.python.org/3/reference/index.html) · [数据模型（特殊方法）](https://docs.python.org/3/reference/datamodel.html)
+- **类型注解**：[typing 模块](https://docs.python.org/3/library/typing.html) · [PEP 484](https://peps.python.org/pep-0484/) · [PEP 585（内置泛型）](https://peps.python.org/pep-0585/)
+- **字符串格式化**：[f-string（PEP 498）](https://peps.python.org/pep-0498/) · [Format Specification Mini-Language](https://docs.python.org/3/library/string.html#format-specification-mini-language)
+- **模式匹配**：[PEP 634（结构化模式匹配，3.10+）](https://peps.python.org/pep-0634/)
+- **虚拟环境**：[venv 模块](https://docs.python.org/3/library/venv.html) · [pip 文档](https://pip.pypa.io/en/stable/)
+- **代码风格**：[PEP 8](https://peps.python.org/pep-0008/)
+- **版本支持周期**：[Python 版本状态](https://devguide.python.org/versions/)

@@ -4,7 +4,7 @@ Python 是一种易学、可读性强、功能强大的高级编程语言。广�
 
 ## 环境要求
 
-- Python 3.10+
+- Python 3.10+（最新稳定版 3.13，受支持版本见 [Python 版本状态](https://devguide.python.org/versions/)）
 - pip（包管理器）
 - 任意文本编辑器或 IDE（推荐 VS Code / PyCharm）
 

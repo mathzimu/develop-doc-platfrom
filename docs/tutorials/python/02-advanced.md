@@ -484,16 +484,13 @@ def good(words: list[str]) -> str:
     return "".join(words)  # O(n)
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-类型系统、GIL、异步、装饰器与元类细节以下列一手文档为准。
+进阶主题的一手规范与参考（链接同见 [官方文档索引](/reference/official-docs)）：
 
-| 主题 | 链接 |
-|------|------|
-| 语言参考 | [Language Reference](https://docs.python.org/3/reference/index.html) |
-| 数据模型 | [Data Model（特殊方法）](https://docs.python.org/3/reference/datamodel.html) |
-| 类型注解 | [typing 模块](https://docs.python.org/3/library/typing.html) · [PEP 484](https://peps.python.org/pep-0484/) · [PEP 695（新类型语法）](https://peps.python.org/pep-0695/) |
-| 并发 | [asyncio](https://docs.python.org/3/library/asyncio.html) · [并发执行](https://docs.python.org/3/library/concurrency.html) |
-| GIL 与 CPython | [Python Wiki GIL](https://wiki.python.org/moin/GlobalInterpreterLock) · [PEP 703（移除 GIL）](https://peps.python.org/pep-0703/) |
-| 装饰器/元类 | [Python Decorators 指南](https://docs.python.org/3/glossary.html#term-decorator) · [元类](https://docs.python.org/3/reference/datamodel.html#customizing-class-creation) |
-| 性能分析 | [profile](https://docs.python.org/3/library/profile.html) · [timeit](https://docs.python.org/3/library/timeit.html) |
+- **语言与数据模型**：[Language Reference](https://docs.python.org/3/reference/index.html) · [Data Model（特殊方法）](https://docs.python.org/3/reference/datamodel.html) · [自定义类创建（元类）](https://docs.python.org/3/reference/datamodel.html#customizing-class-creation)
+- **装饰器 / 上下文管理器**：[Glossary: decorator](https://docs.python.org/3/glossary.html#term-decorator) · [`functools.wraps`](https://docs.python.org/3/library/functools.html#functools.wraps) · [`contextlib`](https://docs.python.org/3/library/contextlib.html)
+- **迭代器 / 生成器 / 协程**：[Iterator（术语）](https://docs.python.org/3/glossary.html#term-iterator) · [yield / yield from](https://docs.python.org/3/reference/expressions.html#yield-expressions)
+- **异步编程**：[asyncio](https://docs.python.org/3/library/asyncio.html) · [并发执行](https://docs.python.org/3/library/concurrency.html) · [aiohttp](https://docs.aiohttp.org/en/stable/)
+- **类型系统**：[typing 模块](https://docs.python.org/3/library/typing.html) · [PEP 484](https://peps.python.org/pep-0484/) · [PEP 544（Protocol）](https://peps.python.org/pep-0544/) · [PEP 589（TypedDict）](https://peps.python.org/pep-0589/) · [PEP 586（Literal）](https://peps.python.org/pep-0586/) · [PEP 695（type 语句）](https://peps.python.org/pep-0695/)
+- **性能与并发模型**：[GIL 与 PEP 703（no-GIL）](https://peps.python.org/pep-0703/) · [profile](https://docs.python.org/3/library/profile.html) · [timeit](https://docs.python.org/3/library/timeit.html) · [Numba](https://numba.readthedocs.io/en/stable/)

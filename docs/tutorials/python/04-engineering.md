@@ -496,14 +496,17 @@ jobs:
 
 该工作流在每次推送和 PR 时自动运行：代码风格检查（ruff）、类型检查（mypy）和测试（pytest）。矩阵构建确保代码在多个 Python 版本上兼容。
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 项目配置 | [pyproject.toml / PEP 621](https://packaging.python.org/en/latest/specifications/pyproject-toml/) |
-| Lint/Format | [Ruff](https://docs.astral.sh/ruff/) |
-| 类型检查 | [mypy](https://mypy.readthedocs.io/en/stable/) · [pyright](https://github.com/microsoft/pyright) |
-| 测试 | [pytest](https://docs.pytest.org/en/stable/) · [pytest-cov](https://pytest-cov.readthedocs.io/) |
-| 迁移 | [Alembic](https://alembic.sqlalchemy.org/en/latest/) |
-| 容器化 | [Docker 官方 Python 镜像](https://hub.docker.com/_/python) |
-| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) · [Codecov](https://docs.codecov.com/docs) |
+工程实践涉及的一手文档与工具参考：
+
+- **项目配置**：[pyproject.toml / PEP 621](https://packaging.python.org/en/latest/specifications/pyproject-toml/) · [Python Packaging Guide](https://packaging.python.org/)
+- **代码质量**：[Ruff](https://docs.astral.sh/ruff/) · [mypy](https://mypy.readthedocs.io/en/stable/) · [pyright](https://github.com/microsoft/pyright) · [pre-commit](https://pre-commit.com/)
+- **配置与校验**：[Pydantic](https://docs.pydantic.dev/) · [pydantic-settings](https://docs.pydantic.dev/latest/concepts/pydantic_settings/)
+- **Web 框架**：[FastAPI](https://fastapi.tiangolo.com/zh/) · [Uvicorn](https://www.uvicorn.org/) · [Gunicorn](https://docs.gunicorn.org/)
+- **日志**：[structlog](https://www.structlog.org/en/stable/)
+- **ORM 与迁移**：[SQLAlchemy 2.0](https://docs.sqlalchemy.org/en/20/) · [Alembic](https://alembic.sqlalchemy.org/en/latest/)
+- **任务队列**：[Celery](https://docs.celeryq.dev/en/stable/)
+- **测试**：[pytest](https://docs.pytest.org/en/stable/) · [pytest-cov](https://pytest-cov.readthedocs.io/) · [pytest-asyncio](https://pytest-asyncio.readthedocs.io/)
+- **容器化**：[Docker 官方 Python 镜像](https://hub.docker.com/_/python) · [Dockerfile 参考](https://docs.docker.com/reference/dockerfile/)
+- **CI/CD**：[GitHub Actions](https://docs.github.com/zh/actions) · [Codecov](https://docs.codecov.com/docs)
