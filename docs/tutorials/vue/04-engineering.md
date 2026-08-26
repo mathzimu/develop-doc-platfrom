@@ -320,13 +320,13 @@ http.defaults.withCredentials = true
 - 环境变量 `.env.production` 分离
 - 使用 `import.meta.env` 而非 `process.env`
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 组合式 API | [Vue 组合式 API 指南](https://cn.vuejs.org/guide/composables.html) |
-| 状态管理 | [Pinia](https://pinia.vuejs.org/zh/) |
-| 测试 | [Vitest](https://vitest.dev/) · [Vue Test Utils](https://test-utils.vuejs.org/zh/) · [Cypress](https://docs.cypress.io/) |
-| 权限/安全 | [Vue 安全建议](https://cn.vuejs.org/guide/best-practices/security.html) |
-| i18n | [Vue-i18n](https://vue-i18n.intlify.dev/) |
-| 环境变量 | [Vite Env Variables](https://cn.vite.dev/guide/env-and-mode.html) · [import.meta.env](https://vitejs.cn/vitejs-cn/guide/env-and-mode.html) |
+- **组合式 API**：[Vue 组合式 API 指南](https://cn.vuejs.org/guide/composables.html)
+- **状态管理**：[Pinia](https://pinia.vuejs.org/zh/)
+- **测试**：[Vitest](https://vitest.dev/) · [Vue Test Utils](https://test-utils.vuejs.org/zh/) · [Cypress](https://docs.cypress.io/)
+- **权限/安全**：[Vue 安全建议](https://cn.vuejs.org/guide/best-practices/security.html)
+- **i18n**：[Vue-i18n](https://vue-i18n.intlify.dev/)
+- **环境变量**：[Vite Env Variables](https://cn.vite.dev/guide/env-and-mode.html) · [import.meta.env](https://vitejs.cn/vitejs-cn/guide/env-and-mode.html)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。 |

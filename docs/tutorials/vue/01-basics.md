@@ -211,6 +211,8 @@ watch(
 
 ## 组件
 
+组件是 Vue 应用的基本构建块，详细用法参见 [Vue 组件官方文档](https://cn.vuejs.org/guide/essentials/component-basics.html)。
+
 ### 组件定义
 
 ```vue
@@ -428,6 +430,8 @@ console.log(route.params.id)
 
 ## 状态管理（Pinia）
 
+Pinia 是 Vue 官方推荐的状态管理库，详见 [Pinia 官方文档](https://pinia.vuejs.org/zh/)。
+
 ```ts
 // stores/counter.ts
 import { defineStore } from 'pinia'
@@ -450,3 +454,16 @@ const store = useCounterStore()
 store.count     // 直接访问
 store.increment()
 ```
+
+## 官方文档与延伸阅读
+
+- **官方文档（中文）**：[cn.vuejs.org](https://cn.vuejs.org/guide/introduction.html) · [API 参考](https://cn.vuejs.org/api/)
+- **单文件组件**：[SFC 语法规范](https://cn.vuejs.org/api/sfc-spec.html) · [`script setup`](https://cn.vuejs.org/api/sfc-script-setup.html)
+- **路由**：[Vue Router](https://router.vuejs.org/zh/)
+- **状态管理**：[Pinia](https://pinia.vuejs.org/zh/)
+- **工具链**：[Vite](https://cn.vite.dev/guide/) · [Vue Language Tools](https://github.com/vuejs/language-tools)
+- **组件库**：[Element Plus](https://element-plus.org/zh-CN/) · [Naive UI](https://www.naiveui.com/zh-CN/os-theme) · [Vuetify](https://vuetifyjs.com/)
+- **工具函数**：[VueUse](https://vueuse.org/)
+- **测试**：[Vue Test Utils](https://test-utils.vuejs.org/) · [Vitest](https://cn.vitest.dev/guide/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

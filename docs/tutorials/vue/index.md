@@ -23,23 +23,16 @@ npm create vue@latest
 cd my-project && npm install && npm run dev
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-组合式 API 语义、模板编译行为、响应式细节以官方文档为准。
-
-| 类型 | 链接 |
-|------|------|
-| 官方文档（中文） | [cn.vuejs.org](https://cn.vuejs.org/guide/introduction.html) |
-| API 参考 | [Vue API](https://cn.vuejs.org/api/) |
-| 单文件组件 | [SFC 语法规范](https://cn.vuejs.org/api/sfc-spec.html) · [`script setup`](https://cn.vuejs.org/api/sfc-script-setup.html) |
-| 深度指南 | [响应式基础](https://cn.vuejs.org/guide/essentials/reactivity-fundamentals.html) · [渲染机制](https://cn.vuejs.org/guide/extras/rendering-mechanism.html) |
-| 路由 | [Vue Router](https://router.vuejs.org/zh/) |
-| 状态管理 | [Pinia](https://pinia.vuejs.org/zh/) |
-| 元框架 | [Nuxt](https://nuxt.com/docs) |
-| 工具链 | [Vite](https://cn.vite.dev/guide/) · [Vue Language Tools](https://github.com/vuejs/language-tools) |
-| 组件库 | [Element Plus](https://element-plus.org/zh-CN/) · [Naive UI](https://www.naiveui.com/zh-CN/os-theme) · [Vuetify](https://vuetifyjs.com/) |
-| 工具函数 | [VueUse](https://vueuse.org/) |
-| 测试 | [Vue Test Utils](https://test-utils.vuejs.org/) · [Vitest](https://cn.vitest.dev/guide/) |
-| 源码与 RFC | [vuejs/core](https://github.com/vuejs/core) · [vuejs/rfcs](https://github.com/vuejs/rfcs) |
-
-更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
+- **官方文档（中文）**：[cn.vuejs.org](https://cn.vuejs.org/guide/introduction.html) · [API 参考](https://cn.vuejs.org/api/)
+- **单文件组件**：[SFC 语法规范](https://cn.vuejs.org/api/sfc-spec.html) · [`script setup`](https://cn.vuejs.org/api/sfc-script-setup.html)
+- **深度指南**：[响应式基础](https://cn.vuejs.org/guide/essentials/reactivity-fundamentals.html) · [渲染机制](https://cn.vuejs.org/guide/extras/rendering-mechanism.html)
+- **路由**：[Vue Router](https://router.vuejs.org/zh/)
+- **状态管理**：[Pinia](https://pinia.vuejs.org/zh/)
+- **元框架**：[Nuxt](https://nuxt.com/docs)
+- **工具链**：[Vite](https://cn.vite.dev/guide/) · [Vue Language Tools](https://github.com/vuejs/language-tools)
+- **组件库**：[Element Plus](https://element-plus.org/zh-CN/) · [Naive UI](https://www.naiveui.com/zh-CN/os-theme) · [Vuetify](https://vuetifyjs.com/)
+- **工具函数**：[VueUse](https://vueuse.org/)
+- **测试**：[Vue Test Utils](https://test-utils.vuejs.org/) · [Vitest](https://cn.vitest.dev/guide/)
+- **源码与 RFC**：[vuejs/core](https://github.com/vuejs/core) · [vuejs/rfcs](https://github.com/vuejs/rfcs)

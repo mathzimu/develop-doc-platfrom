@@ -320,15 +320,13 @@ onDeactivated(() => { /* 离开缓存 —— 适合清理 */ })
 - 合理拆分组件避免过度渲染
 - 使用 `computed` 替代方法调用
 
-## 官方文档
+## 官方文档与延伸阅读
 
-响应式原理、编译优化、依赖追踪与性能细节以官方文档为准。
+- **响应式机制**：[响应式基础](https://cn.vuejs.org/guide/essentials/reactivity-fundamentals.html) · [深度响应式](https://cn.vuejs.org/guide/extras/reactivity-in-depth.html)
+- **渲染机制**：[渲染机制](https://cn.vuejs.org/guide/extras/rendering-mechanism.html) · [渲染函数](https://cn.vuejs.org/guide/extras/render-function.html)
+- **编译优化**：[Reactivity Transform（已废弃）](https://cn.vuejs.org/guide/extras/reactivity-transform.html) · [编译时优化](https://cn.vuejs.org/guide/extras/rendering-mechanism.html#vdom-and-compilation)
+- **自定义指令**：[自定义指令](https://cn.vuejs.org/guide/reusability/custom-directives.html)
+- **Teleport 与 Suspense**：[Teleport](https://cn.vuejs.org/guide/built-ins/teleport.html) · [Suspense](https://cn.vuejs.org/guide/built-ins/suspense.html)
+- **源码与 RFC**：[vuejs/core](https://github.com/vuejs/core) · [vuejs/rfcs](https://github.com/vuejs/rfcs)
 
-| 主题 | 链接 |
-|------|------|
-| 响应式机制 | [响应式基础](https://cn.vuejs.org/guide/essentials/reactivity-fundamentals.html) · [深度响应式](https://cn.vuejs.org/guide/extras/reactivity-in-depth.html) |
-| 渲染机制 | [渲染机制](https://cn.vuejs.org/guide/extras/rendering-mechanism.html) · [渲染函数](https://cn.vuejs.org/guide/extras/render-function.html) |
-| 编译优化 | [Reactivity Transform（已废弃）](https://cn.vuejs.org/guide/extras/reactivity-transform.html) · [编译时优化](https://cn.vuejs.org/guide/extras/rendering-mechanism.html#vdom-and-compilation) |
-| 自定义指令 | [自定义指令](https://cn.vuejs.org/guide/reusability/custom-directives.html) |
-| Teleport 与 Suspense | [Teleport](https://cn.vuejs.org/guide/built-ins/teleport.html) · [Suspense](https://cn.vuejs.org/guide/built-ins/suspense.html) |
-| 源码与 RFC | [vuejs/core](https://github.com/vuejs/core) · [vuejs/rfcs](https://github.com/vuejs/rfcs) |
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。 |

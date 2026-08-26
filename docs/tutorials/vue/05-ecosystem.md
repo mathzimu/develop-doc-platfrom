@@ -86,13 +86,13 @@ export default defineNuxtConfig({
 })
 ```
 
-### 官方文档入口
+## 官方文档与延伸阅读
 
-| 类别 | 入口 |
-|------|------|
-| 核心与 API | [Vue 官方文档（中文）](https://cn.vuejs.org/guide/introduction.html) · [Vue API](https://cn.vuejs.org/api/) |
-| 元框架 | [Nuxt 3](https://nuxt.com/docs) · [VitePress](https://vitepress.dev/zh/) · [Quasar](https://quasar.dev/) |
-| 状态/路由 | [Pinia](https://pinia.vuejs.org/zh/) · [Vue Router](https://router.vuejs.org/zh/) |
-| 组件库 | [Element Plus](https://element-plus.org/zh-CN/) · [Naive UI](https://www.naiveui.com/zh-CN/os-theme) · [Ant Design Vue](https://antdv.com/) · [PrimeVue](https://primevue.org/) · [Radix Vue](https://www.radix-vue.com/) |
-| 工具库 | [VueUse](https://vueuse.org/) · [TanStack Vue Query](https://tanstack.com/query/latest/docs/framework/vue/overview) · [Vue-i18n](https://vue-i18n.intlify.dev/) · [Vee-Validate](https://vee-validate.logaretm.com/v4/) |
-| 测试 | [Vitest](https://vitest.dev/) · [Vue Test Utils](https://test-utils.vuejs.org/zh/) · [Cypress](https://docs.cypress.io/) |
+- **核心与 API**：[Vue 官方文档（中文）](https://cn.vuejs.org/guide/introduction.html) · [Vue API](https://cn.vuejs.org/api/)
+- **元框架**：[Nuxt 3](https://nuxt.com/docs) · [VitePress](https://vitepress.dev/zh/) · [Quasar](https://quasar.dev/)
+- **状态/路由**：[Pinia](https://pinia.vuejs.org/zh/) · [Vue Router](https://router.vuejs.org/zh/)
+- **组件库**：[Element Plus](https://element-plus.org/zh-CN/) · [Naive UI](https://www.naiveui.com/zh-CN/os-theme) · [Ant Design Vue](https://antdv.com/) · [PrimeVue](https://primevue.org/) · [Radix Vue](https://www.radix-vue.com/)
+- **工具库**：[VueUse](https://vueuse.org/) · [TanStack Vue Query](https://tanstack.com/query/latest/docs/framework/vue/overview) · [Vue-i18n](https://vue-i18n.intlify.dev/) · [Vee-Validate](https://vee-validate.logaretm.com/v4/)
+- **测试**：[Vitest](https://vitest.dev/) · [Vue Test Utils](https://test-utils.vuejs.org/zh/) · [Cypress](https://docs.cypress.io/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。 |

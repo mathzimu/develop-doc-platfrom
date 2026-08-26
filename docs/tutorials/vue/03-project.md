@@ -292,12 +292,12 @@ createApp(App)
   .mount('#app')
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| Vue 核心 | [Vue 3 官方文档](https://cn.vuejs.org/guide/introduction.html) |
-| 状态管理 | [Pinia](https://pinia.vuejs.org/zh/) |
-| 数据获取 | [TanStack Vue Query](https://tanstack.com/query/latest/docs/framework/vue/overview) |
-| 样式 | [Tailwind CSS](https://tailwindcss.com/docs) |
-| 脚手架 | [Vite](https://cn.vite.dev/guide/) · [create-vue](https://cn.vuejs.org/guide/quick-start.html) |
+- **Vue 核心**：[Vue 3 官方文档](https://cn.vuejs.org/guide/introduction.html)
+- **状态管理**：[Pinia](https://pinia.vuejs.org/zh/)
+- **数据获取**：[TanStack Vue Query](https://tanstack.com/query/latest/docs/framework/vue/overview)
+- **样式**：[Tailwind CSS](https://tailwindcss.com/docs)
+- **脚手架**：[Vite](https://cn.vite.dev/guide/) · [create-vue](https://cn.vuejs.org/guide/quick-start.html)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。 |
