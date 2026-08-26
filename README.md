@@ -1,6 +1,8 @@
 # Developer Doc Platform
 
-开发者文档平台，基于 [VitePress](https://vitepress.dev/zh/) 与 Markdown 构建。面向开发者社区提供 18 个技术方向的系统化教程，并集中索引官方文档、规范标准与工具链。
+> 基于 [VitePress](https://vitepress.dev/zh/) 与 Markdown 构建的开发者文档平台，提供 18 个技术方向的系统化教程，并集中索引官方文档、规范标准与工具链。
+
+[特性](#特性) · [技术栈](#技术栈) · [快速开始](#快速开始) · [项目结构](#项目结构) · [内容组织](#内容组织) · [配置](#配置) · [部署](#部署) · [贡献](#贡献) · [许可证](#许可证)
 
 ## 特性
 
@@ -22,12 +24,14 @@
 | 搜索 | VitePress 本地搜索（mini-search） |
 | 部署 | 任意静态托管 / Docker / Vercel / Netlify / GitHub Pages / Cloudflare Pages |
 
-## 环境要求
+## 快速开始
+
+### 环境要求
 
 - **Node.js 18+**（推荐 20 LTS）
 - **npm / pnpm / yarn** 任一包管理器
 
-## 快速开始
+### 本地开发
 
 ```bash
 # 安装依赖
@@ -42,6 +46,14 @@ npm run build
 # 预览构建产物
 npm run preview
 ```
+
+可用脚本：
+
+| 脚本 | 说明 |
+|------|------|
+| `npm run dev` | 启动本地开发服务器 |
+| `npm run build` | 构建生产版本 |
+| `npm run preview` | 预览构建产物 |
 
 ## 项目结构
 
