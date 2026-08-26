@@ -77,16 +77,16 @@ packages/
 npx create-turbo@latest my-monorepo
 ```
 
-## 官方文档入口
+## 官方文档与延伸阅读
 
-| 类别 | 入口 |
-|------|------|
-| 核心与 API | [react.dev](https://react.dev/learn) · [React API 参考](https://react.dev/reference/react) · [中文站](https://zh-hans.react.dev/learn) |
-| 元框架 | [Next.js](https://nextjs.org/docs) · [Remix](https://remix.run/docs) · [Gatsby](https://www.gatsbyjs.com/docs/) |
-| 状态管理 | [Zustand](https://zustand.docs.pmnd.rs/) · [Jotai](https://jotai.org/docs/) · [Redux Toolkit](https://redux-toolkit.js.org/) · [XState](https://stately.ai/docs) |
-| 数据获取 | [TanStack Query](https://tanstack.com/query/latest/docs) · [SWR](https://swr.vercel.app/) |
-| 表单 | [React Hook Form](https://react-hook-form.com/) · [Formik](https://formik.org/) · [TanStack Form](https://tanstack.com/form) |
-| 样式 | [Tailwind CSS](https://tailwindcss.com/docs) · [styled-components](https://styled-components.com/) |
-| 测试 | [Testing Library](https://testing-library.com/docs/) · [Vitest](https://vitest.dev/) · [Playwright](https://playwright.dev/) |
-| 组件库 | [shadcn/ui](https://ui.shadcn.com/) · [Radix UI](https://www.radix-ui.com/) · [MUI](https://mui.com/) · [Ant Design](https://ant.design/index-cn) |
-| Monorepo | [Turborepo](https://turborepo.com/docs) · [Nx](https://nx.dev/getting-started/intro) |
+- **官方文档**：[react.dev](https://react.dev/learn) · [React API 参考](https://react.dev/reference/react) · [中文站](https://zh-hans.react.dev/learn)
+- **元框架**：[Next.js](https://nextjs.org/docs) · [Remix](https://remix.run/docs) · [Gatsby](https://www.gatsbyjs.com/docs/)
+- **状态管理**：[Zustand](https://zustand.docs.pmnd.rs/) · [Jotai](https://jotai.org/docs/) · [Redux Toolkit](https://redux-toolkit.js.org/) · [XState](https://stately.ai/docs)
+- **数据获取**：[TanStack Query](https://tanstack.com/query/latest/docs) · [SWR](https://swr.vercel.app/)
+- **表单**：[React Hook Form](https://react-hook-form.com/) · [Formik](https://formik.org/) · [TanStack Form](https://tanstack.com/form)
+- **样式**：[Tailwind CSS](https://tailwindcss.com/docs) · [styled-components](https://styled-components.com/)
+- **测试**：[Testing Library](https://testing-library.com/docs/) · [Vitest](https://vitest.dev/) · [Playwright](https://playwright.dev/)
+- **组件库**：[shadcn/ui](https://ui.shadcn.com/) · [Radix UI](https://www.radix-ui.com/) · [MUI](https://mui.com/) · [Ant Design](https://ant.design/index-cn)
+- **Monorepo**：[Turborepo](https://turborepo.com/docs) · [Nx](https://nx.dev/getting-started/intro)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

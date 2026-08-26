@@ -14,6 +14,10 @@ npm create vite@latest my-app -- --template react-ts  # Vite 方式
 
 组件是返回 JSX 的函数，是 React 应用的基本构建单元。
 
+::: tip
+初次学习组件概念，建议阅读 [react.dev 官方教程](https://react.dev/learn)。
+:::
+
 ```tsx
 function Welcome({ name }: { name: string }) {
   return <h1>Hello, {name}!</h1>
@@ -98,7 +102,7 @@ function UserList({ users }: { users: User[] }) {
 
 ## Hooks
 
-Hooks 是 React 16.8 引入的特性，允许在函数组件中使用状态和生命周期能力。
+Hooks 是 React 16.8 引入的特性，允许在函数组件中使用状态和生命周期能力。详见 [React Hooks 参考](https://react.dev/reference/react/hooks)。
 
 ### useState
 
@@ -387,3 +391,13 @@ import styles from './Button.module.css'
 ::: tip
 性能优化应基于实际测量（React DevTools Profiler），不要过早优化。
 :::
+
+## 官方文档与延伸阅读
+
+- **官方文档**：[react.dev](https://react.dev/learn) · [中文文档](https://zh-hans.react.dev/learn)
+- **API 参考**：[React Reference](https://react.dev/reference/react) · [Hooks 索引](https://react.dev/reference/react/hooks)
+- **元框架**：[Next.js](https://nextjs.org/docs) · [React Router](https://reactrouter.com/) · [Remix](https://remix.run/docs)
+- **状态管理**：[TanStack Query](https://tanstack.com/query/latest/docs) · [Zustand](https://zustand.docs.pmnd.rs/) · [Redux Toolkit](https://redux-toolkit.js.org/)
+- **测试**：[Testing Library](https://testing-library.com/docs/react-testing-library/intro/) · [Playwright](https://playwright.dev/docs/intro)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

@@ -33,22 +33,12 @@ npm create vite@latest my-app -- --template react-ts
 cd my-app && npm install && npm run dev
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-Hook 规则、渲染语义、并发特性等细节以官方文档为准。
-
-| 类型 | 链接 |
-|------|------|
-| 官方文档 | [react.dev](https://react.dev/learn) · [中文文档](https://zh-hans.react.dev/learn) |
-| API 参考 | [React Reference](https://react.dev/reference/react) · [Hooks 索引](https://react.dev/reference/react/hooks) |
-| DOM 与事件 | [react-dom 参考](https://react.dev/reference/react-dom) |
-| 服务端组件 | [Server Components](https://react.dev/reference/rsc/server-components) |
-| 编译器 | [React Compiler](https://react.dev/learn/react-compiler) |
-| 元框架 | [Next.js](https://nextjs.org/docs) · [React Router](https://reactrouter.com/) · [Remix](https://remix.run/docs) |
-| 数据获取 | [TanStack Query](https://tanstack.com/query/latest/docs) · [SWR](https://swr.vercel.app/zh-CN) |
-| 状态管理 | [Zustand](https://zustand.docs.pmnd.rs/) · [Redux Toolkit](https://redux-toolkit.js.org/) · [Jotai](https://jotai.org/docs/introduction) |
-| 表单 | [React Hook Form](https://react-hook-form.com/get-started) |
-| 测试 | [Testing Library](https://testing-library.com/docs/react-testing-library/intro/) · [Playwright](https://playwright.dev/docs/intro) |
-| 源码与 RFC | [facebook/react](https://github.com/facebook/react) · [reactjs/rfcs](https://github.com/reactjs/rfcs) |
-
-更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
+- **官方文档**：[react.dev](https://react.dev/learn) · [中文文档](https://zh-hans.react.dev/learn) · [API 参考](https://react.dev/reference/react) · [Hooks 索引](https://react.dev/reference/react/hooks) · [react-dom 参考](https://react.dev/reference/react-dom) · [Server Components](https://react.dev/reference/rsc/server-components) · [React Compiler](https://react.dev/learn/react-compiler)
+- **元框架**：[Next.js](https://nextjs.org/docs) · [React Router](https://reactrouter.com/) · [Remix](https://remix.run/docs)
+- **数据获取**：[TanStack Query](https://tanstack.com/query/latest/docs) · [SWR](https://swr.vercel.app/zh-CN)
+- **状态管理**：[Zustand](https://zustand.docs.pmnd.rs/) · [Redux Toolkit](https://redux-toolkit.js.org/) · [Jotai](https://jotai.org/docs/introduction)
+- **表单**：[React Hook Form](https://react-hook-form.com/get-started)
+- **测试**：[Testing Library](https://testing-library.com/docs/react-testing-library/intro/) · [Playwright](https://playwright.dev/docs/intro)
+- **源码与 RFC**：[facebook/react](https://github.com/facebook/react) · [reactjs/rfcs](https://github.com/reactjs/rfcs)

@@ -451,12 +451,12 @@ export default function App() {
 }
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| React 核心 | [react.dev](https://react.dev/learn) · [React 中文](https://zh-hans.react.dev/learn) |
-| 数据获取 | [TanStack Query](https://tanstack.com/query/latest/docs) |
-| 样式 | [Tailwind CSS](https://tailwindcss.com/docs) |
-| 脚手架 | [Vite](https://vite.dev/guide/) |
-| 测试 | [Vitest](https://vitest.dev/) · [Testing Library](https://testing-library.com/docs/react-testing-library/intro/) |
+- **官方文档**：[react.dev](https://react.dev/learn) · [React 中文](https://zh-hans.react.dev/learn) · [API 参考](https://react.dev/reference/react)
+- **数据获取**：[TanStack Query](https://tanstack.com/query/latest/docs)
+- **样式**：[Tailwind CSS](https://tailwindcss.com/docs)
+- **脚手架**：[Vite](https://vite.dev/guide/)
+- **测试**：[Vitest](https://vitest.dev/) · [Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

@@ -400,13 +400,14 @@ function App() {
 }
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 项目结构 | [React 项目结构建议](https://react.dev/learn/principles-for-structuring-state) |
-| API 与状态 | [TanStack Query](https://tanstack.com/query/latest/docs) · [Zustand](https://zustand.docs.pmnd.rs/) |
-| 测试 | [Vitest](https://vitest.dev/) · [Testing Library](https://testing-library.com/docs/react-testing-library/intro/) · [Playwright](https://playwright.dev/docs/intro) |
-| 错误监控 | [Sentry React](https://docs.sentry.io/platforms/javascript/guides/react/) |
-| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) · [Vercel](https://vercel.com/docs) |
-| 国际化 | [react-i18next](https://react.i18next.com/) |
+- **官方文档**：[react.dev](https://react.dev/learn) · [中文文档](https://zh-hans.react.dev/learn) · [API 参考](https://react.dev/reference/react)
+- **项目结构**：[React 项目结构建议](https://react.dev/learn/principles-for-structuring-state)
+- **API 与状态**：[TanStack Query](https://tanstack.com/query/latest/docs) · [Zustand](https://zustand.docs.pmnd.rs/)
+- **测试**：[Vitest](https://vitest.dev/) · [Testing Library](https://testing-library.com/docs/react-testing-library/intro/) · [Playwright](https://playwright.dev/docs/intro)
+- **错误监控**：[Sentry React](https://docs.sentry.io/platforms/javascript/guides/react/)
+- **CI/CD**：[GitHub Actions](https://docs.github.com/zh/actions) · [Vercel](https://vercel.com/docs)
+- **国际化**：[react-i18next](https://react.i18next.com/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
