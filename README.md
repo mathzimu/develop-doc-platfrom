@@ -2,6 +2,8 @@
 
 基于 [VitePress](https://vitepress.dev/zh/) 与 Markdown 构建的开发者文档平台：提供 18 个技术方向的系统化教程，并集中索引官方文档、规范标准与工具链。
 
+> English version: [README.en.md](./README.en.md)
+
 ## 目录
 
 - [特性](#特性)
