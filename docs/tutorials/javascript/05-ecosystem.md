@@ -103,12 +103,11 @@ UI 组件库：shadcn/ui, Radix, Ark UI, MUI
 └──────────────────────────────────────┘
 ```
 
-## 官方文档入口
+## 官方文档与延伸阅读
 
-| 类别 | 入口 |
-|------|------|
-| 语言规范 | [ECMA-262](https://tc39.es/ecma262/) · [TC39 提案](https://github.com/tc39/proposals) · [MDN JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) |
-| 运行时 | [Node.js API](https://nodejs.org/docs/latest/api/) · [Deno](https://docs.deno.com/) · [Bun](https://bun.sh/docs) |
-| 构建工具 | [Vite](https://vite.dev/guide/) · [Rollup](https://rollupjs.org/) · [esbuild](https://esbuild.github.io/) · [webpack](https://webpack.js.org/) |
-| 包管理 | [npm](https://docs.npmjs.com/) · [pnpm](https://pnpm.io/zh/) · [Yarn](https://yarnpkg.com/) |
-| 测试 | [Vitest](https://vitest.dev/) · [Playwright](https://playwright.dev/) · [Jest](https://jestjs.io/zh-Hans/) · [MSW](https://mswjs.io/) |
+- **教程与参考**：[MDN JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) · [ECMA-262](https://tc39.es/ecma262/) · [TC39 提案](https://github.com/tc39/proposals)
+- **运行时**：[Node.js API](https://nodejs.org/docs/latest/api/) · [Deno](https://docs.deno.com/) · [Bun](https://bun.sh/docs)
+- **构建与包管理**：[Vite](https://vite.dev/guide/) · [Rollup](https://rollupjs.org/) · [esbuild](https://esbuild.github.io/) · [webpack](https://webpack.js.org/) · [npm](https://docs.npmjs.com/) · [pnpm](https://pnpm.io/zh/) · [Yarn](https://yarnpkg.com/)
+- **测试**：[Vitest](https://vitest.dev/) · [Playwright](https://playwright.dev/) · [Jest](https://jestjs.io/zh-Hans/) · [MSW](https://mswjs.io/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

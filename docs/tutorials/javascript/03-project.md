@@ -275,11 +275,10 @@ render()
 7. **多用户**：接入后端 API，支持多设备同步
 8. **PWA**：添加 Service Worker，支持离线使用
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 语言规范 | [ECMA-262](https://tc39.es/ecma262/) · [MDN JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) |
-| localStorage | [MDN Web Storage](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Storage_API) |
-| Service Worker / PWA | [MDN Service Worker](https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API) |
-| 测试 | [Vitest](https://vitest.dev/) · [Jest](https://jestjs.io/zh-Hans/) |
+- **教程与参考**：[MDN JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) · [ECMA-262](https://tc39.es/ecma262/)
+- **Web API**：[MDN Web Storage](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Storage_API) · [MDN Service Worker](https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API)
+- **测试**：[Vitest](https://vitest.dev/) · [Jest](https://jestjs.io/zh-Hans/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

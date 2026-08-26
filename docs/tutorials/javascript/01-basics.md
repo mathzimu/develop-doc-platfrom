@@ -2,6 +2,8 @@
 
 ## 变量声明
 
+> 变量、作用域与基础语法可参考 [MDN JavaScript 语言基础](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Introduction)。
+
 ```js
 // var - 函数作用域，避免使用
 var old = '不推荐';
@@ -623,3 +625,12 @@ try {
 6. **避免内存泄漏**：及时移除事件监听和定时器
 7. **使用 `===` 而非 `==`**：避免隐式类型转换
 8. **合理使用数据结构**：大量唯一值用 Set，键值对用 Map
+
+## 官方文档与延伸阅读
+
+- **教程与参考**：[MDN JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) · [MDN Web API](https://developer.mozilla.org/zh-CN/docs/Web/API)
+- **语言规范**：[ECMA-262](https://tc39.es/ecma262/) · [TC39 Proposals](https://github.com/tc39/proposals)
+- **构建与包管理**：[Vite](https://vite.dev/guide/) · [Rollup](https://rollupjs.org/) · [esbuild](https://esbuild.github.io/) · [npm](https://docs.npmjs.com/) · [pnpm](https://pnpm.io/zh/motivation) · [Yarn](https://yarnpkg.com/)
+- **测试**：[Vitest](https://vitest.dev/) · [Jest](https://jestjs.io/zh-Hans/) · [Playwright](https://playwright.dev/) · [MSW](https://mswjs.io/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
