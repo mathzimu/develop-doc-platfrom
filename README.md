@@ -122,7 +122,3 @@ developer-doc-platform/
 ## 许可证
 
 基于 MIT 协议发布。
-
-## 远程仓库
-
-https://github.com/mathzimu/develop_doc_platfrom
