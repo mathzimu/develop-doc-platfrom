@@ -290,14 +290,12 @@ SVG 使用 XML 描述矢量图形，可直接嵌入 HTML：
 <script src="/app.js" defer></script>
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-本节涉及可访问性、SEO 结构化数据、性能优化，细节以下列一手资料为准。
+本节涉及可访问性、SEO 结构化数据、性能优化，细节以下列一手资料为准：
 
-| 主题 | 链接 |
-|------|------|
-| 可访问性 | [WAI-ARIA APG](https://www.w3.org/WAI/ARIA/apg/) · [WCAG 2.2](https://www.w3.org/TR/WCAG22/) |
-| 结构化数据 | [Schema.org](https://schema.org/docs/documents.html) · [Google 结构化数据指南](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=zh-cn) |
-| 性能指标 | [Core Web Vitals](https://web.dev/articles/vitals) · [LCP](https://web.dev/articles/lcp) · [CLS](https://web.dev/articles/cls) |
-| 资源加载 | [Preload/Prefetch](https://web.dev/articles/fetch-priority) · [defer/async](https://javascript.info/script-async-defer) |
-| 组件化 | [MDN 自定义元素](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_components) · [Shadow DOM](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) |
+- **可访问性**：[WAI-ARIA APG](https://www.w3.org/WAI/ARIA/apg/) · [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
+- **结构化数据**：[Schema.org](https://schema.org/docs/documents.html) · [Google 结构化数据指南](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=zh-cn)
+- **性能指标**：[Core Web Vitals](https://web.dev/articles/vitals) · [LCP](https://web.dev/articles/lcp) · [INP](https://web.dev/articles/inp) · [CLS](https://web.dev/articles/cls)
+- **资源加载**：[Preload/Prefetch](https://web.dev/articles/fetch-priority) · [defer/async](https://javascript.info/script-async-defer)
+- **组件化**：[MDN 自定义元素](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_components) · [Shadow DOM](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)

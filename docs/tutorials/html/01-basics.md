@@ -88,7 +88,7 @@ HTML 提供六级标题 `<h1>` 到 `<h6>`，以及段落标签 `<p>`。
 |------|------|
 | `href` | 目标 URL |
 | `target="_blank"` | 在新标签页打开 |
-| `rel="noopener noreferrer"` | 与 `_blank` 配合使用，防止安全漏洞 |
+| `rel="noopener noreferrer"` | 与 `_blank` 配合使用，防止安全漏洞（[MDN 说明](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#target)） |
 
 ::: warning `target="_blank"` 务必加 `rel="noopener"`
 用 `_blank` 打开新标签时，新页面可通过 `window.opener` 访问原页面的 `window` 对象，存在篡改与性能隐患。加 `rel="noopener noreferrer"` 会切断该引用，是现代浏览器的安全标配。
@@ -297,7 +297,7 @@ HTML 元素分为块级（block）和行内（inline）两类。块级元素独�
 
 ## 语义化 HTML5
 
-使用语义标签可以提升可访问性和 SEO：
+使用语义标签可以提升可访问性和 SEO（参见 [MDN: 语义元素](https://developer.mozilla.org/zh-CN/docs/Glossary/Semantics)）：
 
 ::: tip 为什么语义化重要
 - **可访问性**：屏幕阅读器依靠 `<nav>`、`<main>`、`<article>` 等语义标签理解页面结构；用一堆 `<div>` 会让读屏软件 "看不见" 结构。
@@ -426,3 +426,15 @@ HTML 元素分为块级（block）和行内（inline）两类。块级元素独�
 5. **重复 id**：`id` 必须在页面内唯一，使用 `class` 代替重复
 6. **使用过时的标签**：避免 `<font>`、`<center>`、`<marquee>`，用 CSS 代替
 7. **忽视语义化**：多用 `<header>`、`<nav>`、`<main>`，少用 `<div>`
+
+## 官方文档与延伸阅读
+
+基础标签、属性与默认行为以下列一手资料为准（链接同见 [官方文档索引](/reference/official-docs)）：
+
+- **教程与参考**：[MDN HTML（中文）](https://developer.mozilla.org/zh-CN/docs/Web/HTML) · [MDN HTML 元素索引](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element)
+- **全局属性**：[MDN 全局属性](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes)
+- **表单与输入**：[MDN 表单指南](https://developer.mozilla.org/zh-CN/docs/Learn/Forms) · [`<input>` 元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input)
+- **语义化**：[MDN 语义元素（Glossary）](https://developer.mozilla.org/zh-CN/docs/Glossary/Semantics) · [HTML 语义标签参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element)
+- **语言规范**：[WHATWG HTML Living Standard](https://html.spec.whatwg.org/multipage/) · [DOM 标准](https://dom.spec.whatwg.org/)
+- **可访问性**：[WAI-ARIA APG](https://www.w3.org/WAI/ARIA/apg/) · [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
+- **校验与兼容性**：[W3C Markup Validator](https://validator.w3.org/) · [Can I use](https://caniuse.com/) · [Baseline](https://web.dev/baseline)

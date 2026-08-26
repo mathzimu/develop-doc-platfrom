@@ -41,21 +41,17 @@ HTML（HyperText Markup Language）是构建网页的标准标记语言。所有
 
 无需任何编程经验。了解文件、文件夹、URL 等基本概念即可。
 
-## 官方文档
+## 官方文档与延伸阅读
 
-标签属性、默认行为、浏览器差异等细节以下列一手资料为准。
+标签属性、默认行为、浏览器差异等细节以下列一手资料为准：
 
-| 类型 | 链接 |
-|------|------|
-| 教程与参考（中文） | [MDN HTML](https://developer.mozilla.org/zh-CN/docs/Web/HTML) |
-| 元素索引 | [MDN HTML 元素参考](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element) |
-| 全局属性 | [MDN 全局属性](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes) |
-| 表单与输入 | [MDN 表单指南](https://developer.mozilla.org/zh-CN/docs/Learn/Forms) · [`input` 元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input) |
-| 语言规范 | [WHATWG HTML Living Standard](https://html.spec.whatwg.org/multipage/) |
-| DOM 规范 | [WHATWG DOM Standard](https://dom.spec.whatwg.org/) |
-| 可访问性 | [WAI-ARIA APG](https://www.w3.org/WAI/ARIA/apg/) · [WCAG 2.2](https://www.w3.org/TR/WCAG22/) |
-| 结构化数据 | [Schema.org](https://schema.org/docs/documents.html) · [Google 搜索中心](https://developers.google.com/search/docs?hl=zh-cn) |
-| 校验与审计 | [W3C Validator](https://validator.w3.org/) · [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) |
-| 兼容性 | [Can I use](https://caniuse.com/) · [Baseline](https://web.dev/baseline) |
+- **教程与参考（中文）**：[MDN HTML](https://developer.mozilla.org/zh-CN/docs/Web/HTML) · [MDN HTML 元素索引](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element)
+- **全局属性**：[MDN 全局属性](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes)
+- **表单与输入**：[MDN 表单指南](https://developer.mozilla.org/zh-CN/docs/Learn/Forms) · [`<input>` 元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input)
+- **语言规范**：[WHATWG HTML Living Standard](https://html.spec.whatwg.org/multipage/) · [DOM 标准](https://dom.spec.whatwg.org/)
+- **可访问性**：[WAI-ARIA APG](https://www.w3.org/WAI/ARIA/apg/) · [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
+- **结构化数据**：[Schema.org](https://schema.org/docs/documents.html) · [Google 搜索中心](https://developers.google.com/search/docs?hl=zh-cn)
+- **校验与审计**：[W3C Validator](https://validator.w3.org/) · [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview)
+- **兼容性**：[Can I use](https://caniuse.com/) · [Baseline](https://web.dev/baseline)
 
 更多入口见 [官方文档索引](/reference/official-docs) 与 [规范与标准](/reference/standards)。

@@ -2,7 +2,7 @@
 
 ## WCAG 无障碍标准
 
-企业级产品必须满足 Web 内容无障碍指南（WCAG 2.1 AA 级别）。
+企业级产品必须满足 Web 内容无障碍指南（WCAG 2.2 AA 级别）。
 
 ```html
 <!-- 语义化结构 -->
@@ -366,12 +366,12 @@ customElements.define('custom-card', CustomCard)
 - 总宽度建议 600px 以内
 - 不支持 JavaScript
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 无障碍标准 | [WCAG 2.2](https://www.w3.org/TR/WCAG22/) · [WAI-ARIA APG](https://www.w3.org/WAI/ARIA/apg/) |
-| 性能指标 | [Core Web Vitals](https://web.dev/articles/vitals) · [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) |
-| PWA / SW | [Service Workers](https://www.w3.org/TR/service-workers/) · [MDN PWA](https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps) |
-| 结构化数据 | [Schema.org](https://schema.org/docs/documents.html) |
-| 邮件规范 | [MJML 文档](https://documentation.mjml.io/) · [CanIUse Email](https://www.caniemail.com/) |
+企业级工程实践的一手标准与工具参考：
+
+- **无障碍标准**：[WCAG 2.2](https://www.w3.org/TR/WCAG22/) · [WAI-ARIA APG](https://www.w3.org/WAI/ARIA/apg/) · [对比度检查（WebAIM）](https://webaim.org/resources/contrastchecker/)
+- **性能指标**：[Core Web Vitals](https://web.dev/articles/vitals) · [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) · [INP](https://web.dev/articles/inp)
+- **PWA / Service Worker**：[Service Workers 规范](https://www.w3.org/TR/service-workers/) · [MDN PWA](https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps)
+- **结构化数据**：[Schema.org](https://schema.org/docs/documents.html)
+- **HTML 邮件**：[MJML 文档](https://documentation.mjml.io/) · [Can I Email](https://www.caniemail.com/)
