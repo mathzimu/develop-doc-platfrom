@@ -88,6 +88,10 @@ public class HelloWorld {
 | `boolean` | - | true / false |
 | `char` | 16位 | Unicode 字符 |
 
+::: tip 官方参考
+数据类型、包装类与自动装箱的权威定义见 [Java SE 21 API](https://docs.oracle.com/en/java/javase/21/docs/api/index.html) 与 [Java Language Specification](https://docs.oracle.com/javase/specs/)。
+:::
+
 ```java
 // 包装类型与自动装箱
 Integer a = 100;          // 自动装箱 int → Integer
@@ -445,3 +449,15 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:3.2.0'
 }
 ```
+
+## 官方文档与延伸阅读
+
+- **JDK 文档**：[Java SE 21 文档（Oracle）](https://docs.oracle.com/en/java/javase/21/) · [API 参考](https://docs.oracle.com/en/java/javase/21/docs/api/index.html)
+- **语言规范**：[Java Language Specification](https://docs.oracle.com/javase/specs/)
+- **官方学习站**：[dev.java](https://dev.java/learn/)
+- **JDK 发行版**：[OpenJDK](https://openjdk.org/) · [Eclipse Temurin](https://adoptium.net/temurin/releases/)
+- **构建工具**：[Maven](https://maven.apache.org/guides/) · [Gradle](https://docs.gradle.org/current/userguide/userguide.html)
+- **应用框架**：[Spring Boot](https://docs.spring.io/spring-boot/index.html) · [Quarkus](https://quarkus.io/guides/) · [Micronaut](https://docs.micronaut.io/latest/guide/)
+- **测试**：[JUnit 5](https://junit.org/junit5/docs/current/user-guide/) · [Mockito](https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/module-summary.html)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

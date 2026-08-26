@@ -29,23 +29,16 @@ mvn -v
 mvn archetype:generate -DgroupId=com.example -DartifactId=demo -DinteractiveMode=false
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-API 签名、JVM 行为、框架配置项以下列一手文档为准。
-
-| 类型 | 链接 |
-|------|------|
-| JDK 文档 | [Java SE 21 文档](https://docs.oracle.com/en/java/javase/21/) |
-| API 参考 | [Java SE 21 API](https://docs.oracle.com/en/java/javase/21/docs/api/index.html) |
-| 语言与 JVM 规范 | [Java SE Specifications](https://docs.oracle.com/javase/specs/) |
-| 官方学习站 | [dev.java](https://dev.java/learn/) |
-| JDK 发行版 | [OpenJDK](https://openjdk.org/) · [Eclipse Temurin](https://adoptium.net/temurin/releases/) |
-| 并发 | [java.util.concurrent](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/package-summary.html) · [虚拟线程（JEP 444）](https://openjdk.org/jeps/444) |
-| 构建工具 | [Maven](https://maven.apache.org/guides/) · [Gradle](https://docs.gradle.org/current/userguide/userguide.html) |
-| 应用框架 | [Spring Boot](https://docs.spring.io/spring-boot/index.html) · [Spring Framework](https://docs.spring.io/spring-framework/reference/) · [Quarkus](https://quarkus.io/guides/) · [Micronaut](https://docs.micronaut.io/latest/guide/) |
-| 持久层 | [Spring Data JPA](https://docs.spring.io/spring-data/jpa/reference/) · [Hibernate](https://hibernate.org/orm/documentation/) · [MyBatis](https://mybatis.org/mybatis-3/zh_CN/index.html) |
-| 安全 | [Spring Security](https://docs.spring.io/spring-security/reference/) |
-| 测试 | [JUnit 5](https://junit.org/junit5/docs/current/user-guide/) · [Mockito](https://site.mockito.org/) · [Testcontainers](https://java.testcontainers.org/) |
-| 代码质量 | [Checkstyle](https://checkstyle.org/) · [SpotBugs](https://spotbugs.readthedocs.io/en/stable/) |
-
-更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
+- **JDK 文档**：[Java SE 21 文档（Oracle）](https://docs.oracle.com/en/java/javase/21/) · [API 参考](https://docs.oracle.com/en/java/javase/21/docs/api/index.html)
+- **语言规范**：[Java Language Specification](https://docs.oracle.com/javase/specs/)
+- **官方学习站**：[dev.java](https://dev.java/learn/)
+- **JDK 发行版**：[OpenJDK](https://openjdk.org/) · [Eclipse Temurin](https://adoptium.net/temurin/releases/)
+- **并发**：[java.util.concurrent](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/package-summary.html) · [虚拟线程（JEP 444）](https://openjdk.org/jeps/444)
+- **构建工具**：[Maven](https://maven.apache.org/guides/) · [Gradle](https://docs.gradle.org/current/userguide/userguide.html)
+- **应用框架**：[Spring Boot](https://docs.spring.io/spring-boot/index.html) · [Spring Framework](https://docs.spring.io/spring-framework/reference/) · [Quarkus](https://quarkus.io/guides/) · [Micronaut](https://docs.micronaut.io/latest/guide/)
+- **持久层**：[Spring Data JPA](https://docs.spring.io/spring-data/jpa/reference/) · [Hibernate](https://hibernate.org/orm/documentation/) · [MyBatis](https://mybatis.org/mybatis-3/zh_CN/index.html)
+- **安全**：[Spring Security](https://docs.spring.io/spring-security/reference/)
+- **测试**：[JUnit 5](https://junit.org/junit5/docs/current/user-guide/) · [Mockito](https://site.mockito.org/) · [Testcontainers](https://java.testcontainers.org/)
+- **代码质量**：[Checkstyle](https://checkstyle.org/) · [SpotBugs](https://spotbugs.readthedocs.io/en/stable/)

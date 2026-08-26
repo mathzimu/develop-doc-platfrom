@@ -263,13 +263,18 @@ jobs:
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 构建 | [Maven](https://maven.apache.org/guides/) · [Gradle](https://docs.gradle.org/current/userguide/userguide.html) |
-| 测试 | [JUnit 5](https://junit.org/junit5/docs/current/user-guide/) · [Mockito](https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/module-summary.html) · [Testcontainers](https://java.testcontainers.org/) |
-| 代码质量 | [Checkstyle](https://checkstyle.org/) · [SpotBugs](https://spotbugs.readthedocs.io/en/stable/) |
-| 监控 | [Spring Boot Actuator](https://docs.spring.io/spring-boot/reference/actuator/index.html) · [Micrometer](https://micrometer.io/) · [Prometheus](https://prometheus.io/docs/) |
-| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) · [Maven Central 发布](https://central.sonatype.org/) |
-| 安全 | [OWASP Dependency Check](https://owasp.org/www-project-dependency-check/) · [Snyk](https://snyk.io/) |
+- **JDK 文档**：[Java SE 21 文档（Oracle）](https://docs.oracle.com/en/java/javase/21/) · [API 参考](https://docs.oracle.com/en/java/javase/21/docs/api/index.html)
+- **语言规范**：[Java Language Specification](https://docs.oracle.com/javase/specs/)
+- **官方学习站**：[dev.java](https://dev.java/learn/)
+- **JDK 发行版**：[OpenJDK](https://openjdk.org/) · [Eclipse Temurin](https://adoptium.net/temurin/releases/)
+- **构建工具**：[Maven](https://maven.apache.org/guides/) · [Gradle](https://docs.gradle.org/current/userguide/userguide.html)
+- **应用框架**：[Spring Boot](https://docs.spring.io/spring-boot/index.html) · [Spring Security](https://docs.spring.io/spring-security/reference/)
+- **测试**：[JUnit 5](https://junit.org/junit5/docs/current/user-guide/) · [Mockito](https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/module-summary.html) · [Testcontainers](https://java.testcontainers.org/)
+- **代码质量**：[Checkstyle](https://checkstyle.org/) · [SpotBugs](https://spotbugs.readthedocs.io/en/stable/)
+- **监控**：[Spring Boot Actuator](https://docs.spring.io/spring-boot/reference/actuator/index.html) · [Micrometer](https://micrometer.io/) · [Prometheus](https://prometheus.io/docs/)
+- **CI/CD**：[GitHub Actions](https://docs.github.com/zh/actions) · [Maven Central 发布](https://central.sonatype.org/)
+- **安全**：[OWASP Dependency Check](https://owasp.org/www-project-dependency-check/) · [Snyk](https://snyk.io/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。 |

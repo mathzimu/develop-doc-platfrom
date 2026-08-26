@@ -334,15 +334,17 @@ provides com.example.myapp.spi.Plugin
 }
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-JVM 内存模型、并发、反射、模块系统等细节以 Oracle 官方规范与 API 为准。
+- **JDK 文档**：[Java SE 21 文档（Oracle）](https://docs.oracle.com/en/java/javase/21/) · [API 参考](https://docs.oracle.com/en/java/javase/21/docs/api/index.html)
+- **语言规范**：[Java Language Specification](https://docs.oracle.com/javase/specs/) · [JVMS](https://docs.oracle.com/javase/specs/jvms/se21/html/)
+- **官方学习站**：[dev.java](https://dev.java/learn/)
+- **JDK 发行版**：[OpenJDK](https://openjdk.org/) · [Eclipse Temurin](https://adoptium.net/temurin/releases/)
+- **并发与内存模型**：[java.util.concurrent](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/package-summary.html) · [Java 内存模型（JLS §17）](https://docs.oracle.com/javase/specs/jls/se21/html/jls-17.html) · [虚拟线程（JEP 444）](https://openjdk.org/jeps/444)
+- **反射与模块**：[java.lang.reflect](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/reflect/package-summary.html) · [JPMS（JEP 261）](https://openjdk.org/jeps/261)
+- **运行时诊断**：[JFR 调试说明](https://docs.oracle.com/en/java/javase/21/specialized-debugging-instructions.html) · [Diagnostic Commands（jcmd）](https://docs.oracle.com/en/java/javase/21/docs/specs/man/jcmd.html)
+- **构建工具**：[Maven](https://maven.apache.org/guides/) · [Gradle](https://docs.gradle.org/current/userguide/userguide.html)
+- **应用框架**：[Spring Boot](https://docs.spring.io/spring-boot/index.html) · [Quarkus](https://quarkus.io/guides/) · [Micronaut](https://docs.micronaut.io/latest/guide/)
+- **测试**：[JUnit 5](https://junit.org/junit5/docs/current/user-guide/) · [Mockito](https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/module-summary.html)
 
-| 主题 | 链接 |
-|------|------|
-| 语言与 JVM 规范 | [Java Language Specification](https://docs.oracle.com/javase/specs/) · [JVMS](https://docs.oracle.com/javase/specs/jvms/se21/html/) |
-| API 参考 | [Java SE 21 API](https://docs.oracle.com/en/java/javase/21/docs/api/index.html) |
-| 内存模型 | [Java Memory Model（JLS §17）](https://docs.oracle.com/javase/specs/jls/se21/html/jls-17.html) · [虚拟线程（JEP 444）](https://openjdk.org/jeps/444) |
-| 并发 | [java.util.concurrent](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/package-summary.html) · [内存模型指南](https://docs.oracle.com/javase/specs/jls/se21/html/jls-17.html) |
-| 反射与模块 | [java.lang.reflect](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/reflect/package-summary.html) · [JPMS（JEP 261）](https://openjdk.org/jeps/261) |
-| 运行时 | [jfr/JFR](https://docs.oracle.com/en/java/javase/21/specialized-debugging-instructions.html) · [Diagnostic Commands](https://docs.oracle.com/en/java/javase/21/docs/specs/man/jcmd.html) |
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。 |

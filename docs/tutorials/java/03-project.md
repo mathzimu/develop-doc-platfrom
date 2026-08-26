@@ -476,12 +476,16 @@ spring:
 </dependency>
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| Spring Boot | [Spring Boot 官方文档](https://docs.spring.io/spring-boot/index.html) · [中文指南](https://springdoc.cn/spring-boot/) |
-| Spring Data JPA | [JPA 参考](https://docs.spring.io/spring-data/jpa/reference/) |
-| Maven | [Maven 指南](https://maven.apache.org/guides/) |
-| 测试 | [JUnit 5](https://junit.org/junit5/docs/current/user-guide/) · [Mockito](https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/module-summary.html) |
-| H2 数据库 | [H2 Database](https://www.h2database.com/html/main.html) |
+- **JDK 文档**：[Java SE 21 文档（Oracle）](https://docs.oracle.com/en/java/javase/21/) · [API 参考](https://docs.oracle.com/en/java/javase/21/docs/api/index.html)
+- **语言规范**：[Java Language Specification](https://docs.oracle.com/javase/specs/)
+- **官方学习站**：[dev.java](https://dev.java/learn/)
+- **JDK 发行版**：[OpenJDK](https://openjdk.org/) · [Eclipse Temurin](https://adoptium.net/temurin/releases/)
+- **构建工具**：[Maven](https://maven.apache.org/guides/) · [Gradle](https://docs.gradle.org/current/userguide/userguide.html)
+- **应用框架**：[Spring Boot 官方文档](https://docs.spring.io/spring-boot/index.html) · [Spring Boot 中文指南](https://springdoc.cn/spring-boot/) · [Spring Data JPA 参考](https://docs.spring.io/spring-data/jpa/reference/)
+- **持久层**：[Hibernate](https://hibernate.org/orm/documentation/) · [MyBatis](https://mybatis.org/mybatis-3/zh_CN/index.html)
+- **测试**：[JUnit 5](https://junit.org/junit5/docs/current/user-guide/) · [Mockito](https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/module-summary.html) · [Testcontainers](https://java.testcontainers.org/)
+- **数据库**：[H2 Database](https://www.h2database.com/html/main.html)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。 |
