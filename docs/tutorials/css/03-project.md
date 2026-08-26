@@ -362,13 +362,13 @@ body {
 
 将以上所有 CSS 片段合并到 `style.css` 中，`index.html` 引用该文件即可运行。可在此基础上扩展动画、深色模式、更多页面等。
 
-## 官方文档与延伸阅读
+## 官方文档
 
-- **教程与参考**：[MDN CSS](https://developer.mozilla.org/zh-CN/docs/Web/CSS) · [MDN CSS 属性参考](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference)
-- **布局**：[MDN Flexbox](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_flexible_box_layout) · [MDN Grid](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_grid_layout) · [CSS Grid 规范](https://drafts.csswg.org/css-grid/)
-- **响应式设计**：[MDN 媒体查询](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries) · [MDN `prefers-color-scheme`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media/prefers-color-scheme)
-- **动画**：[MDN CSS 动画](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_animations)
-- **规范**：[CSS Working Group Drafts](https://drafts.csswg.org/) · [W3C CSS 当前工作](https://www.w3.org/Style/CSS/current-work)
-- **兼容性与性能**：[Can I use](https://caniuse.com/) · [渲染性能（web.dev）](https://web.dev/articles/rendering-performance)
-
-更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
+| 主题 | 链接 |
+|------|------|
+| Flexbox | [MDN Flexbox](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_flexible_box_layout) |
+| Grid | [MDN Grid](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_grid_layout) · [CSS Grid 规范](https://drafts.csswg.org/css-grid/) |
+| 响应式 | [MDN 媒体查询](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries) |
+| 深色模式 | [MDN `prefers-color-scheme`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media/prefers-color-scheme) |
+| 动画 | [MDN CSS 动画](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_animations) |
+| 兼容性 | [Can I use](https://caniuse.com/) |

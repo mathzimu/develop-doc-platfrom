@@ -343,14 +343,13 @@ module.exports = {
 | Vanilla Extract | 零运行时 CSS | 大型企业项目 |
 | Panda CSS | 构建时 + 类型安全 | Monorepo |
 
-## 官方文档与延伸阅读
+## 官方文档
 
-- **教程与参考**：[MDN CSS](https://developer.mozilla.org/zh-CN/docs/Web/CSS) · [MDN CSS 属性参考](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference)
-- **方法论**：[BEM](https://getbem.com/) · [OOCSS](https://github.com/stubbornella/oocss)
-- **预处理与后处理**：[Sass](https://sass-lang.com/documentation/) · [PostCSS](https://postcss.org/) · [Stylelint](https://stylelint.io/)
-- **视觉回归测试**：[Percy](https://docs.percy.io/) · [Chromatic](https://www.chromatic.com/docs/) · [Playwright 截图](https://playwright.dev/docs/screenshots)
-- **性能**：[渲染性能（web.dev）](https://web.dev/articles/rendering-performance) · [Critical Path](https://web.dev/articles/critical-rendering-path)
-- **框架与方案**：[Tailwind CSS](https://tailwindcss.com/docs) · [Emotion](https://emotion.sh/docs/introduction) · [Vanilla Extract](https://vanilla-extract.style/)
-- **规范**：[CSS Working Group Drafts](https://drafts.csswg.org/) · [W3C CSS 当前工作](https://www.w3.org/Style/CSS/current-work)
-
-更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
+| 主题 | 链接 |
+|------|------|
+| 方法论 | [BEM](https://getbem.com/) · [OOCSS](https://github.com/stubbornella/oocss) |
+| 预处理 | [Sass](https://sass-lang.com/documentation/) · [PostCSS](https://postcss.org/) |
+| 检查与规范 | [Stylelint](https://stylelint.io/) |
+| 视觉回归 | [Percy](https://docs.percy.io/) · [Chromatic](https://www.chromatic.com/docs/) · [Playwright 截图](https://playwright.dev/docs/screenshots) |
+| 性能 | [渲染性能（web.dev）](https://web.dev/articles/rendering-performance) · [Critical Path](https://web.dev/articles/critical-rendering-path) |
+| CSS 方案 | [Tailwind CSS](https://tailwindcss.com/docs) · [Emotion](https://emotion.sh/docs/introduction) · [Vanilla Extract](https://vanilla-extract.style/) |
