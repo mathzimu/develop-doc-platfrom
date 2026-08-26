@@ -18,11 +18,11 @@
 
 | 类别 | 选型 |
 |------|------|
-| 框架 | [VitePress](https://vitepress.dev/zh/) ^1.6.4（基于 [Vue](https://vuejs.org/) 3） |
-| 内容格式 | Markdown + 少量 Vue 组件 |
-| 包管理 | npm（兼容 pnpm / yarn） |
-| 搜索 | VitePress 本地搜索（mini-search） |
-| 部署 | 任意静态托管 / Docker / Vercel / Netlify / GitHub Pages / Cloudflare Pages |
+| 框架 | [VitePress](https://vitepress.dev/zh/) 1.6.4，基于 [Vue](https://vuejs.org/) 3 的静态站点生成器 |
+| 内容格式 | Markdown 为主，按需嵌入 Vue 组件增强交互 |
+| 包管理 | npm（同时兼容 pnpm / yarn） |
+| 搜索 | 内置 mini-search 本地全文搜索，无需后端服务 |
+| 部署 | 纯静态产物，支持 Docker / Vercel / Netlify / GitHub Pages / Cloudflare Pages |
 
 ## 快速开始
 
