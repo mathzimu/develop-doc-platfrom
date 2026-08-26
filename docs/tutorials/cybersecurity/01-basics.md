@@ -12,6 +12,8 @@
 
 ## Web 常见攻击与防护
 
+常见攻击类型可对照 [OWASP Top 10](https://owasp.org/www-project-top-ten/) 了解风险趋势。
+
 ### XSS（跨站脚本攻击）
 
 攻击者将恶意脚本注入到网页中，在用户浏览器中执行。
@@ -305,3 +307,14 @@ ufw enable
 | Let's Encrypt | 免费 TLS 证书 |
 | OpenSSL | 加密工具 |
 | fail2ban | 暴力破解防护 |
+
+## 官方文档与延伸阅读
+
+- **标准与框架**：[OWASP Top 10](https://owasp.org/www-project-top-ten/) · [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) · [NIST SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)
+- **Web 安全**：[OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/) · [PortSwigger Web Security](https://portswigger.net/web-security)
+- **加密学**：[NIST Cryptographic Standards](https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines)
+- **漏洞数据库**：[CVE](https://cve.mitre.org/) · [CWE](https://cwe.mitre.org/) · [NVD](https://nvd.nist.gov/)
+- **训练平台**：[Hack The Box](https://www.hackthebox.com/) · [TryHackMe](https://tryhackme.com/)
+- **工具**：[OWASP ZAP](https://www.zaproxy.org/) · [Burp Suite](https://portswigger.net/burp) · [Metasploit](https://docs.metasploit.com/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

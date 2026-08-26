@@ -340,15 +340,17 @@ def auto_block():
                           json={"text": f"封禁 {ip}（{count} 次失败）"})
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-攻击原理、云安全、零信任与供应链安全以权威规范为准。
+- **标准与框架**：[OWASP Top 10](https://owasp.org/www-project-top-ten/) · [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) · [NIST SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST SP 800-207（零信任架构）](https://csrc.nist.gov/pubs/sp/800/207/final)
+- **Web 安全**：[OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
+- **漏洞数据库**：[CVE](https://www.cve.org/) · [CWE](https://cwe.mitre.org/) · [NVD](https://nvd.nist.gov/) · [MITRE ATT&CK](https://attack.mitre.org/)
+- **云安全**：[AWS IAM 文档](https://docs.aws.amazon.com/IAM/) · [K8s RBAC](https://kubernetes.io/zh-cn/docs/reference/access-authn-authz/rbac/)
+- **零信任**：[BeyondCorp（Google）](https://cloud.google.com/beyondcorp)
+- **供应链安全**：[SLSA](https://slsa.dev/spec/v1.0/) · [SBOM 指南](https://www.cisa.gov/sbom) · [Sigstore](https://docs.sigstore.dev/)
+- **认证协议**：[OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749.html) · [OAuth 2.0 安全最佳实践 RFC 9700](https://www.rfc-editor.org/rfc/rfc9700.html) · [WebAuthn](https://www.w3.org/TR/webauthn-3/)
+- **加密学**：[NIST Cryptographic Standards](https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines)
+- **训练平台**：[Hack The Box](https://www.hackthebox.com/) · [TryHackMe](https://tryhackme.com/)
+- **工具**：[OWASP ZAP](https://www.zaproxy.org/) · [Burp Suite](https://portswigger.net/burp) · [Metasploit](https://docs.metasploit.com/)
 
-| 主题 | 链接 |
-|------|------|
-| Web 攻击 | [OWASP Top 10](https://owasp.org/www-project-top-ten/) · [OWASP Cheat Sheet](https://cheatsheetseries.owasp.org/) |
-| 漏洞与弱点 | [CWE](https://cwe.mitre.org/) · [CVE](https://www.cve.org/) · [NVD](https://nvd.nist.gov/) · [MITRE ATT&CK](https://attack.mitre.org/) |
-| 云安全 | [AWS IAM 文档](https://docs.aws.amazon.com/IAM/) · [K8s RBAC](https://kubernetes.io/zh-cn/docs/reference/access-authn-authz/rbac/) |
-| 零信任 | [NIST SP 800-207（零信任架构）](https://csrc.nist.gov/pubs/sp/800/207/final) · [BeyondCorp（Google）](https://cloud.google.com/beyondcorp) |
-| 供应链安全 | [SLSA](https://slsa.dev/spec/v1.0/) · [SBOM 指南](https://www.cisa.gov/sbom) · [Sigstore](https://docs.sigstore.dev/) |
-| 认证协议 | [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749.html) · [OAuth 2.0 安全最佳实践 RFC 9700](https://www.rfc-editor.org/rfc/rfc9700.html) · [WebAuthn](https://www.w3.org/TR/webauthn-3/) |
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

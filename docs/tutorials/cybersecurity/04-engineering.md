@@ -168,13 +168,16 @@ add_header Strict-Transport-Security "max-age=63072000; includeSubDomains; prelo
 | **PCI DSS** | 支付卡数据 | 加密存储、访问控制、定期扫描 |
 | **等级保护** | 中国信息系统 | 分级保护、安全评估 |
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| SSDLC | [OWASP SAMM](https://owaspsamm.org/) · [Microsoft SDL](https://www.microsoft.com/en-us/securityengineering/sdl) |
-| 威胁建模 | [OWASP Threat Modeling](https://owasp.org/www-community/Threat_Modeling) · [STRIDE](https://learn.microsoft.com/zh-cn/azure/architecture/patterns/threat-model-2018) |
-| API 安全 | [OWASP API Security Top 10](https://owasp.org/www-project-api-security/) · [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) |
-| 密钥管理 | [HashiCorp Vault](https://www.hashicorp.com/products/vault) · [AWS KMS](https://docs.aws.amazon.com/kms/) |
-| 安全头 | [OWASP Secure Headers](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html) |
-| 合规框架 | [ISO 27001](https://www.iso.org/standard/82.html) · [NIST SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [GDPR](https://gdpr.eu/) · [PCI DSS](https://www.pcisecuritystandards.org/) |
+- **标准与框架**：[OWASP Top 10](https://owasp.org/www-project-top-ten/) · [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) · [NIST SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [ISO 27001](https://www.iso.org/standard/82.html)
+- **SSDLC 与威胁建模**：[OWASP SAMM](https://owaspsamm.org/) · [Microsoft SDL](https://www.microsoft.com/en-us/securityengineering/sdl) · [OWASP Threat Modeling](https://owasp.org/www-community/Threat_Modeling) · [STRIDE](https://learn.microsoft.com/zh-cn/azure/architecture/patterns/threat-model-2018)
+- **API 安全**：[OWASP API Security Top 10](https://owasp.org/www-project-api-security/) · [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/)
+- **Web 安全**：[OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/) · [OWASP Secure Headers](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html)
+- **密钥管理**：[HashiCorp Vault](https://www.hashicorp.com/products/vault) · [AWS KMS](https://docs.aws.amazon.com/kms/)
+- **合规框架**：[ISO 27001](https://www.iso.org/standard/82.html) · [NIST SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [GDPR](https://gdpr.eu/) · [PCI DSS](https://www.pcisecuritystandards.org/)
+- **漏洞数据库**：[CVE](https://www.cve.org/) · [CWE](https://cwe.mitre.org/) · [NVD](https://nvd.nist.gov/)
+- **训练平台**：[Hack The Box](https://www.hackthebox.com/) · [TryHackMe](https://tryhackme.com/)
+- **工具**：[OWASP ZAP](https://www.zaproxy.org/) · [Burp Suite](https://portswigger.net/burp) · [Metasploit](https://docs.metasploit.com/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

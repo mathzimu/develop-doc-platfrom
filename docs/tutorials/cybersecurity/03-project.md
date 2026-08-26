@@ -180,11 +180,14 @@ nmap -sT -p 1-1024 --open -T4 scanme.nmap.org
 masscan 192.168.1.0/24 -p80,443 --rate=1000
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 端口扫描 | [nmap（官方读物）](https://nmap.org/book/man.html) |
-| 网络扫描 | [masscan](https://github.com/robertdavidgraham/masscan) |
-| Python 网络 | [Python socket](https://docs.python.org/3/library/socket.html) · [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) |
-| 合法实践 | [PortSwigger Web Security Academy](https://portswigger.net/web-security) · [nmap 合法说明](https://nmap.org/book/legal-issues.html) |
+- **扫描工具**：[nmap（官方读物）](https://nmap.org/book/man.html) · [masscan](https://github.com/robertdavidgraham/masscan)
+- **Python 网络**：[Python socket](https://docs.python.org/3/library/socket.html) · [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html)
+- **漏洞数据库**：[CVE](https://www.cve.org/) · [CWE](https://cwe.mitre.org/) · [NVD](https://nvd.nist.gov/)
+- **训练平台**：[Hack The Box](https://www.hackthebox.com/) · [TryHackMe](https://tryhackme.com/) · [PortSwigger Web Security Academy](https://portswigger.net/web-security)
+- **合法实践**：[nmap 合法说明](https://nmap.org/book/legal-issues.html)
+- **标准与框架**：[OWASP Top 10](https://owasp.org/www-project-top-ten/) · [NIST SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)
+- **工具**：[OWASP ZAP](https://www.zaproxy.org/) · [Burp Suite](https://portswigger.net/burp) · [Metasploit](https://docs.metasploit.com/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

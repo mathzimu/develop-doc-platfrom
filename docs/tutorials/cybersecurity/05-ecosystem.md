@@ -72,13 +72,16 @@
 
 > 注：以上资质信息为通用参考，具体以各家官方为准。
 
-## 官方文档入口
+## 官方文档与延伸阅读
 
-| 类别 | 入口 |
-|------|------|
-| Web 风险与实践 | [OWASP Top 10](https://owasp.org/www-project-top-ten/) · [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/) · [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) |
-| 弱点/漏洞库 | [CWE](https://cwe.mitre.org/) · [CVE](https://www.cve.org/) · [NVD](https://nvd.nist.gov/) · [MITRE ATT&CK](https://attack.mitre.org/) |
-| 认证协议 | [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519.html) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749.html) · [OpenID Connect](https://openid.net/specs/openid-connect-core-1_0.html) · [WebAuthn](https://www.w3.org/TR/webauthn-3/) |
-| 密钥管理 | [HashiCorp Vault](https://developer.hashicorp.com/vault/docs) · [AWS KMS](https://docs.aws.amazon.com/kms/) · [Azure Key Vault](https://learn.microsoft.com/zh-cn/azure/key-vault/) · [GCP Cloud KMS](https://cloud.google.com/kms/docs) · [SOPS](https://getsops.io/) |
-| 监控/ID | [Wazuh](https://documentation.wazuh.com/) · [Snort](https://www.snort.org/documents) · [Suricata](https://suricata.readthedocs.io/) · [Falco](https://falco.org/docs/) |
-| 合规框架 | [ISO 27001](https://www.iso.org/standard/82.html) · [NIST CSF](https://www.nist.gov/cyberframework) · [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks) |
+- **标准与框架**：[OWASP Top 10](https://owasp.org/www-project-top-ten/) · [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) · [NIST SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [ISO 27001](https://www.iso.org/standard/82.html) · [NIST CSF](https://www.nist.gov/cyberframework) · [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks)
+- **Web 安全**：[OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
+- **认证协议**：[JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519.html) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749.html) · [OpenID Connect](https://openid.net/specs/openid-connect-core-1_0.html) · [WebAuthn](https://www.w3.org/TR/webauthn-3/)
+- **密钥管理**：[HashiCorp Vault](https://developer.hashicorp.com/vault/docs) · [AWS KMS](https://docs.aws.amazon.com/kms/) · [Azure Key Vault](https://learn.microsoft.com/zh-cn/azure/key-vault/) · [GCP Cloud KMS](https://cloud.google.com/kms/docs) · [SOPS](https://getsops.io/)
+- **监控/ID**：[Wazuh](https://documentation.wazuh.com/) · [Snort](https://www.snort.org/documents) · [Suricata](https://suricata.readthedocs.io/) · [Falco](https://falco.org/docs/)
+- **漏洞数据库**：[CVE](https://www.cve.org/) · [CWE](https://cwe.mitre.org/) · [NVD](https://nvd.nist.gov/) · [MITRE ATT&CK](https://attack.mitre.org/)
+- **加密学**：[NIST Cryptographic Standards](https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines)
+- **训练平台**：[Hack The Box](https://www.hackthebox.com/) · [TryHackMe](https://tryhackme.com/)
+- **工具**：[OWASP ZAP](https://www.zaproxy.org/) · [Burp Suite](https://portswigger.net/burp) · [Metasploit](https://docs.metasploit.com/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

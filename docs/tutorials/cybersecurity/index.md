@@ -38,17 +38,12 @@ python3 --version
 docker run --rm -p 3000:3000 bkimminich/juice-shop
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-漏洞定义、利用细节、防护标准以下列一手资料为准。
-
-| 类型 | 链接 |
-|------|------|
-| Web 风险 | [OWASP Top 10](https://owasp.org/www-project-top-ten/) · [OWASP Cheat Sheet](https://cheatsheetseries.owasp.org/) |
-| 验证标准 | [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) |
-| 弱点/漏洞库 | [CWE](https://cwe.mitre.org/) · [CVE](https://www.cve.org/) · [NVD](https://nvd.nist.gov/) · [MITRE ATT&CK](https://attack.mitre.org/) |
-| 认证与授权 | [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519.html) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749.html) · [OIDC](https://openid.net/specs/openid-connect-core-1_0.html) |
-| 合规与框架 | [ISO 27001](https://www.iso.org/standard/82.html) · [NIST CSF](https://www.nist.gov/cyberframework) · [NIST SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks) |
-| 动手练习 | [PortSwigger Web Security Academy](https://portswigger.net/web-security) · [TryHackMe](https://tryhackme.com/) |
-
-更多入口见 [官方文档索引](/reference/official-docs) 与 [规范与标准](/reference/standards)。
+- **标准与框架**：[OWASP Top 10](https://owasp.org/www-project-top-ten/) · [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) · [NIST SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [ISO 27001](https://www.iso.org/standard/82.html) · [NIST CSF](https://www.nist.gov/cyberframework) · [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks)
+- **Web 安全**：[OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/) · [PortSwigger Web Security Academy](https://portswigger.net/web-security)
+- **认证与授权**：[JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519.html) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749.html) · [OpenID Connect](https://openid.net/specs/openid-connect-core-1_0.html)
+- **漏洞数据库**：[CVE](https://www.cve.org/) · [CWE](https://cwe.mitre.org/) · [NVD](https://nvd.nist.gov/) · [MITRE ATT&CK](https://attack.mitre.org/)
+- **加密学**：[NIST Cryptographic Standards](https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines)
+- **训练平台**：[Hack The Box](https://www.hackthebox.com/) · [TryHackMe](https://tryhackme.com/)
+- **工具**：[OWASP ZAP](https://www.zaproxy.org/) · [Burp Suite](https://portswigger.net/burp) · [Metasploit](https://docs.metasploit.com/)
