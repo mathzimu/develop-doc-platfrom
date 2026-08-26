@@ -263,13 +263,19 @@ jobs:
           curl -X POST ${{ secrets.DEPLOY_WEBHOOK }}
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 数据建模 | [Data Modeling](https://www.mongodb.com/docs/manual/data-modeling/) |
-| 分片 | [Sharding](https://www.mongodb.com/docs/manual/sharding/) · [分片键选择](https://www.mongodb.com/docs/manual/core/sharding-choose-a-shard-key/) |
-| 副本集 | [Replication](https://www.mongodb.com/docs/manual/replication/) |
-| 索引优化 | [Indexes](https://www.mongodb.com/docs/manual/indexes/) |
-| 监控 | [mongostat/mongotop](https://www.mongodb.com/docs/database-tools/) · [Atlas Performance Advisor](https://www.mongodb.com/docs/atlas/performance-advisor/) |
-| 安全 | [Security Checklist](https://www.mongodb.com/docs/manual/administration/security-checklist/) |
+- **官方手册**：[MongoDB Manual](https://www.mongodb.com/docs/manual/)
+- **数据建模**：[Data Modeling](https://www.mongodb.com/docs/manual/data-modeling/)
+- **分片**：[Sharding](https://www.mongodb.com/docs/manual/sharding/) · [分片键选择](https://www.mongodb.com/docs/manual/core/sharding-choose-a-shard-key/)
+- **副本集**：[Replication](https://www.mongodb.com/docs/manual/replication/)
+- **索引优化**：[Indexes](https://www.mongodb.com/docs/manual/indexes/)
+- **监控**：[mongostat/mongotop](https://www.mongodb.com/docs/database-tools/) · [Atlas Performance Advisor](https://www.mongodb.com/docs/atlas/performance-advisor/)
+- **安全**：[Security Checklist](https://www.mongodb.com/docs/manual/administration/security-checklist/)
+- **CRUD 与聚合**：[Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) · [聚合阶段参考](https://www.mongodb.com/docs/manual/reference/operator/aggregation-pipeline/)
+- **驱动**：[Node.js Driver](https://www.mongodb.com/docs/drivers/node/current/) · [PyMongo](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/)
+- **ODM**：[Mongoose](https://mongoosejs.com/docs/guide.html)
+- **云服务**：[MongoDB Atlas](https://www.mongodb.com/docs/atlas/)
+- **工具**：[mongosh](https://www.mongodb.com/docs/mongodb-shell/) · [Compass](https://www.mongodb.com/docs/compass/current/) · [Database Tools](https://www.mongodb.com/docs/database-tools/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

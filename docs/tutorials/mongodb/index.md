@@ -26,25 +26,19 @@ MongoDB 是一种 NoSQL 文档数据库，将数据存储为 JSON 风格的 BSON
 - 了解 JSON 数据结构
 - 了解关系型数据库概念有助于对比理解（见 [SQL 教程](/tutorials/sql/)）
 
-## 官方文档
+## 官方文档与延伸阅读
 
-聚合操作符、索引类型、分片策略与版本差异以官方文档为准。
-
-| 类型 | 链接 |
-|------|------|
-| 官方文档 | [MongoDB Manual](https://www.mongodb.com/docs/manual/) · [中文文档](https://www.mongodb.com/zh-cn/docs/manual/) |
-| CRUD 操作 | [CRUD 指南](https://www.mongodb.com/docs/manual/crud/) · [查询操作符](https://www.mongodb.com/docs/manual/reference/operator/query/) |
-| 聚合 | [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) · [聚合阶段参考](https://www.mongodb.com/docs/manual/reference/operator/aggregation-pipeline/) |
-| 索引 | [Indexes](https://www.mongodb.com/docs/manual/indexes/) · [索引策略](https://www.mongodb.com/docs/manual/applications/indexes/) |
-| 数据建模 | [Data Modeling](https://www.mongodb.com/docs/manual/data-modeling/) · [设计模式](https://www.mongodb.com/blog/post/building-with-patterns-a-summary) |
-| 事务 | [Transactions](https://www.mongodb.com/docs/manual/core/transactions/) |
-| 复制与分片 | [Replication](https://www.mongodb.com/docs/manual/replication/) · [Sharding](https://www.mongodb.com/docs/manual/sharding/) |
-| Change Streams | [Change Streams](https://www.mongodb.com/docs/manual/changeStreams/) |
-| 时序集合 | [Time Series](https://www.mongodb.com/docs/manual/core/timeseries-collections/) |
-| 全文检索 | [Atlas Search](https://www.mongodb.com/docs/atlas/atlas-search/) · [Vector Search](https://www.mongodb.com/docs/atlas/atlas-vector-search/) |
-| 驱动与 ODM | [Node.js Driver](https://www.mongodb.com/docs/drivers/node/current/) · [Mongoose](https://mongoosejs.com/docs/guide.html) · [PyMongo](https://pymongo.readthedocs.io/en/stable/) |
-| 命令行与工具 | [mongosh](https://www.mongodb.com/docs/mongodb-shell/) · [Database Tools](https://www.mongodb.com/docs/database-tools/) · [Compass](https://www.mongodb.com/docs/compass/current/) |
-| 安全 | [Security Checklist](https://www.mongodb.com/docs/manual/administration/security-checklist/) |
-| BSON 规范 | [bsonspec.org](https://bsonspec.org/spec.html) |
-
-更多入口见 [官方文档索引](/reference/official-docs)。
+- **官方手册**：[MongoDB Manual](https://www.mongodb.com/docs/manual/) · [中文文档](https://www.mongodb.com/zh-cn/docs/manual/)
+- **CRUD 与聚合**：[CRUD 指南](https://www.mongodb.com/docs/manual/crud/) · [查询操作符](https://www.mongodb.com/docs/manual/reference/operator/query/) · [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) · [聚合阶段参考](https://www.mongodb.com/docs/manual/reference/operator/aggregation-pipeline/)
+- **索引**：[Indexes](https://www.mongodb.com/docs/manual/indexes/) · [索引策略](https://www.mongodb.com/docs/manual/applications/indexes/)
+- **数据建模**：[Data Modeling](https://www.mongodb.com/docs/manual/data-modeling/) · [设计模式](https://www.mongodb.com/blog/post/building-with-patterns-a-summary)
+- **事务**：[Transactions](https://www.mongodb.com/docs/manual/core/transactions/)
+- **复制与分片**：[Replication](https://www.mongodb.com/docs/manual/replication/) · [Sharding](https://www.mongodb.com/docs/manual/sharding/)
+- **Change Streams**：[Change Streams](https://www.mongodb.com/docs/manual/changeStreams/)
+- **时序集合**：[Time Series](https://www.mongodb.com/docs/manual/core/timeseries-collections/)
+- **全文检索**：[Atlas Search](https://www.mongodb.com/docs/atlas/atlas-search/) · [Vector Search](https://www.mongodb.com/docs/atlas/atlas-vector-search/)
+- **驱动与 ODM**：[Node.js Driver](https://www.mongodb.com/docs/drivers/node/current/) · [PyMongo](https://pymongo.readthedocs.io/en/stable/) · [Mongoose](https://mongoosejs.com/docs/guide.html)
+- **命令行与工具**：[mongosh](https://www.mongodb.com/docs/mongodb-shell/) · [Database Tools](https://www.mongodb.com/docs/database-tools/) · [Compass](https://www.mongodb.com/docs/compass/current/)
+- **安全**：[Security Checklist](https://www.mongodb.com/docs/manual/administration/security-checklist/)
+- **BSON 规范**：[bsonspec.org](https://bsonspec.org/spec.html)
+- **云服务**：[MongoDB Atlas](https://www.mongodb.com/docs/atlas/)

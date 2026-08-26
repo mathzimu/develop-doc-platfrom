@@ -303,12 +303,15 @@ console.log('测试数据已导入')
 await mongoose.disconnect()
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| CRUD | [MongoDB CRUD 指南](https://www.mongodb.com/docs/manual/crud/) |
-| 聚合 | [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) |
-| 索引 | [MongoDB 索引](https://www.mongodb.com/docs/manual/indexes/) |
-| ODM | [Mongoose](https://mongoosejs.com/docs/guide.html) |
-| 数据建模 | [Data Modeling](https://www.mongodb.com/docs/manual/data-modeling/) |
+- **官方手册**：[MongoDB Manual](https://www.mongodb.com/docs/manual/)
+- **CRUD 与聚合**：[MongoDB CRUD 指南](https://www.mongodb.com/docs/manual/crud/) · [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/)
+- **索引**：[MongoDB 索引](https://www.mongodb.com/docs/manual/indexes/)
+- **数据建模**：[Data Modeling](https://www.mongodb.com/docs/manual/data-modeling/)
+- **驱动**：[Node.js Driver](https://www.mongodb.com/docs/drivers/node/current/) · [PyMongo](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/)
+- **ODM**：[Mongoose](https://mongoosejs.com/docs/guide.html)
+- **云服务**：[MongoDB Atlas](https://www.mongodb.com/docs/atlas/)
+- **工具**：[mongosh](https://www.mongodb.com/docs/mongodb-shell/) · [Compass](https://www.mongodb.com/docs/compass/current/) · [Database Tools](https://www.mongodb.com/docs/database-tools/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

@@ -65,6 +65,10 @@ db.users.drop()     // 删除集合
 
 MongoDB 的读写操作都以 **集合** 为作用对象，方法名采用 `操作 + One/Many` 的命名（如 `insertOne` / `insertMany`）。所有写入操作默认返回 `{ acknowledged: true, insertedId }` 等结果对象。
 
+::: tip 官方参考
+基础 CRUD 行为、查询操作符与写入确认以 [MongoDB Manual – CRUD](https://www.mongodb.com/docs/manual/crud/) 为准。
+:::
+
 ### 创建
 
 ```js
@@ -282,3 +286,16 @@ mongoexport --db mydb --collection users --out users.json
 mongorestore --db mydb ./backup/mydb
 mongoimport --db mydb --collection users --file users.json
 ```
+
+## 官方文档与延伸阅读
+
+- **官方手册**：[MongoDB Manual](https://www.mongodb.com/docs/manual/)
+- **CRUD 与聚合**：[CRUD 指南](https://www.mongodb.com/docs/manual/crud/) · [聚合阶段参考](https://www.mongodb.com/docs/manual/reference/operator/aggregation-pipeline/)
+- **索引**：[Indexes](https://www.mongodb.com/docs/manual/indexes/)
+- **数据建模**：[Data Modeling](https://www.mongodb.com/docs/manual/data-modeling/)
+- **驱动**：[Node.js Driver](https://www.mongodb.com/docs/drivers/node/current/) · [PyMongo](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/)
+- **ODM**：[Mongoose](https://mongoosejs.com/docs/guide.html)
+- **云服务**：[MongoDB Atlas](https://www.mongodb.com/docs/atlas/)
+- **工具**：[mongosh](https://www.mongodb.com/docs/mongodb-shell/) · [Compass](https://www.mongodb.com/docs/compass/current/) · [Database Tools](https://www.mongodb.com/docs/database-tools/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
