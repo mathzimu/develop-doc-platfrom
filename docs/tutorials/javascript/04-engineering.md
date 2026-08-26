@@ -467,12 +467,12 @@ const clean = DOMPurify.sanitize(dirtyHTML)
 import { encode } from 'he'  // HTML entities
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 项目规范 | [Conventional Commits](https://www.conventionalcommits.org/zh-hans/v1.0.0/) |
-| Lint/Format | [ESLint](https://eslint.org/docs/latest/) · [Prettier](https://prettier.io/docs/) · [Biome](https://biomejs.dev/zh-cn/) |
-| 测试 | [Vitest](https://vitest.dev/) · [Jest](https://jestjs.io/zh-Hans/) · [Playwright](https://playwright.dev/docs/intro) |
-| 安全编码 | [OWASP Top 10](https://owasp.org/www-project-top-ten/) · [OWASP Cheat Sheet](https://cheatsheetseries.owasp.org/) · [XSS 防护](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) |
-| 依赖安全 | [Dependabot](https://docs.github.com/zh/code-security/dependabot) · [npm audit](https://docs.npmjs.com/cli/v10/commands/npm-audit) |
+- **规范与协作**：[Conventional Commits](https://www.conventionalcommits.org/zh-hans/v1.0.0/)
+- **Lint / Format**：[ESLint](https://eslint.org/docs/latest/) · [Prettier](https://prettier.io/docs/)
+- **测试**：[Vitest](https://cn.vitest.dev/guide/)
+- **安全编码**：[OWASP Top 10](https://owasp.org/www-project-top-ten/) · [OWASP Cheat Sheet](https://cheatsheetseries.owasp.org/) · [XSS 防护](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
+- **依赖安全**：[Dependabot](https://docs.github.com/zh/code-security/dependabot) · [npm audit](https://docs.npmjs.com/cli/v10/commands/npm-audit)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

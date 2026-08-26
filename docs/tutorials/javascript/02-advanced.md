@@ -333,13 +333,10 @@ Atomics.add(view, 0, 1)   // 原子操作
 console.log(Atomics.load(view, 0)) // 43
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-本节涉及闭包、原型、事件循环、并发原语等底层机制，以语言规范与 MDN 为准。
+- **教程与参考**：[MDN JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) · [MDN Web API](https://developer.mozilla.org/zh-CN/docs/Web/API)
+- **语言规范**：[ECMA-262](https://tc39.es/ecma262/) · [TC39 Proposals](https://github.com/tc39/proposals)
+- **运行时**：[Node.js API](https://nodejs.org/docs/latest/api/) · [Deno](https://docs.deno.com/) · [Bun](https://bun.sh/docs)
 
-| 主题 | 链接 |
-|------|------|
-| 语言规范 | [ECMA-262](https://tc39.es/ecma262/) · [TC39 提案](https://github.com/tc39/proposals) |
-| 参考文档 | [MDN JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript) · [MDN 类型化数组](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays) |
-| 异步 | [Event Loop（HTML 规范）](https://html.spec.whatwg.org/multipage/webappapis.html#event-loops) · [MDN 微任务](https://developer.mozilla.org/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide) |
-| 并发原语 | [SharedArrayBuffer](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) · [Atomics](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Atomics) |
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
