@@ -95,12 +95,12 @@ const UserSchema = object({
 })
 ```
 
-### 官方文档入口
+## 官方文档与延伸阅读
 
-| 类别 | 入口 |
-|------|------|
-| 官方工具 | [TypeScript 官方文档](https://www.typescriptlang.org/docs/) · [tsconfig 全集](https://www.typescriptlang.org/tsconfig) · [Release Notes](https://www.typescriptlang.org/docs/handbook/release-notes/overview.html) |
-| 转译 | [SWC](https://swc.rs/) · [esbuild](https://esbuild.github.io/) · [tsx](https://tsx.is/) · [ts-node](https://typestrong.org/ts-node/) |
-| Lint / Format | [Biome](https://biomejs.dev/zh-cn/) · [ESLint](https://eslint.org/docs/latest/) · [Prettier](https://prettier.io/docs/) |
-| 运行时验证 | [Zod](https://zod.dev/) · [Valibot](https://valibot.dev/) · [Yup](https://github.com/jquense/yup) |
-| 类型工具 | [typescript-eslint](https://typescript-eslint.io/) · [ts-pattern](https://github.com/gvergnaud/ts-pattern) |
+- **官方文档**：[TypeScript 官方文档](https://www.typescriptlang.org/docs/) · [tsconfig 选项全集](https://www.typescriptlang.org/tsconfig) · [Release Notes](https://www.typescriptlang.org/docs/handbook/release-notes/overview.html)
+- **转译**：[SWC](https://swc.rs/) · [esbuild](https://esbuild.github.io/) · [tsx](https://tsx.is/) · [ts-node](https://typestrong.org/ts-node/)
+- **Lint / Format**：[Biome](https://biomejs.dev/zh-cn/) · [ESLint](https://eslint.org/docs/latest/) · [Prettier](https://prettier.io/docs/)
+- **运行时验证**：[Zod](https://zod.dev/) · [Valibot](https://valibot.dev/) · [Yup](https://github.com/jquense/yup)
+- **类型工具**：[typescript-eslint](https://typescript-eslint.io/) · [ts-pattern](https://github.com/gvergnaud/ts-pattern)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

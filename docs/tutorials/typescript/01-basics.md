@@ -24,6 +24,10 @@ let anything: any = '可以是任何类型'  // 避免使用
 `any` 会**关闭类型检查**，失去使用 TS 的意义。能用 `unknown`（配合类型守卫收窄）就不要用 `any`；项目应开启 `strict` 模式并尽量 `noImplicitAny`。
 :::
 
+::: tip 官方参考
+基础类型、联合类型与类型推断的权威说明见 [TypeScript Handbook（基础类型）](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)。
+:::
+
 // 联合类型
 let id: string | number = 'abc123'
 
@@ -387,3 +391,18 @@ import { type User, type Config } from './types'  // inline type import
 | `sourceMap` | 生成源码映射 |
 | `skipLibCheck` | 跳过 `.d.ts` 类型检查（加速编译） |
 | `esModuleInterop` | 兼容 CommonJS 和 ES Module 互操作 |
+
+::: tip 官方参考
+所有 `tsconfig` 编译选项的完整释义见 [tsconfig 选项全集](https://www.typescriptlang.org/tsconfig)。
+:::
+
+## 官方文档与延伸阅读
+
+- **官方文档**：[TypeScript 官网](https://www.typescriptlang.org/docs/) · [TypeScript 中文站](https://www.typescriptlang.org/zh/docs/) · [Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- **基础类型**：[Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
+- **tsconfig 参考**：[tsconfig 选项全集](https://www.typescriptlang.org/tsconfig)
+- **类型定义**：[DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
+- **在线试验**：[TS Playground](https://www.typescriptlang.org/play)
+- **版本变更**：[Release Notes](https://www.typescriptlang.org/docs/handbook/release-notes/overview.html)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

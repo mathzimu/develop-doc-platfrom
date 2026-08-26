@@ -295,15 +295,13 @@ const palette = {
 // 如果某个值不是 Colors，编译报错
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-本节涉及条件类型、映射类型、逆变协变、装饰器与类型体操，以 TypeScript 官方文档为准。
+- **官方文档**：[TypeScript 手册](https://www.typescriptlang.org/docs/handbook/intro.html) · [tsconfig 选项全集](https://www.typescriptlang.org/tsconfig) · [TS Playground](https://www.typescriptlang.org/play)
+- **类型系统**：[条件类型](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html) · [映射类型](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html) · [模板字面量类型](https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html) · [类型兼容性](https://www.typescriptlang.org/docs/handbook/type-compatibility.html)
+- **装饰器**：[TypeScript 装饰器](https://www.typescriptlang.org/docs/handbook/decorators.html) · [TC39 Decorators 提案](https://github.com/tc39/proposal-decorators)
+- **工具类型**：[Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html)
+- **类型体操**：[Type Challenges](https://github.com/type-challenges/type-challenges)
+- **类型定义**：[DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
 
-| 主题 | 链接 |
-|------|------|
-| 类型手册 | [TypeScript 手册](https://www.typescriptlang.org/docs/handbook/intro.html) |
-| 类型系统 | [条件类型](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html) · [映射类型](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html) · [模板字面量类型](https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html) |
-| 类型兼容性 | [Type Compatibility](https://www.typescriptlang.org/docs/handbook/type-compatibility.html) |
-| 装饰器 | [TypeScript 装饰器](https://www.typescriptlang.org/docs/handbook/decorators.html) · [TC39 Decorators 提案](https://github.com/tc39/proposal-decorators) |
-| 工具类型 | [Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html) |
-| 类型实践 | [Type Challenges](https://github.com/type-challenges/type-challenges) |
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。 |

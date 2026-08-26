@@ -233,12 +233,13 @@ const keys = Object.keys(obj)  // ("a" | "b")[] 而不是 string[]
 const data = JSON.parse('{"a":1}')  // unknown 而不是 any
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 严格模式 | [tsconfig 全集](https://www.typescriptlang.org/tsconfig) · [strict](https://www.typescriptlang.org/tsconfig#strict) |
-| 声明文件 | [Declaration Files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) · [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) |
-| Monorepo | [Turborepo](https://turborepo.com/docs) · [Nx](https://nx.dev/getting-started/intro) |
-| Lint | [typescript-eslint](https://typescript-eslint.io/getting-started/) · [Biome](https://biomejs.dev/zh-cn/) |
-| CI/CD | [GitHub Actions](https://docs.github.com/zh/actions) |
+- **严格模式**：[tsconfig 选项全集](https://www.typescriptlang.org/tsconfig) · [strict 选项](https://www.typescriptlang.org/tsconfig#strict)
+- **声明文件**：[Declaration Files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) · [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
+- **Monorepo**：[Turborepo](https://turborepo.com/docs) · [Nx](https://nx.dev/getting-started/intro)
+- **Lint**：[typescript-eslint](https://typescript-eslint.io/getting-started/) · [Biome](https://biomejs.dev/zh-cn/)
+- **CI/CD**：[GitHub Actions](https://docs.github.com/zh/actions)
+- **官方文档**：[TypeScript 官网](https://www.typescriptlang.org/docs/) · [Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

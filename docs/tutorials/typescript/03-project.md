@@ -273,13 +273,12 @@ async function main() {
 }
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 类型手册 | [TypeScript 手册](https://www.typescriptlang.org/docs/handbook/intro.html) |
-| tsconfig | [tsconfig 全集](https://www.typescriptlang.org/tsconfig) |
-| 泛型 | [TypeScript 泛型](https://www.typescriptlang.org/docs/handbook/2/generics.html) |
-| 类型定义 | [Declaration Files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) |
-| 运行时校验 | [Zod](https://zod.dev/) |
-| 测试 | [Vitest](https://vitest.dev/) · [tsx](https://tsx.is/) |
+- **官方文档**：[TypeScript 手册](https://www.typescriptlang.org/docs/handbook/intro.html) · [tsconfig 选项全集](https://www.typescriptlang.org/tsconfig)
+- **泛型**：[TypeScript 泛型](https://www.typescriptlang.org/docs/handbook/2/generics.html)
+- **类型定义**：[Declaration Files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) · [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
+- **运行时校验**：[Zod](https://zod.dev/)
+- **测试与执行**：[Vitest](https://vitest.dev/) · [tsx](https://tsx.is/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。 |
