@@ -28,16 +28,10 @@ echo "Hello, Bash World!"
 - 无需编程经验
 - 熟悉终端基本操作即可
 
-## 官方文档
+## 官方文档与延伸阅读
 
-语法、内建命令与 POSIX 兼容性以一手文档为准。
-
-| 类型 | 链接 |
-|------|------|
-| 官方手册 | [GNU Bash Manual](https://www.gnu.org/software/bash/manual/bash.html) |
-| POSIX 规范 | [POSIX Shell Command Language](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html) |
-| 编码规范 | [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html) |
-| 静态检查 | [ShellCheck](https://www.shellcheck.net/) · [shfmt](https://github.com/mvdan/sh) |
-| 测试框架 | [Bats-core](https://bats-core.readthedocs.io/en/stable/) |
-
-更多入口见 [官方文档索引](/reference/official-docs)。
+- **官方手册**：[GNU Bash Manual](https://www.gnu.org/software/bash/manual/bash.html)
+- **POSIX Shell 规范**：[POSIX Shell Command Language](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html)
+- **编码规范**：[Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
+- **静态检查与格式化**：[ShellCheck](https://www.shellcheck.net/) · [shfmt](https://github.com/mvdan/sh)
+- **测试框架**：[Bats-core](https://bats-core.readthedocs.io/en/stable/)

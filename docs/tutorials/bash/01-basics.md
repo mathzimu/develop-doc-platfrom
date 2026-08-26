@@ -140,6 +140,7 @@ echo "Hello, World!"
 - **Shebang（`#!`）** 告诉系统用哪个解释器运行脚本；`#!/bin/bash` 与 `#!/usr/bin/env bash` 的区别在于后者按 `PATH` 查找，可移植性更好。
 - 脚本需有**执行权限**才能 `./script.sh` 直接运行（`chmod +x`）；否则只能用 `bash script.sh` 调用。
 - Bash 与 `sh`（POSIX）不完全兼容，`#!/bin/sh` 下应使用 POSIX 写法，避免 Bash 专有语法。
+- 完整的内建命令、参数展开与语法细节见 [GNU Bash Manual](https://www.gnu.org/software/bash/manual/bash.html)。
 :::
 
 ### 变量
@@ -446,4 +447,15 @@ start=$(date +%s%N)
 # ... commands ...
 end=$(date +%s%N)
 echo "耗时: $(( (end - start) / 1000000 )) ms"
+
+## 官方文档与延伸阅读
+
+- **官方手册**：[GNU Bash Manual](https://www.gnu.org/software/bash/manual/bash.html)
+- **POSIX Shell 规范**：[POSIX Shell Command Language](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html)
+- **编码规范**：[Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
+- **静态检查与格式化**：[ShellCheck](https://www.shellcheck.net/) · [shfmt](https://github.com/mvdan/sh)
+- **测试框架**：[Bats-core](https://bats-core.readthedocs.io/en/stable/)
+- **GNU 核心工具**：[Coreutils Manual](https://www.gnu.org/software/coreutils/manual/coreutils.html) · [sed](https://www.gnu.org/software/sed/manual/sed.html) · [awk](https://www.gnu.org/software/gawk/manual/gawk.html)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
 ```

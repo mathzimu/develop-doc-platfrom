@@ -84,12 +84,15 @@ deploy: lint test
 - [pure-bash-bible](https://github.com/dylanaraps/pure-bash-bible) — 纯 Bash 实现合集
 - [explainshell](https://explainshell.com/) — 逐段解释 Shell 命令
 
-## 官方文档入口
+## 官方文档与延伸阅读
 
-| 类别 | 入口 |
-|------|------|
-| 语言规范 | [GNU Bash Manual](https://www.gnu.org/software/bash/manual/bash.html) · [POSIX Shell Command Language](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html) |
-| 编码规范 | [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html) |
-| 质量工具 | [ShellCheck](https://www.shellcheck.net/) · [shfmt](https://github.com/mvdan/sh) · [Bats-core](https://bats-core.readthedocs.io/en/stable/) |
-| 现代 CLI | [jq](https://jqlang.github.io/jq/) · [yq](https://mikefarah.gitbook.io/yq) · [ripgrep](https://github.com/BurntSushi/ripgrep) · [fd](https://github.com/sharkdp/fd) · [bat](https://github.com/sharkdp/bat) · [fzf](https://github.com/junegunn/fzf) · [httpie](https://httpie.io/docs/cli) |
-| 任务/配置管理 | [GNU coreutils](https://www.gnu.org/software/coreutils/manual/coreutils.html) · [Ansible](https://docs.ansible.com/) · [Terraform](https://developer.hashicorp.com/terraform/docs) |
+- **官方手册**：[GNU Bash Manual](https://www.gnu.org/software/bash/manual/bash.html) · [GNU Bash 官方手册（概览）](https://www.gnu.org/software/bash/manual/)
+- **POSIX Shell 规范**：[POSIX Shell Command Language](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html)
+- **编码规范**：[Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
+- **静态检查与格式化**：[ShellCheck](https://www.shellcheck.net/) · [shfmt](https://github.com/mvdan/sh) · [Bats-core](https://bats-core.readthedocs.io/en/stable/)
+- **GNU 核心工具**：[Coreutils Manual](https://www.gnu.org/software/coreutils/manual/coreutils.html)
+- **现代 CLI 工具**：[jq](https://jqlang.github.io/jq/) · [yq](https://mikefarah.gitbook.io/yq) · [ripgrep](https://github.com/BurntSushi/ripgrep) · [fd](https://github.com/sharkdp/fd) · [bat](https://github.com/sharkdp/bat) · [fzf](https://github.com/junegunn/fzf) · [httpie](https://httpie.io/docs/cli)
+- **任务与配置管理**：[Ansible](https://docs.ansible.com/) · [Terraform](https://developer.hashicorp.com/terraform/docs)
+- **学习资源**：[bash-guide](https://github.com/Idnan/bash-guide) · [pure-bash-bible](https://github.com/dylanaraps/pure-bash-bible) · [explainshell](https://explainshell.com/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

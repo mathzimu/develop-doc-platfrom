@@ -369,11 +369,11 @@ main "$@"
 0 2 * * * /opt/scripts/log-analyzer.sh -f json -o /reports/$(date +\%Y\%m\%d).json /var/log/app.log
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 文本处理 | [GNU grep](https://www.gnu.org/software/grep/manual/) · [GNU sed](https://www.gnu.org/software/sed/manual/sed.html) · [GNU awk](https://www.gnu.org/software/gawk/manual/gawk.html) |
-| 命令行参数 | [Bash 位置参数](https://www.gnu.org/software/bash/manual/bash.html#Positional-Parameters) · [getopts](https://www.gnu.org/software/bash/manual/bash.html#index-getopts) |
-| 定时任务 | [crontab(5)](https://man7.org/linux/man-pages/man5/crontab.5.html) |
-| 静态检查 | [ShellCheck](https://www.shellcheck.net/) |
+- **官方手册**：[Bash 位置参数](https://www.gnu.org/software/bash/manual/bash.html#Positional-Parameters) · [getopts](https://www.gnu.org/software/bash/manual/bash.html#index-getopts)
+- **正则与文本处理**：[GNU grep](https://www.gnu.org/software/grep/manual/) · [GNU sed](https://www.gnu.org/software/sed/manual/sed.html) · [GNU awk](https://www.gnu.org/software/gawk/manual/gawk.html)
+- **定时任务**：[crontab(5)](https://man7.org/linux/man-pages/man5/crontab.5.html)
+- **静态检查**：[ShellCheck](https://www.shellcheck.net/)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

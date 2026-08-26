@@ -421,15 +421,12 @@ for line in "${lines[@]}"; do
 done
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-正则、进程替换、信号、数组、I/O 等细节以 GNU Bash 手册与 POSIX 规范为准。
+- **官方手册**：[GNU Bash Manual](https://www.gnu.org/software/bash/manual/bash.html)
+- **POSIX Shell 规范**：[POSIX Shell Command Language](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html)
+- **编码规范**：[Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
+- **静态检查与格式化**：[ShellCheck](https://www.shellcheck.net/) · [shfmt](https://github.com/mvdan/sh)
+- **GNU 核心工具**：[Coreutils Manual](https://www.gnu.org/software/coreutils/manual/coreutils.html) · [grep](https://www.gnu.org/software/grep/manual/) · [sed](https://www.gnu.org/software/sed/manual/sed.html) · [awk](https://www.gnu.org/software/gawk/manual/gawk.html)
 
-| 主题 | 链接 |
-|------|------|
-| 官方手册 | [GNU Bash Manual](https://www.gnu.org/software/bash/manual/bash.html) |
-| POSIX 规范 | [POSIX Shell Command Language](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html) |
-| 正则与文本 | [GNU grep](https://www.gnu.org/software/grep/manual/) · [GNU sed](https://www.gnu.org/software/sed/manual/sed.html) · [GNU awk](https://www.gnu.org/software/gawk/manual/gawk.html) |
-| 核心工具 | [GNU coreutils](https://www.gnu.org/software/coreutils/manual/coreutils.html) |
-| 编码规范 | [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html) |
-| 静态检查 | [ShellCheck](https://www.shellcheck.net/) · [shfmt](https://github.com/mvdan/sh) |
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
