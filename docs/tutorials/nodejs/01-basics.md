@@ -40,6 +40,8 @@ require('/abs/path')   // 绝对路径
 
 ## 内置核心模块
 
+> **提示**：核心模块（fs、path、http、events、stream 等）的完整 API 签名以官方文档为准，参见 [Node.js API](https://nodejs.org/docs/latest/api/)。
+
 ### fs - 文件系统
 
 ```js
@@ -347,4 +349,17 @@ const result = await Promise.race([
   fetchData(),
   new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 5000)),
 ])
+
+## 官方文档与延伸阅读
+
+- **API 文档**：[nodejs.org/api](https://nodejs.org/docs/latest/api/) · [中文站](https://nodejs.org/zh-cn)
+- **入门指南**：[Node.js Learn](https://nodejs.org/en/learn)
+- **模块系统**：[ESM](https://nodejs.org/api/esm.html) · [CommonJS](https://nodejs.org/api/modules.html)
+- **版本与支持周期**：[Release Schedule](https://github.com/nodejs/release#release-schedule)
+- **版本管理**：[nvm](https://github.com/nvm-sh/nvm) · [fnm](https://github.com/Schniz/fnm)
+- **框架**：[Express](https://expressjs.com/zh-cn/) · [Fastify](https://fastify.dev/docs/latest/) · [NestJS](https://docs.nestjs.com/) · [Hono](https://hono.dev/docs/)
+- **ORM 与数据库**：[Prisma](https://www.prisma.io/docs) · [Drizzle](https://orm.drizzle.team/docs/overview) · [TypeORM](https://typeorm.io/) · [node-postgres](https://node-postgres.com/)
+- **其他运行时**：[Deno](https://docs.deno.com/) · [Bun](https://bun.sh/docs)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
 ```

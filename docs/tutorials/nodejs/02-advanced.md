@@ -386,14 +386,15 @@ performance.mark('query-end')
 performance.measure('DB Query', 'query-start', 'query-end')
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-Event Loop、流、线程、Buffer 等底层行为以官方 API 文档为准。
+- **API 文档**：[nodejs.org/api](https://nodejs.org/docs/latest/api/) · [中文站](https://nodejs.org/zh-cn)
+- **版本管理**：[nvm](https://github.com/nvm-sh/nvm) · [fnm](https://github.com/Schniz/fnm)
+- **Event Loop**：[The Node.js Event Loop](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick) · [Event Loop（中文）](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)
+- **Streams**：[Stream API](https://nodejs.org/api/stream.html) · [Node.js Stream 文档](https://nodejs.org/en/learn/asynchronous-work/reading-files-with-node-js)
+- **进程与线程**：[Child Processes](https://nodejs.org/api/child_process.html) · [Worker Threads](https://nodejs.org/api/worker_threads.html)
+- **内存与性能**：[Buffer](https://nodejs.org/api/buffer.html) · [Performance Hooks](https://nodejs.org/api/perf_hooks.html) · [诊断与性能](https://nodejs.org/en/learn/getting-started/diagnostics)
+- **其他运行时**：[Deno](https://docs.deno.com/) · [Bun](https://bun.sh/docs)
+- **安全**：[Node.js 安全最佳实践](https://nodejs.org/en/learn/getting-started/security-best-practices)
 
-| 主题 | 链接 |
-|------|------|
-| Event Loop | [The Node.js Event Loop](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick) · [Event Loop（中文）](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick) |
-| Streams | [Stream API](https://nodejs.org/api/stream.html) · [Node.js Stream 文档](https://nodejs.org/en/learn/asynchronous-work/reading-files-with-node-js) |
-| 进程与线程 | [Child Processes](https://nodejs.org/api/child_process.html) · [Worker Threads](https://nodejs.org/api/worker_threads.html) |
-| 内存与性能 | [Buffer](https://nodejs.org/api/buffer.html) · [Performance Hooks](https://nodejs.org/api/perf_hooks.html) · [诊断与性能](https://nodejs.org/en/learn/getting-started/diagnostics) |
-| 安全 | [Node.js 安全最佳实践](https://nodejs.org/en/learn/getting-started/security-best-practices) |
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

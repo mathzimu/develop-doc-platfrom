@@ -401,14 +401,16 @@ describe('Posts API', () => {
 })
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| Node.js API | [nodejs.org/api](https://nodejs.org/docs/latest/api/) |
-| Web 框架 | [Express](https://expressjs.com/zh-cn/) · [Fastify](https://fastify.dev/docs/latest/) |
-| ORM | [Prisma](https://www.prisma.io/docs) |
-| 校验 | [Zod](https://zod.dev/) |
-| 鉴权 | [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519.html) |
-| 测试 | [Vitest](https://vitest.dev/) · [Supertest](https://github.com/ladjs/supertest) |
-| PostgreSQL | [官方文档](https://www.postgresql.org/docs/current/) |
+- **API 文档**：[nodejs.org/api](https://nodejs.org/docs/latest/api/) · [中文站](https://nodejs.org/zh-cn)
+- **版本管理**：[nvm](https://github.com/nvm-sh/nvm) · [fnm](https://github.com/Schniz/fnm)
+- **Web 框架**：[Express](https://expressjs.com/zh-cn/) · [Fastify](https://fastify.dev/docs/latest/) · [NestJS](https://docs.nestjs.com/) · [Hono](https://hono.dev/docs/)
+- **ORM**：[Prisma](https://www.prisma.io/docs) · [Drizzle](https://orm.drizzle.team/docs/overview) · [TypeORM](https://typeorm.io/)
+- **校验**：[Zod](https://zod.dev/)
+- **鉴权**：[jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519.html)
+- **测试**：[Vitest](https://vitest.dev/) · [Supertest](https://github.com/ladjs/supertest)
+- **数据库**：[PostgreSQL 官方文档](https://www.postgresql.org/docs/current/)
+- **其他运行时**：[Deno](https://docs.deno.com/) · [Bun](https://bun.sh/docs)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。

@@ -336,13 +336,16 @@ volumes:
   pgdata:
 ```
 
-## 官方文档
+## 官方文档与延伸阅读
 
-| 主题 | 链接 |
-|------|------|
-| 错误处理 | [Node.js 错误处理](https://nodejs.org/en/learn/getting-started/errors-in-node) · [Express 错误处理(中文)](https://expressjs.com/zh-cn/guide/error-handling.html) |
-| 结构化日志 | [Pino](https://getpino.io/) · [pino-pretty](https://github.com/pinojs/pino-pretty) |
-| 数据验证 | [Zod](https://zod.dev/) |
-| 测试 | [node:test](https://nodejs.org/api/test.html) · [Vitest](https://vitest.dev/) |
-| 容器化 | [Docker for Node](https://nodejs.org/en/learn/docker/introduction) · [Node 镜像](https://hub.docker.com/_/node) |
-| 部署 | [PM2](https://pm2.keymetrics.io/) · [OpenTelemetry](https://opentelemetry.io/docs/languages/js/) |
+- **API 文档**：[nodejs.org/api](https://nodejs.org/docs/latest/api/) · [中文站](https://nodejs.org/zh-cn)
+- **版本管理**：[nvm](https://github.com/nvm-sh/nvm) · [fnm](https://github.com/Schniz/fnm)
+- **错误处理**：[Node.js 错误处理](https://nodejs.org/en/learn/getting-started/errors-in-node) · [Express 错误处理(中文)](https://expressjs.com/zh-cn/guide/error-handling.html)
+- **结构化日志**：[Pino](https://getpino.io/) · [pino-pretty](https://github.com/pinojs/pino-pretty)
+- **数据验证**：[Zod](https://zod.dev/)
+- **测试**：[node:test](https://nodejs.org/api/test.html) · [Vitest](https://vitest.dev/)
+- **容器化**：[Docker for Node](https://nodejs.org/en/learn/docker/introduction) · [Node 镜像](https://hub.docker.com/_/node)
+- **部署与监控**：[PM2](https://pm2.keymetrics.io/) · [OpenTelemetry](https://opentelemetry.io/docs/languages/js/)
+- **其他运行时**：[Deno](https://docs.deno.com/) · [Bun](https://bun.sh/docs)
+
+更多入口见 [官方文档索引](/reference/official-docs) 与 [工具链与包管理](/reference/tooling)。
