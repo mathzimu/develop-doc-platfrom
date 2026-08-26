@@ -47,14 +47,6 @@ npm run build
 npm run preview
 ```
 
-可用脚本：
-
-| 脚本 | 说明 |
-|------|------|
-| `npm run dev` | 启动本地开发服务器 |
-| `npm run build` | 构建生产版本 |
-| `npm run preview` | 预览构建产物 |
-
 ## 项目结构
 
 ```
